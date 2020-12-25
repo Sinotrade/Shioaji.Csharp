@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://sinotrade.github.io/Shioaji.Csharp/</loc>
-     <lastmod>2020-12-24</lastmod>
+     <lastmod>2020-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://sinotrade.github.io/Shioaji.Csharp/quickstart/</loc>
-     <lastmod>2020-12-24</lastmod>
+     <lastmod>2020-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://sinotrade.github.io/Shioaji.Csharp/tutor/login/</loc>
-     <lastmod>2020-12-24</lastmod>
+     <lastmod>2020-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://sinotrade.github.io/Shioaji.Csharp/tutor/contract/</loc>
+     <lastmod>2020-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://sinotrade.github.io/Shioaji.Csharp/tutor/order/Stock/</loc>
+     <lastmod>2020-12-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://sinotrade.github.io/Shioaji.Csharp/tutor/order/FutureOption/</loc>
+     <lastmod>2020-12-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

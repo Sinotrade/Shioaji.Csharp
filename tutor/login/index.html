@@ -21,7 +21,7 @@
     
     
       
-        <title>Login - Shioaji Csharp</title>
+        <title>Login - Shioaji C#</title>
       
     
     
@@ -78,7 +78,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="https://sinotrade.github.io/Shioaji.Csharp/" title="Shioaji Csharp" class="md-header-nav__button md-logo" aria-label="Shioaji Csharp">
+    <a href="https://sinotrade.github.io/Shioaji.Csharp/" title="Shioaji C#" class="md-header-nav__button md-logo" aria-label="Shioaji C#">
       
   <img src="../../img/shioaji-logo.svg" alt="logo">
 
@@ -90,7 +90,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            Shioaji Csharp
+            Shioaji C#
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -164,12 +164,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://sinotrade.github.io/Shioaji.Csharp/" title="Shioaji Csharp" class="md-nav__button md-logo" aria-label="Shioaji Csharp">
+    <a href="https://sinotrade.github.io/Shioaji.Csharp/" title="Shioaji C#" class="md-nav__button md-logo" aria-label="Shioaji C#">
       
   <img src="../../img/shioaji-logo.svg" alt="logo">
 
     </a>
-    Shioaji Csharp
+    Shioaji C#
   </label>
   
     <div class="md-nav__source">
@@ -288,8 +288,86 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contract/" title="Contract" class="md-nav__link">
+      Contract
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Order
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Order" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Order
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../order/Stock/" title="Stock" class="md-nav__link">
+      Stock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../order/FutureOption/" title="Future and Option" class="md-nav__link">
+      Future and Option
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="https://sinotrade.github.io/" title="Python" class="md-nav__link">
+      Python
+    </a>
   </li>
 
     
@@ -349,24 +427,22 @@
 <div class="admonition info">
 <p class="admonition-title">In</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Production</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">shioaji</span> <span class="k">as</span> <span class="nn">sj</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">sj</span><span class="o">.</span><span class="n">Shioaji</span><span class="p">()</span>
-<span class="n">api</span><span class="o">.</span><span class="n">login</span><span class="p">(</span>
-    <span class="n">person_id</span><span class="o">=</span><span class="s2">&quot;YOUR_ID&quot;</span><span class="p">,</span> 
-    <span class="n">passwd</span><span class="o">=</span><span class="s2">&quot;YOUR_PASSWORD&quot;</span><span class="p">,</span> 
-    <span class="n">contracts_cb</span><span class="o">=</span><span class="k">lambda</span> <span class="n">security_type</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">security_type</span><span class="p">)</span><span class="si">}</span><span class="s2"> fetch done.&quot;</span><span class="p">)</span>
-<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>    
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_accounts</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Simulation</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">shioaji</span> <span class="k">as</span> <span class="nn">sj</span>
-<span class="hll"><span class="n">api</span> <span class="o">=</span> <span class="n">sj</span><span class="o">.</span><span class="n">Shioaji</span><span class="p">(</span><span class="n">simulation</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
-</span><span class="n">api</span><span class="o">.</span><span class="n">login</span><span class="p">(</span>
-    <span class="n">person_id</span><span class="o">=</span><span class="s2">&quot;PAPIUSER01&quot;</span><span class="p">,</span> 
-    <span class="n">passwd</span><span class="o">=</span><span class="s2">&quot;2222&quot;</span><span class="p">,</span> 
-    <span class="n">contracts_cb</span><span class="o">=</span><span class="k">lambda</span> <span class="n">security_type</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">repr</span><span class="p">(</span><span class="n">security_type</span><span class="p">)</span><span class="si">}</span><span class="s2"> fetch done.&quot;</span><span class="p">)</span>
-<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="hll"><span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">(</span><span class="n">simulation</span><span class="p">:</span><span class="k">true</span><span class="p">);</span>
+</span><span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PAPIUSER01&quot;</span><span class="p">,</span> <span class="s">&quot;2222&quot;</span><span class="p">);</span>    
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_accounts</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
@@ -374,12 +450,11 @@
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">FutureAccount</span><span class="p">(</span><span class="n">person_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">broker_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">StockAccount</span><span class="p">(</span><span class="n">person_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">broker_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)]</span>
-<span class="o">&lt;</span><span class="n">SecurityType</span><span class="o">.</span><span class="n">Index</span><span class="p">:</span> <span class="s1">&#39;IND&#39;</span><span class="o">&gt;</span> <span class="n">fetch</span> <span class="n">done</span><span class="o">.</span>
-<span class="o">&lt;</span><span class="n">SecurityType</span><span class="o">.</span><span class="n">Future</span><span class="p">:</span> <span class="s1">&#39;FUT&#39;</span><span class="o">&gt;</span> <span class="n">fetch</span> <span class="n">done</span><span class="o">.</span>
-<span class="o">&lt;</span><span class="n">SecurityType</span><span class="o">.</span><span class="n">Option</span><span class="p">:</span> <span class="s1">&#39;OPT&#39;</span><span class="o">&gt;</span> <span class="n">fetch</span> <span class="n">done</span><span class="o">.</span>
-<span class="o">&lt;</span><span class="n">SecurityType</span><span class="o">.</span><span class="n">Stock</span><span class="p">:</span> <span class="s1">&#39;STK&#39;</span><span class="o">&gt;</span> <span class="n">fetch</span> <span class="n">done</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code><span class="na">[</span>
+<span class="na"> {account_type=F, person_id=&quot;&quot;, broker_id=&quot;&quot;, account_id=&quot;&quot;, signed=True, username=&quot;&quot;,},</span>
+<span class="na"> {account_type=H, person_id=&quot;&quot;, broker_id=&quot;&quot;, account_id=&quot;&quot;, signed=False, username=&quot;&quot;,},</span>
+<span class="na"> {account_type=S, person_id=&quot;&quot;, broker_id=&quot;&quot;, account_id=&quot;&quot;, signed=True, username=&quot;&quot;,}</span>
+<span class="na">]</span>
 </code></pre></div>
 
 </div>
@@ -415,6 +490,20 @@
             </div>
           </a>
         
+        
+          <a href="../contract/" title="Contract" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Contract
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
