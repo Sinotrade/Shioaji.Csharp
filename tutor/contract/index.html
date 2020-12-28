@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -252,19 +254,130 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Contract
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Contract" class="md-nav__link md-nav__link--active">
+      Contract
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#login-fetch-contracts" class="md-nav__link">
+    Login Fetch Contracts
+  </a>
+  
+    <nav class="md-nav" aria-label="Login Fetch Contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contracts" class="md-nav__link">
+    Contracts
+  </a>
+  
+    <nav class="md-nav" aria-label="Contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stock-contract" class="md-nav__link">
+    Stock Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#futures-contract" class="md-nav__link">
+    Futures Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options-contract" class="md-nav__link">
+    Options Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-contract" class="md-nav__link">
+    Index Contract
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
-    <label class="md-nav__link" for="nav-3-2">
+    <label class="md-nav__link" for="nav-3-3">
       Order
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Order" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
+      <label class="md-nav__title" for="nav-3-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -281,6 +394,18 @@
   <li class="md-nav__item">
     <a href="../order/Stock/" title="Stock" class="md-nav__link">
       Stock
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../order/FutureOption/" title="Future and Option" class="md-nav__link">
+      Future and Option
     </a>
   </li>
 
@@ -418,62 +543,71 @@
                 
                 <h2 id="login-fetch-contracts">Login Fetch Contracts<a class="headerlink" href="#login-fetch-contracts" title="Permanent link">&para;</a></h2>
 <h3 id="first-you-need-login"><a href="../../tutor/login/">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
-<p>After login success we will start to fetch all kind of contract but fetching will not block other action. So how to know the fetch action is done ? We have contracts_cb in <code>login</code> function that you can pass your customize function define how to do when the contract fetched. In this exmaple, we just print what kind of contract when it has been fetched.</p>
-<div class="admonition note">
-<p class="admonition-title">contracts_timeout</p>
-<p>If you set contracts_timeout inside <code>login</code> from 0 to 10000, it will block the fetch and wait 10 second until the contract is back.<br>
-If you set contract_cb (contract callback) as prine, it will print "SecurityType.Index, SecurityType.Stock, SecurityType.Future, SecurityType.Option " until the contract is back.
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">login</span><span class="p">(</span>
-    <span class="n">person_id</span><span class="o">=</span><span class="s1">&#39;YOUR_ID&#39;</span><span class="p">,</span> 
-    <span class="n">passwd</span><span class="o">=</span><span class="s1">&#39;YOUR_PASSWORD&#39;</span><span class="p">,</span> 
-    <span class="n">contracts_timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
-    <span class="n">contracts_cb</span><span class="o">=</span><span class="nb">print</span><span class="p">,</span>
-<span class="p">)</span> 
-</code></pre></div></p>
-</div>
+<p>After login success we will start to fetch all kind of contract.</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+</code></pre></div>
+
 <h2 id="contracts">Contracts<a class="headerlink" href="#contracts" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span> <span class="n">_contract</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">;</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_contract</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Contracts</span><span class="p">(</span><span class="n">Indexs</span><span class="o">=</span><span class="p">(</span><span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span><span class="p">),</span> <span class="n">Stocks</span><span class="o">=</span><span class="p">(</span><span class="n">OES</span><span class="p">,</span> <span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span><span class="p">),</span> <span class="n">Futures</span><span class="o">=</span><span class="p">(</span><span class="n">BRF</span><span class="p">,</span> <span class="n">CAF</span><span class="p">,</span> <span class="n">CBF</span><span class="p">,</span> <span class="n">CCF</span><span class="p">,</span> <span class="n">CDF</span><span class="p">,</span> <span class="n">CEF</span><span class="p">,</span> <span class="n">CFF</span><span class="p">,</span> <span class="n">CGF</span><span class="p">,</span> <span class="n">CHF</span><span class="p">,</span> <span class="n">CJF</span><span class="p">,</span> <span class="n">CK1</span><span class="p">,</span> <span class="n">CKF</span><span class="p">,</span> <span class="n">CLF</span><span class="p">,</span> <span class="n">CM1</span><span class="p">,</span> <span class="n">CMF</span><span class="p">,</span> <span class="n">CNF</span><span class="p">,</span> <span class="n">CQF</span><span class="p">,</span> <span class="n">CRF</span><span class="p">,</span> <span class="n">CSF</span><span class="p">,</span> <span class="n">CU1</span><span class="p">,</span> <span class="n">CUF</span><span class="p">,</span> <span class="n">CWF</span><span class="p">,</span> <span class="n">CXF</span><span class="p">,</span> <span class="n">CYF</span><span class="p">,</span> <span class="n">CZ1</span><span class="p">,</span> <span class="n">CZF</span><span class="p">,</span> <span class="n">DCF</span><span class="p">,</span> <span class="n">DD1</span><span class="p">,</span> <span class="n">DDF</span><span class="p">,</span> <span class="n">DEF</span><span class="p">,</span> <span class="n">DFF</span><span class="p">,</span> <span class="n">DGF</span><span class="p">,</span> <span class="n">DHF</span><span class="p">,</span> <span class="n">DIF</span><span class="p">,</span> <span class="n">DJF</span><span class="p">,</span> <span class="n">DKF</span><span class="p">,</span> <span class="n">DLF</span><span class="p">,</span> <span class="n">DNF</span><span class="p">,</span> <span class="n">DOF</span><span class="p">,</span> <span class="n">DPF</span><span class="p">,</span> <span class="n">DQF</span><span class="p">,</span> <span class="n">DSF</span><span class="p">,</span> <span class="n">DUF</span><span class="p">,</span> <span class="n">DVF</span><span class="p">,</span> <span class="n">DWF</span><span class="p">,</span> <span class="n">DXF</span><span class="p">,</span> <span class="n">DYF</span><span class="p">,</span> <span class="n">DZF</span><span class="p">,</span> <span class="n">EEF</span><span class="p">,</span> <span class="n">EGF</span><span class="p">,</span> <span class="n">EHF</span><span class="p">,</span> <span class="n">EMF</span><span class="p">,</span> <span class="n">EPF</span><span class="p">,</span> <span class="n">ERF</span><span class="p">,</span> <span class="n">EXF</span><span class="p">,</span> <span class="n">EY1</span><span class="p">,</span> <span class="n">EYF</span><span class="p">,</span> <span class="n">FEF</span><span class="p">,</span> <span class="n">FFF</span><span class="p">,</span> <span class="n">FGF</span><span class="p">,</span> <span class="n">FKF</span><span class="p">,</span> <span class="n">FQF</span><span class="p">,</span> <span class="n">FRF</span><span class="p">,</span> <span class="n">FTF</span><span class="p">,</span> <span class="n">FVF</span><span class="p">,</span> <span class="n">FWF</span><span class="p">,</span> <span class="n">FXF</span><span class="p">,</span> <span class="n">FYF</span><span class="p">,</span> <span class="n">FZF</span><span class="p">,</span> <span class="n">G2F</span><span class="p">,</span> <span class="n">GAF</span><span class="p">,</span> <span class="n">GCF</span><span class="p">,</span> <span class="n">GDF</span><span class="p">,</span> <span class="n">GHF</span><span class="p">,</span> <span class="n">GIF</span><span class="p">,</span> <span class="n">GJF</span><span class="p">,</span> <span class="n">GLF</span><span class="p">,</span> <span class="n">GMF</span><span class="p">,</span> <span class="n">GNF</span><span class="p">,</span> <span class="n">GOF</span><span class="p">,</span> <span class="n">GRF</span><span class="p">,</span> <span class="n">GTF</span><span class="p">,</span> <span class="n">GUF</span><span class="p">,</span> <span class="n">GWF</span><span class="p">,</span> <span class="n">GXF</span><span class="p">,</span> <span class="n">GZF</span><span class="p">,</span> <span class="n">HAF</span><span class="p">,</span> <span class="n">HBF</span><span class="p">,</span> <span class="n">HCF</span><span class="p">,</span> <span class="n">HHF</span><span class="p">,</span> <span class="n">HIF</span><span class="p">,</span> <span class="n">HLF</span><span class="p">,</span> <span class="n">HOF</span><span class="p">,</span> <span class="n">HS1</span><span class="p">,</span> <span class="n">HSF</span><span class="p">,</span> <span class="n">HY1</span><span class="p">,</span> <span class="n">HYF</span><span class="p">,</span> <span class="n">IA1</span><span class="p">,</span> <span class="n">IAF</span><span class="p">,</span> <span class="n">IHF</span><span class="p">,</span> <span class="n">IIF</span><span class="p">,</span> <span class="n">IJF</span><span class="p">,</span> <span class="n">IMF</span><span class="p">,</span> <span class="n">IOF</span><span class="p">,</span> <span class="n">IPF</span><span class="p">,</span> <span class="n">IQF</span><span class="p">,</span> <span class="n">IRF</span><span class="p">,</span> <span class="n">ITF</span><span class="p">,</span> <span class="n">IXF</span><span class="p">,</span> <span class="n">IYF</span><span class="p">,</span> <span class="n">IZF</span><span class="p">,</span> <span class="n">JBF</span><span class="p">,</span> <span class="n">JFF</span><span class="p">,</span> <span class="n">JNF</span><span class="p">,</span> <span class="n">JPF</span><span class="p">,</span> <span class="n">JSF</span><span class="p">,</span> <span class="n">JWF</span><span class="p">,</span> <span class="n">JZF</span><span class="p">,</span> <span class="n">KAF</span><span class="p">,</span> <span class="n">KB1</span><span class="p">,</span> <span class="n">KBF</span><span class="p">,</span> <span class="n">KCF</span><span class="p">,</span> <span class="n">KDF</span><span class="p">,</span> <span class="n">KFF</span><span class="p">,</span> <span class="n">KGF</span><span class="p">,</span> <span class="n">KIF</span><span class="p">,</span> <span class="n">KKF</span><span class="p">,</span> <span class="n">KLF</span><span class="p">,</span> <span class="n">KOF</span><span class="p">,</span> <span class="n">KPF</span><span class="p">,</span> <span class="n">KSF</span><span class="p">,</span> <span class="n">KWF</span><span class="p">,</span> <span class="n">LBF</span><span class="p">,</span> <span class="n">LCF</span><span class="p">,</span> <span class="n">LE1</span><span class="p">,</span> <span class="n">LEF</span><span class="p">,</span> <span class="n">LIF</span><span class="p">,</span> <span class="n">LMF</span><span class="p">,</span> <span class="n">LOF</span><span class="p">,</span> <span class="n">LQF</span><span class="p">,</span> <span class="n">LRF</span><span class="p">,</span> <span class="n">LTF</span><span class="p">,</span> <span class="n">LUF</span><span class="p">,</span> <span class="n">LVF</span><span class="p">,</span> <span class="n">LWF</span><span class="p">,</span> <span class="n">LXF</span><span class="p">,</span> <span class="n">LYF</span><span class="p">,</span> <span class="n">MAF</span><span class="p">,</span> <span class="n">MBF</span><span class="p">,</span> <span class="n">MCF</span><span class="p">,</span> <span class="n">MJF</span><span class="p">,</span> <span class="n">MKF</span><span class="p">,</span> <span class="n">MPF</span><span class="p">,</span> <span class="n">MQF</span><span class="p">,</span> <span class="n">MVF</span><span class="p">,</span> <span class="n">MX1</span><span class="p">,</span> <span class="n">MXF</span><span class="p">,</span> <span class="n">MYF</span><span class="p">,</span> <span class="n">NAF</span><span class="p">,</span> <span class="n">NBF</span><span class="p">,</span> <span class="n">NCF</span><span class="p">,</span> <span class="n">NDF</span><span class="p">,</span> <span class="n">NEF</span><span class="p">,</span> <span class="n">NGF</span><span class="p">,</span> <span class="n">NHF</span><span class="p">,</span> <span class="n">NIF</span><span class="p">,</span> <span class="n">NJF</span><span class="p">,</span> <span class="n">NLF</span><span class="p">,</span> <span class="n">NMF</span><span class="p">,</span> <span class="n">NNF</span><span class="p">,</span> <span class="n">NOF</span><span class="p">,</span> <span class="n">NQF</span><span class="p">,</span> <span class="n">NSF</span><span class="p">,</span> <span class="n">NUF</span><span class="p">,</span> <span class="n">NVF</span><span class="p">,</span> <span class="n">NWF</span><span class="p">,</span> <span class="n">NXF</span><span class="p">,</span> <span class="n">NYF</span><span class="p">,</span> <span class="n">NZF</span><span class="p">,</span> <span class="n">OAF</span><span class="p">,</span> <span class="n">OBF</span><span class="p">,</span> <span class="n">OCF</span><span class="p">,</span> <span class="n">ODF</span><span class="p">,</span> <span class="n">OEF</span><span class="p">,</span> <span class="n">OGF</span><span class="p">,</span> <span class="n">OHF</span><span class="p">,</span> <span class="n">OJF</span><span class="p">,</span> <span class="n">OKF</span><span class="p">,</span> <span class="n">OLF</span><span class="p">,</span> <span class="n">OMF</span><span class="p">,</span> <span class="n">OOF</span><span class="p">,</span> <span class="n">OPF</span><span class="p">,</span> <span class="n">OQF</span><span class="p">,</span> <span class="n">ORF</span><span class="p">,</span> <span class="n">OS1</span><span class="p">,</span> <span class="n">OSF</span><span class="p">,</span> <span class="n">OTF</span><span class="p">,</span> <span class="n">OUF</span><span class="p">,</span> <span class="n">OVF</span><span class="p">,</span> <span class="n">OWF</span><span class="p">,</span> <span class="n">OXF</span><span class="p">,</span> <span class="n">OYF</span><span class="p">,</span> <span class="n">OZF</span><span class="p">,</span> <span class="n">PAF</span><span class="p">,</span> <span class="n">PBF</span><span class="p">,</span> <span class="n">PCF</span><span class="p">,</span> <span class="n">PDF</span><span class="p">,</span> <span class="n">PEF</span><span class="p">,</span> <span class="n">PFF</span><span class="p">,</span> <span class="n">PGF</span><span class="p">,</span> <span class="n">PHF</span><span class="p">,</span> <span class="n">PIF</span><span class="p">,</span> <span class="n">PJF</span><span class="p">,</span> <span class="n">PKF</span><span class="p">,</span> <span class="n">PLF</span><span class="p">,</span> <span class="n">PMF</span><span class="p">,</span> <span class="n">PNF</span><span class="p">,</span> <span class="n">POF</span><span class="p">,</span> <span class="n">PPF</span><span class="p">,</span> <span class="n">PQF</span><span class="p">,</span> <span class="n">RHF</span><span class="p">,</span> <span class="n">RTF</span><span class="p">,</span> <span class="n">SPF</span><span class="p">,</span> <span class="n">T5F</span><span class="p">,</span> <span class="n">TGF</span><span class="p">,</span> <span class="n">TJF</span><span class="p">,</span> <span class="n">TXF</span><span class="p">,</span> <span class="n">UDF</span><span class="p">,</span> <span class="n">UNF</span><span class="p">,</span> <span class="n">XAF</span><span class="p">,</span> <span class="n">XBF</span><span class="p">,</span> <span class="n">XEF</span><span class="p">,</span> <span class="n">XIF</span><span class="p">,</span> <span class="n">XJF</span><span class="p">),</span> <span class="n">Options</span><span class="o">=</span><span class="p">(</span><span class="n">CAO</span><span class="p">,</span> <span class="n">CBO</span><span class="p">,</span> <span class="n">CCO</span><span class="p">,</span> <span class="n">CDO</span><span class="p">,</span> <span class="n">CEO</span><span class="p">,</span> <span class="n">CFO</span><span class="p">,</span> <span class="n">CGO</span><span class="p">,</span> <span class="n">CHO</span><span class="p">,</span> <span class="n">CJO</span><span class="p">,</span> <span class="n">CKO</span><span class="p">,</span> <span class="n">CLO</span><span class="p">,</span> <span class="n">CMO</span><span class="p">,</span> <span class="n">CNO</span><span class="p">,</span> <span class="n">CQO</span><span class="p">,</span> <span class="n">CRO</span><span class="p">,</span> <span class="n">CSO</span><span class="p">,</span> <span class="n">CXO</span><span class="p">,</span> <span class="n">CZO</span><span class="p">,</span> <span class="n">DCO</span><span class="p">,</span> <span class="n">DEO</span><span class="p">,</span> <span class="n">DFO</span><span class="p">,</span> <span class="n">DGO</span><span class="p">,</span> <span class="n">DHO</span><span class="p">,</span> <span class="n">DJO</span><span class="p">,</span> <span class="n">DKO</span><span class="p">,</span> <span class="n">DLO</span><span class="p">,</span> <span class="n">DNO</span><span class="p">,</span> <span class="n">DOO</span><span class="p">,</span> <span class="n">DPO</span><span class="p">,</span> <span class="n">DQO</span><span class="p">,</span> <span class="n">DSO</span><span class="p">,</span> <span class="n">DUO</span><span class="p">,</span> <span class="n">DVO</span><span class="p">,</span> <span class="n">DWO</span><span class="p">,</span> <span class="n">DXO</span><span class="p">,</span> <span class="n">GIO</span><span class="p">,</span> <span class="n">GXO</span><span class="p">,</span> <span class="n">HCO</span><span class="p">,</span> <span class="n">IJO</span><span class="p">,</span> <span class="n">LOO</span><span class="p">,</span> <span class="n">NYA</span><span class="p">,</span> <span class="n">NYO</span><span class="p">,</span> <span class="n">NZO</span><span class="p">,</span> <span class="n">OAO</span><span class="p">,</span> <span class="n">OBO</span><span class="p">,</span> <span class="n">OCO</span><span class="p">,</span> <span class="n">OJO</span><span class="p">,</span> <span class="n">OKO</span><span class="p">,</span> <span class="n">OOO</span><span class="p">,</span> <span class="n">OZO</span><span class="p">,</span> <span class="n">RHO</span><span class="p">,</span> <span class="n">RTO</span><span class="p">,</span> <span class="n">TEO</span><span class="p">,</span> <span class="n">TFO</span><span class="p">,</span> <span class="n">TGO</span><span class="p">,</span> <span class="n">TX1</span><span class="p">,</span> <span class="n">TXO</span><span class="p">))</span>
+<div class="highlight"><pre><span></span><code><span class="n">Contracts</span><span class="p">(</span><span class="n">Indexs</span><span class="p">=(</span><span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span><span class="p">),</span> <span class="n">Stocks</span><span class="p">=(</span><span class="n">OES</span><span class="p">,</span> <span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span><span class="p">),</span> <span class="n">Futures</span><span class="p">=(</span><span class="n">BRF</span><span class="p">,</span> <span class="n">CAF</span><span class="p">,</span> <span class="n">CBF</span><span class="p">,</span> <span class="n">CCF</span><span class="p">,</span> <span class="n">CDF</span><span class="p">,</span> <span class="n">CEF</span><span class="p">,</span> <span class="n">CFF</span><span class="p">,</span> <span class="n">CGF</span><span class="p">,</span> <span class="n">CHF</span><span class="p">,</span> <span class="n">CJF</span><span class="p">,</span> <span class="n">CK1</span><span class="p">,</span> <span class="n">CKF</span><span class="p">,</span> <span class="n">CLF</span><span class="p">,</span> <span class="n">CM1</span><span class="p">,</span> <span class="n">CMF</span><span class="p">,</span> <span class="n">CNF</span><span class="p">,</span> <span class="n">CQF</span><span class="p">,</span> <span class="n">CRF</span><span class="p">,</span> <span class="n">CSF</span><span class="p">,</span> <span class="n">CU1</span><span class="p">,</span> <span class="n">CUF</span><span class="p">,</span> <span class="n">CWF</span><span class="p">,</span> <span class="n">CXF</span><span class="p">,</span> <span class="n">CYF</span><span class="p">,</span> <span class="n">CZ1</span><span class="p">,</span> <span class="n">CZF</span><span class="p">,</span> <span class="n">DCF</span><span class="p">,</span> <span class="n">DD1</span><span class="p">,</span> <span class="n">DDF</span><span class="p">,</span> <span class="n">DEF</span><span class="p">,</span> <span class="n">DFF</span><span class="p">,</span> <span class="n">DGF</span><span class="p">,</span> <span class="n">DHF</span><span class="p">,</span> <span class="n">DIF</span><span class="p">,</span> <span class="n">DJF</span><span class="p">,</span> <span class="n">DKF</span><span class="p">,</span> <span class="n">DLF</span><span class="p">,</span> <span class="n">DNF</span><span class="p">,</span> <span class="n">DOF</span><span class="p">,</span> <span class="n">DPF</span><span class="p">,</span> <span class="n">DQF</span><span class="p">,</span> <span class="n">DSF</span><span class="p">,</span> <span class="n">DUF</span><span class="p">,</span> <span class="n">DVF</span><span class="p">,</span> <span class="n">DWF</span><span class="p">,</span> <span class="n">DXF</span><span class="p">,</span> <span class="n">DYF</span><span class="p">,</span> <span class="n">DZF</span><span class="p">,</span> <span class="n">EEF</span><span class="p">,</span> <span class="n">EGF</span><span class="p">,</span> <span class="n">EHF</span><span class="p">,</span> <span class="n">EMF</span><span class="p">,</span> <span class="n">EPF</span><span class="p">,</span> <span class="n">ERF</span><span class="p">,</span> <span class="n">EXF</span><span class="p">,</span> <span class="n">EY1</span><span class="p">,</span> <span class="n">EYF</span><span class="p">,</span> <span class="n">FEF</span><span class="p">,</span> <span class="n">FFF</span><span class="p">,</span> <span class="n">FGF</span><span class="p">,</span> <span class="n">FKF</span><span class="p">,</span> <span class="n">FQF</span><span class="p">,</span> <span class="n">FRF</span><span class="p">,</span> <span class="n">FTF</span><span class="p">,</span> <span class="n">FVF</span><span class="p">,</span> <span class="n">FWF</span><span class="p">,</span> <span class="n">FXF</span><span class="p">,</span> <span class="n">FYF</span><span class="p">,</span> <span class="n">FZF</span><span class="p">,</span> <span class="n">G2F</span><span class="p">,</span> <span class="n">GAF</span><span class="p">,</span> <span class="n">GCF</span><span class="p">,</span> <span class="n">GDF</span><span class="p">,</span> <span class="n">GHF</span><span class="p">,</span> <span class="n">GIF</span><span class="p">,</span> <span class="n">GJF</span><span class="p">,</span> <span class="n">GLF</span><span class="p">,</span> <span class="n">GMF</span><span class="p">,</span> <span class="n">GNF</span><span class="p">,</span> <span class="n">GOF</span><span class="p">,</span> <span class="n">GRF</span><span class="p">,</span> <span class="n">GTF</span><span class="p">,</span> <span class="n">GUF</span><span class="p">,</span> <span class="n">GWF</span><span class="p">,</span> <span class="n">GXF</span><span class="p">,</span> <span class="n">GZF</span><span class="p">,</span> <span class="n">HAF</span><span class="p">,</span> <span class="n">HBF</span><span class="p">,</span> <span class="n">HCF</span><span class="p">,</span> <span class="n">HHF</span><span class="p">,</span> <span class="n">HIF</span><span class="p">,</span> <span class="n">HLF</span><span class="p">,</span> <span class="n">HOF</span><span class="p">,</span> <span class="n">HS1</span><span class="p">,</span> <span class="n">HSF</span><span class="p">,</span> <span class="n">HY1</span><span class="p">,</span> <span class="n">HYF</span><span class="p">,</span> <span class="n">IA1</span><span class="p">,</span> <span class="n">IAF</span><span class="p">,</span> <span class="n">IHF</span><span class="p">,</span> <span class="n">IIF</span><span class="p">,</span> <span class="n">IJF</span><span class="p">,</span> <span class="n">IMF</span><span class="p">,</span> <span class="n">IOF</span><span class="p">,</span> <span class="n">IPF</span><span class="p">,</span> <span class="n">IQF</span><span class="p">,</span> <span class="n">IRF</span><span class="p">,</span> <span class="n">ITF</span><span class="p">,</span> <span class="n">IXF</span><span class="p">,</span> <span class="n">IYF</span><span class="p">,</span> <span class="n">IZF</span><span class="p">,</span> <span class="n">JBF</span><span class="p">,</span> <span class="n">JFF</span><span class="p">,</span> <span class="n">JNF</span><span class="p">,</span> <span class="n">JPF</span><span class="p">,</span> <span class="n">JSF</span><span class="p">,</span> <span class="n">JWF</span><span class="p">,</span> <span class="n">JZF</span><span class="p">,</span> <span class="n">KAF</span><span class="p">,</span> <span class="n">KB1</span><span class="p">,</span> <span class="n">KBF</span><span class="p">,</span> <span class="n">KCF</span><span class="p">,</span> <span class="n">KDF</span><span class="p">,</span> <span class="n">KFF</span><span class="p">,</span> <span class="n">KGF</span><span class="p">,</span> <span class="n">KIF</span><span class="p">,</span> <span class="n">KKF</span><span class="p">,</span> <span class="n">KLF</span><span class="p">,</span> <span class="n">KOF</span><span class="p">,</span> <span class="n">KPF</span><span class="p">,</span> <span class="n">KSF</span><span class="p">,</span> <span class="n">KWF</span><span class="p">,</span> <span class="n">LBF</span><span class="p">,</span> <span class="n">LCF</span><span class="p">,</span> <span class="n">LE1</span><span class="p">,</span> <span class="n">LEF</span><span class="p">,</span> <span class="n">LIF</span><span class="p">,</span> <span class="n">LMF</span><span class="p">,</span> <span class="n">LOF</span><span class="p">,</span> <span class="n">LQF</span><span class="p">,</span> <span class="n">LRF</span><span class="p">,</span> <span class="n">LTF</span><span class="p">,</span> <span class="n">LUF</span><span class="p">,</span> <span class="n">LVF</span><span class="p">,</span> <span class="n">LWF</span><span class="p">,</span> <span class="n">LXF</span><span class="p">,</span> <span class="n">LYF</span><span class="p">,</span> <span class="n">MAF</span><span class="p">,</span> <span class="n">MBF</span><span class="p">,</span> <span class="n">MCF</span><span class="p">,</span> <span class="n">MJF</span><span class="p">,</span> <span class="n">MKF</span><span class="p">,</span> <span class="n">MPF</span><span class="p">,</span> <span class="n">MQF</span><span class="p">,</span> <span class="n">MVF</span><span class="p">,</span> <span class="n">MX1</span><span class="p">,</span> <span class="n">MXF</span><span class="p">,</span> <span class="n">MYF</span><span class="p">,</span> <span class="n">NAF</span><span class="p">,</span> <span class="n">NBF</span><span class="p">,</span> <span class="n">NCF</span><span class="p">,</span> <span class="n">NDF</span><span class="p">,</span> <span class="n">NEF</span><span class="p">,</span> <span class="n">NGF</span><span class="p">,</span> <span class="n">NHF</span><span class="p">,</span> <span class="n">NIF</span><span class="p">,</span> <span class="n">NJF</span><span class="p">,</span> <span class="n">NLF</span><span class="p">,</span> <span class="n">NMF</span><span class="p">,</span> <span class="n">NNF</span><span class="p">,</span> <span class="n">NOF</span><span class="p">,</span> <span class="n">NQF</span><span class="p">,</span> <span class="n">NSF</span><span class="p">,</span> <span class="n">NUF</span><span class="p">,</span> <span class="n">NVF</span><span class="p">,</span> <span class="n">NWF</span><span class="p">,</span> <span class="n">NXF</span><span class="p">,</span> <span class="n">NYF</span><span class="p">,</span> <span class="n">NZF</span><span class="p">,</span> <span class="n">OAF</span><span class="p">,</span> <span class="n">OBF</span><span class="p">,</span> <span class="n">OCF</span><span class="p">,</span> <span class="n">ODF</span><span class="p">,</span> <span class="n">OEF</span><span class="p">,</span> <span class="n">OGF</span><span class="p">,</span> <span class="n">OHF</span><span class="p">,</span> <span class="n">OJF</span><span class="p">,</span> <span class="n">OKF</span><span class="p">,</span> <span class="n">OLF</span><span class="p">,</span> <span class="n">OMF</span><span class="p">,</span> <span class="n">OOF</span><span class="p">,</span> <span class="n">OPF</span><span class="p">,</span> <span class="n">OQF</span><span class="p">,</span> <span class="n">ORF</span><span class="p">,</span> <span class="n">OS1</span><span class="p">,</span> <span class="n">OSF</span><span class="p">,</span> <span class="n">OTF</span><span class="p">,</span> <span class="n">OUF</span><span class="p">,</span> <span class="n">OVF</span><span class="p">,</span> <span class="n">OWF</span><span class="p">,</span> <span class="n">OXF</span><span class="p">,</span> <span class="n">OYF</span><span class="p">,</span> <span class="n">OZF</span><span class="p">,</span> <span class="n">PAF</span><span class="p">,</span> <span class="n">PBF</span><span class="p">,</span> <span class="n">PCF</span><span class="p">,</span> <span class="n">PDF</span><span class="p">,</span> <span class="n">PEF</span><span class="p">,</span> <span class="n">PFF</span><span class="p">,</span> <span class="n">PGF</span><span class="p">,</span> <span class="n">PHF</span><span class="p">,</span> <span class="n">PIF</span><span class="p">,</span> <span class="n">PJF</span><span class="p">,</span> <span class="n">PKF</span><span class="p">,</span> <span class="n">PLF</span><span class="p">,</span> <span class="n">PMF</span><span class="p">,</span> <span class="n">PNF</span><span class="p">,</span> <span class="n">POF</span><span class="p">,</span> <span class="n">PPF</span><span class="p">,</span> <span class="n">PQF</span><span class="p">,</span> <span class="n">RHF</span><span class="p">,</span> <span class="n">RTF</span><span class="p">,</span> <span class="n">SPF</span><span class="p">,</span> <span class="n">T5F</span><span class="p">,</span> <span class="n">TGF</span><span class="p">,</span> <span class="n">TJF</span><span class="p">,</span> <span class="n">TXF</span><span class="p">,</span> <span class="n">UDF</span><span class="p">,</span> <span class="n">UNF</span><span class="p">,</span> <span class="n">XAF</span><span class="p">,</span> <span class="n">XBF</span><span class="p">,</span> <span class="n">XEF</span><span class="p">,</span> <span class="n">XIF</span><span class="p">,</span> <span class="n">XJF</span><span class="p">),</span> <span class="n">Options</span><span class="p">=(</span><span class="n">CAO</span><span class="p">,</span> <span class="n">CBO</span><span class="p">,</span> <span class="n">CCO</span><span class="p">,</span> <span class="n">CDO</span><span class="p">,</span> <span class="n">CEO</span><span class="p">,</span> <span class="n">CFO</span><span class="p">,</span> <span class="n">CGO</span><span class="p">,</span> <span class="n">CHO</span><span class="p">,</span> <span class="n">CJO</span><span class="p">,</span> <span class="n">CKO</span><span class="p">,</span> <span class="n">CLO</span><span class="p">,</span> <span class="n">CMO</span><span class="p">,</span> <span class="n">CNO</span><span class="p">,</span> <span class="n">CQO</span><span class="p">,</span> <span class="n">CRO</span><span class="p">,</span> <span class="n">CSO</span><span class="p">,</span> <span class="n">CXO</span><span class="p">,</span> <span class="n">CZO</span><span class="p">,</span> <span class="n">DCO</span><span class="p">,</span> <span class="n">DEO</span><span class="p">,</span> <span class="n">DFO</span><span class="p">,</span> <span class="n">DGO</span><span class="p">,</span> <span class="n">DHO</span><span class="p">,</span> <span class="n">DJO</span><span class="p">,</span> <span class="n">DKO</span><span class="p">,</span> <span class="n">DLO</span><span class="p">,</span> <span class="n">DNO</span><span class="p">,</span> <span class="n">DOO</span><span class="p">,</span> <span class="n">DPO</span><span class="p">,</span> <span class="n">DQO</span><span class="p">,</span> <span class="n">DSO</span><span class="p">,</span> <span class="n">DUO</span><span class="p">,</span> <span class="n">DVO</span><span class="p">,</span> <span class="n">DWO</span><span class="p">,</span> <span class="n">DXO</span><span class="p">,</span> <span class="n">GIO</span><span class="p">,</span> <span class="n">GXO</span><span class="p">,</span> <span class="n">HCO</span><span class="p">,</span> <span class="n">IJO</span><span class="p">,</span> <span class="n">LOO</span><span class="p">,</span> <span class="n">NYA</span><span class="p">,</span> <span class="n">NYO</span><span class="p">,</span> <span class="n">NZO</span><span class="p">,</span> <span class="n">OAO</span><span class="p">,</span> <span class="n">OBO</span><span class="p">,</span> <span class="n">OCO</span><span class="p">,</span> <span class="n">OJO</span><span class="p">,</span> <span class="n">OKO</span><span class="p">,</span> <span class="n">OOO</span><span class="p">,</span> <span class="n">OZO</span><span class="p">,</span> <span class="n">RHO</span><span class="p">,</span> <span class="n">RTO</span><span class="p">,</span> <span class="n">TEO</span><span class="p">,</span> <span class="n">TFO</span><span class="p">,</span> <span class="n">TGO</span><span class="p">,</span> <span class="n">TX1</span><span class="p">,</span> <span class="n">TXO</span><span class="p">))</span>
 </code></pre></div>
 
 </div>
-<p>If your contracts have been downloaded, will see the output like above. If part of that kind contract download not yet, It will still be <code>None</code>.</p>
+<p>If your contracts have been downloaded, will see the output like above.</p>
 <h3 id="stock-contract">Stock Contract<a class="headerlink" href="#stock-contract" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">contract_2890</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2890&quot;</span><span class="p">]</span>
-<span class="n">contract_2890</span>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span> <span class="n">contract_2890</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2890&quot;</span><span class="p">];</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">contract_2890</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Stock</span><span class="p">(</span><span class="n">exchange</span><span class="o">=&lt;</span><span class="n">Exchange</span><span class="o">.</span><span class="n">TSE</span><span class="p">:</span> <span class="s1">&#39;TSE&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;2890&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;TSE2890&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;永豐金&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="n">limit_up</span><span class="o">=</span><span class="mf">11.3</span><span class="p">,</span> <span class="n">limit_down</span><span class="o">=</span><span class="mf">9.27</span><span class="p">,</span> <span class="n">update_date</span><span class="o">=</span><span class="s1">&#39;2020/03/18&#39;</span><span class="p">,</span> <span class="n">day_trade</span><span class="o">=&lt;</span><span class="n">DayTrade</span><span class="o">.</span><span class="n">Yes</span><span class="p">:</span> <span class="s1">&#39;Yes&#39;</span><span class="o">&gt;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">security_type</span><span class="p">=</span><span class="n">STK</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="m">2890</span><span class="p">,</span> 
+    <span class="n">symbol</span><span class="p">=</span><span class="n">TSE2890</span><span class="p">,</span> 
+    <span class="n">exchange</span><span class="p">=</span><span class="n">TSE</span><span class="p">,</span> 
+    <span class="n">limit_up</span><span class="p">=</span><span class="m">12.25</span><span class="p">,</span> 
+    <span class="n">limit_down</span><span class="p">=</span><span class="m">10.05</span><span class="p">,</span> 
+    <span class="n">reference</span><span class="p">=</span><span class="m">11.15</span><span class="p">,</span> 
+    <span class="n">margin_trading_balance</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">short_selling_balance</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">update_date</span><span class="p">=</span><span class="m">2020</span><span class="p">/</span><span class="m">12</span><span class="p">/</span><span class="m">28</span><span class="p">,</span> 
+    <span class="n">category</span><span class="p">=</span><span class="m">17</span><span class="p">,</span> 
+    <span class="n">day_trade</span><span class="p">=</span><span class="n">Yes</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">exchange</span> <span class="p">(</span><span class="n">Exchange</span><span class="p">):</span> <span class="n">Attributes</span> <span class="n">of</span> <span class="n">industry</span><span class="o">.</span>
-    <span class="p">{</span><span class="n">OES</span><span class="p">,</span> <span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span> <span class="o">...</span><span class="n">etc</span><span class="p">}</span>
-<span class="n">code</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Id</span><span class="o">.</span>
-<span class="n">symbol</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="o">.</span>
-<span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Name</span><span class="o">.</span>
-<span class="n">category</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Category</span><span class="o">.</span>
-<span class="n">limit_up</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">up</span><span class="o">.</span>
-<span class="n">limit_down</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">down</span><span class="o">.</span>
-<span class="n">reference</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Reference</span> <span class="n">price</span><span class="o">.</span>
-<span class="n">update_date</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Update</span> <span class="n">date</span><span class="o">.</span>
-<span class="n">margin_trading_balance</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Margin</span> <span class="n">trading</span> <span class="n">balance</span><span class="o">.</span>
-<span class="n">short_selling_balance</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">Short</span> <span class="n">selling</span> <span class="n">balance</span><span class="o">.</span>
-<span class="n">day_trade</span> <span class="p">(</span><span class="n">DayTrade</span><span class="p">):</span> <span class="n">Day</span> <span class="n">trade</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code><span class="n">exchange</span> <span class="p">(</span><span class="n">Exchange</span><span class="p">):</span> <span class="n">Attributes</span> <span class="n">of</span> <span class="n">industry</span><span class="p">.</span>
+    <span class="p">{</span><span class="n">OES</span><span class="p">,</span> <span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span> <span class="p">...</span><span class="n">etc</span><span class="p">}</span>
+<span class="n">code</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Id</span><span class="p">.</span>
+<span class="n">symbol</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="p">.</span>
+<span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Name</span><span class="p">.</span>
+<span class="n">category</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Category</span><span class="p">.</span>
+<span class="n">limit_up</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">up</span><span class="p">.</span>
+<span class="n">limit_down</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">down</span><span class="p">.</span>
+<span class="n">reference</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Reference</span> <span class="n">price</span><span class="p">.</span>
+<span class="n">update_date</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Update</span> <span class="n">date</span><span class="p">.</span>
+<span class="n">margin_trading_balance</span> <span class="p">(</span><span class="kt">int</span><span class="p">):</span> <span class="n">Margin</span> <span class="n">trading</span> <span class="n">balance</span><span class="p">.</span>
+<span class="n">short_selling_balance</span> <span class="p">(</span><span class="kt">int</span><span class="p">):</span> <span class="n">Short</span> <span class="n">selling</span> <span class="n">balance</span><span class="p">.</span>
+<span class="n">day_trade</span> <span class="p">(</span><span class="n">DayTrade</span><span class="p">):</span> <span class="n">Day</span> <span class="n">trade</span><span class="p">.</span>
     <span class="p">{</span><span class="n">Yes</span><span class="p">,</span> <span class="n">No</span><span class="p">,</span> <span class="n">OnlyBuy</span><span class="p">}</span>
 </code></pre></div>
 
@@ -481,141 +615,118 @@ If you set contract_cb (contract callback) as prine, it will print "SecurityType
 <h3 id="futures-contract">Futures Contract<a class="headerlink" href="#futures-contract" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="hll"><span class="n">contract_txf</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Futures</span><span class="p">[</span><span class="s1">&#39;TXFC0&#39;</span><span class="p">]</span>
-</span>
-<span class="hll"><span class="n">contract_txf</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Futures</span><span class="o">.</span><span class="n">TXF</span><span class="o">.</span><span class="n">TXF202003</span>
-</span><span class="n">contract_txf</span>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span> <span class="n">contract_txf</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Futures</span><span class="p">[</span><span class="s">&quot;TXF&quot;</span><span class="p">][</span><span class="s">&quot;TXF202101&quot;</span><span class="p">];</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">contract_txf</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Future</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s1">&#39;TXFC0&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;TXF202003&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;臺股期貨&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s1">&#39;TXF&#39;</span><span class="p">,</span> <span class="n">delivery_month</span><span class="o">=</span><span class="s1">&#39;202003&#39;</span><span class="p">,</span> <span class="n">underlying_kind</span><span class="o">=</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">limit_up</span><span class="o">=</span><span class="mf">10308.0</span><span class="p">,</span> <span class="n">limit_down</span><span class="o">=</span><span class="mf">8434.0</span><span class="p">,</span> <span class="n">update_date</span><span class="o">=</span><span class="s1">&#39;2020/03/18&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">security_type</span><span class="p">=</span><span class="n">FUT</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="n">TXFA1</span><span class="p">,</span> 
+    <span class="n">category</span><span class="p">=</span><span class="n">TXF</span><span class="p">,</span> 
+    <span class="n">symbol</span><span class="p">=</span><span class="n">TXF202101</span><span class="p">,</span> 
+    <span class="n">exchange</span><span class="p">=</span><span class="n">TAIFEX</span><span class="p">,</span> 
+    <span class="n">limit_up</span><span class="p">=</span><span class="m">15734</span><span class="p">,</span> 
+    <span class="n">limit_down</span><span class="p">=</span><span class="m">12874</span><span class="p">,</span> 
+    <span class="n">reference</span><span class="p">=</span><span class="m">14304</span><span class="p">,</span> 
+    <span class="n">update_date</span><span class="p">=</span><span class="m">2020</span><span class="p">/</span><span class="m">12</span><span class="p">/</span><span class="m">28</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Id</span><span class="o">.</span>
-<span class="n">symbol</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="o">.</span>
-<span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Name</span><span class="o">.</span>
-<span class="n">category</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Category</span><span class="o">.</span>
-<span class="n">limit_up</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">up</span><span class="o">.</span>
-<span class="n">limit_down</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">down</span><span class="o">.</span>
-<span class="n">reference</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Reference</span> <span class="n">price</span><span class="o">.</span>
-<span class="n">update_date</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Update</span> <span class="n">date</span><span class="o">.</span>
-<span class="n">delivery_month</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Delivery</span> <span class="n">Month</span><span class="o">.</span>
-<span class="n">underlying_kind</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Underlying</span> <span class="n">Kind</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Id</span><span class="p">.</span>
+<span class="n">symbol</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="p">.</span>
+<span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Name</span><span class="p">.</span>
+<span class="n">category</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Category</span><span class="p">.</span>
+<span class="n">limit_up</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">up</span><span class="p">.</span>
+<span class="n">limit_down</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">down</span><span class="p">.</span>
+<span class="n">reference</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Reference</span> <span class="n">price</span><span class="p">.</span>
+<span class="n">update_date</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Update</span> <span class="n">date</span><span class="p">.</span>
+<span class="n">delivery_month</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Delivery</span> <span class="n">Month</span><span class="p">.</span>
+<span class="n">underlying_kind</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Underlying</span> <span class="n">Kind</span><span class="p">.</span>
 </code></pre></div>
 
 </div>
-<p>In above two highlight lines, you can get same contract with different way.</p>
 <h3 id="options-contract">Options Contract<a class="headerlink" href="#options-contract" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Options</span>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span> <span class="n">contract_opt</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Options</span><span class="p">[</span><span class="s">&quot;TXO&quot;</span><span class="p">][</span><span class="s">&quot;TXO20210309200P&quot;</span><span class="p">];</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">contract_opt</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">CAO</span><span class="p">,</span> <span class="n">CBO</span><span class="p">,</span> <span class="n">CCO</span><span class="p">,</span> <span class="n">CDO</span><span class="p">,</span> <span class="n">CEO</span><span class="p">,</span> <span class="n">CFO</span><span class="p">,</span> <span class="n">CGO</span><span class="p">,</span> <span class="n">CHO</span><span class="p">,</span> <span class="n">CJO</span><span class="p">,</span> <span class="n">CKO</span><span class="p">,</span> <span class="n">CLO</span><span class="p">,</span> <span class="n">CMO</span><span class="p">,</span> <span class="n">CNO</span><span class="p">,</span> <span class="n">CQO</span><span class="p">,</span> <span class="n">CRO</span><span class="p">,</span> <span class="n">CSO</span><span class="p">,</span> <span class="n">CXO</span><span class="p">,</span> <span class="n">CZO</span><span class="p">,</span> <span class="n">DCO</span><span class="p">,</span> <span class="n">DEO</span><span class="p">,</span> <span class="n">DFO</span><span class="p">,</span> <span class="n">DGO</span><span class="p">,</span> <span class="n">DHO</span><span class="p">,</span> <span class="n">DJO</span><span class="p">,</span> <span class="n">DKO</span><span class="p">,</span> <span class="n">DLO</span><span class="p">,</span> <span class="n">DNO</span><span class="p">,</span> <span class="n">DOO</span><span class="p">,</span> <span class="n">DPO</span><span class="p">,</span> <span class="n">DQO</span><span class="p">,</span> <span class="n">DSO</span><span class="p">,</span> <span class="n">DUO</span><span class="p">,</span> <span class="n">DVO</span><span class="p">,</span> <span class="n">DWO</span><span class="p">,</span> <span class="n">DXO</span><span class="p">,</span> <span class="n">GIO</span><span class="p">,</span> <span class="n">GXO</span><span class="p">,</span> <span class="n">HCO</span><span class="p">,</span> <span class="n">IJO</span><span class="p">,</span> <span class="n">LOO</span><span class="p">,</span> <span class="n">NYA</span><span class="p">,</span> <span class="n">NYO</span><span class="p">,</span> <span class="n">NZO</span><span class="p">,</span> <span class="n">OAO</span><span class="p">,</span> <span class="n">OBO</span><span class="p">,</span> <span class="n">OCO</span><span class="p">,</span> <span class="n">OJO</span><span class="p">,</span> <span class="n">OKO</span><span class="p">,</span> <span class="n">OOO</span><span class="p">,</span> <span class="n">OZO</span><span class="p">,</span> <span class="n">RHO</span><span class="p">,</span> <span class="n">RTO</span><span class="p">,</span> <span class="n">TEO</span><span class="p">,</span> <span class="n">TFO</span><span class="p">,</span> <span class="n">TGO</span><span class="p">,</span> <span class="n">TX1</span><span class="p">,</span> <span class="n">TXO</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">security_type</span><span class="p">=</span><span class="n">OPT</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="n">TXO09200O1</span><span class="p">,</span> 
+    <span class="n">category</span><span class="p">=</span><span class="n">TXO</span><span class="p">,</span> 
+    <span class="n">symbol</span><span class="p">=</span><span class="n">TXO20210309200P</span><span class="p">,</span> 
+    <span class="n">exchange</span><span class="p">=</span><span class="n">TAIFEX</span><span class="p">,</span> 
+    <span class="n">delivery_month</span><span class="p">=</span><span class="m">202103</span><span class="p">,</span> 
+    <span class="n">strike_price</span><span class="p">=</span><span class="m">9200</span><span class="p">,</span> 
+    <span class="n">option_right</span><span class="p">=</span><span class="n">P</span><span class="p">,</span> 
+    <span class="n">underlying_kind</span><span class="p">=</span><span class="n">I</span><span class="p">,</span> 
+    <span class="n">limit_up</span><span class="p">=</span><span class="m">1440</span><span class="p">,</span> 
+    <span class="n">limit_down</span><span class="p">=</span><span class="m">0.1</span><span class="p">,</span> 
+    <span class="n">reference</span><span class="p">=</span><span class="m">15</span><span class="p">,</span> 
+    <span class="n">update_date</span><span class="p">=</span><span class="m">2020</span><span class="p">/</span><span class="m">12</span><span class="p">/</span><span class="m">28</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
-<p>Options object show all avaiable options product.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Options</span><span class="p">[</span><span class="s2">&quot;TXO10000C0&quot;</span><span class="p">]</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Option</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s1">&#39;TXO10000C0&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;TXO202003010000C&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;臺指選擇權&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s1">&#39;TXO&#39;</span><span class="p">,</span> <span class="n">delivery_month</span><span class="o">=</span><span class="s1">&#39;202003&#39;</span><span class="p">,</span> <span class="n">strike_price</span><span class="o">=</span><span class="mf">10000.0</span><span class="p">,</span> <span class="n">option_right</span><span class="o">=&lt;</span><span class="n">OptionRight</span><span class="o">.</span><span class="n">Call</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">underlying_kind</span><span class="o">=</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">limit_up</span><span class="o">=</span><span class="mf">945.0</span><span class="p">,</span> <span class="n">limit_down</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">update_date</span><span class="o">=</span><span class="s1">&#39;2020/03/18&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<p>Get options by code.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">TX4</span><span class="o">.</span><span class="n">TX420200308800P</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Option</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s1">&#39;TX408800O0&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;TX420200308800P&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;臺指選擇權&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s1">&#39;TX4&#39;</span><span class="p">,</span> <span class="n">delivery_month</span><span class="o">=</span><span class="s1">&#39;202003&#39;</span><span class="p">,</span> <span class="n">strike_price</span><span class="o">=</span><span class="mf">8800.0</span><span class="p">,</span> <span class="n">option_right</span><span class="o">=&lt;</span><span class="n">OptionRight</span><span class="o">.</span><span class="n">Put</span><span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">underlying_kind</span><span class="o">=</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">limit_up</span><span class="o">=</span><span class="mf">1090.0</span><span class="p">,</span> <span class="n">limit_down</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">update_date</span><span class="o">=</span><span class="s1">&#39;2020/03/18&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<p>Get options with readable way.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Options</span><span class="o">.</span><span class="n">TXO</span><span class="o">.</span><span class="n">TXO202003010000P</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Option</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="s1">&#39;TXO10000O0&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;TXO202003010000P&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;臺指選擇權&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="s1">&#39;TXO&#39;</span><span class="p">,</span> <span class="n">delivery_month</span><span class="o">=</span><span class="s1">&#39;202003&#39;</span><span class="p">,</span> <span class="n">strike_price</span><span class="o">=</span><span class="mf">10000.0</span><span class="p">,</span> <span class="n">option_right</span><span class="o">=&lt;</span><span class="n">OptionRight</span><span class="o">.</span><span class="n">Put</span><span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">underlying_kind</span><span class="o">=</span><span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="n">limit_up</span><span class="o">=</span><span class="mf">1570.0</span><span class="p">,</span> <span class="n">limit_down</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">update_date</span><span class="o">=</span><span class="s1">&#39;2020/03/18&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<p>Get put options with readable way.</p>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Id</span><span class="o">.</span>
-<span class="n">symbol</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="o">.</span>
-<span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Name</span><span class="o">.</span>
-<span class="n">category</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Category</span><span class="o">.</span>
-<span class="n">limit_up</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">up</span><span class="o">.</span>
-<span class="n">limit_down</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">down</span><span class="o">.</span>
-<span class="n">reference</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">Reference</span> <span class="n">price</span><span class="o">.</span>
-<span class="n">update_date</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Update</span> <span class="n">date</span><span class="o">.</span>
-<span class="n">delivery_month</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Delivery</span> <span class="n">Month</span><span class="o">.</span>
-<span class="n">strike_price</span> <span class="p">(</span><span class="nb">int</span> <span class="ow">or</span> <span class="nb">float</span><span class="p">):</span> <span class="n">Strike</span> <span class="n">Price</span><span class="o">.</span>
-<span class="n">option_right</span> <span class="p">(</span><span class="n">OptionRight</span><span class="p">):</span> <span class="n">Option</span> <span class="n">Right</span><span class="o">.</span>
-<span class="n">underlying_kind</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Underlying</span> <span class="n">Kind</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Id</span><span class="p">.</span>
+<span class="n">symbol</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="p">.</span>
+<span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Name</span><span class="p">.</span>
+<span class="n">category</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Category</span><span class="p">.</span>
+<span class="n">limit_up</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">up</span><span class="p">.</span>
+<span class="n">limit_down</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Limit</span> <span class="n">down</span><span class="p">.</span>
+<span class="n">reference</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">Reference</span> <span class="n">price</span><span class="p">.</span>
+<span class="n">update_date</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Update</span> <span class="n">date</span><span class="p">.</span>
+<span class="n">delivery_month</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Delivery</span> <span class="n">Month</span><span class="p">.</span>
+<span class="n">strike_price</span> <span class="p">(</span><span class="kt">int</span> <span class="n">or</span> <span class="kt">float</span><span class="p">):</span> <span class="n">Strike</span> <span class="n">Price</span><span class="p">.</span>
+<span class="n">option_right</span> <span class="p">(</span><span class="n">OptionRight</span><span class="p">):</span> <span class="n">Option</span> <span class="n">Right</span><span class="p">.</span>
+<span class="n">underlying_kind</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Underlying</span> <span class="n">Kind</span><span class="p">.</span>
 </code></pre></div>
 
 </div>
 <h3 id="index-contract">Index Contract<a class="headerlink" href="#index-contract" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Indexs</span><span class="o">.</span><span class="n">TSE</span>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span> <span class="n">contract_idx</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Indexs</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;001&quot;</span><span class="p">];</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">contract_idx</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">TSE</span><span class="p">(</span><span class="n">TSE001</span><span class="p">,</span> <span class="n">TSE015</span><span class="p">,</span> <span class="n">TSE016</span><span class="p">,</span> <span class="n">TSE017</span><span class="p">,</span> <span class="n">TSE018</span><span class="p">,</span> <span class="n">TSE019</span><span class="p">,</span> <span class="n">TSE020</span><span class="p">,</span> <span class="n">TSE022</span><span class="p">,</span> <span class="n">TSE023</span><span class="p">,</span> <span class="n">TSE024</span><span class="p">,</span> <span class="n">TSE025</span><span class="p">,</span> <span class="n">TSE026</span><span class="p">,</span> <span class="n">TSE028</span><span class="p">,</span> <span class="n">TSE029</span><span class="p">,</span> <span class="n">TSE030</span><span class="p">,</span> <span class="n">TSE031</span><span class="p">,</span> <span class="n">TSE032</span><span class="p">,</span> <span class="n">TSE033</span><span class="p">,</span> <span class="n">TSE035</span><span class="p">,</span> <span class="n">TSE036</span><span class="p">,</span> <span class="n">TSE037</span><span class="p">,</span> <span class="n">TSE038</span><span class="p">,</span> <span class="n">TSE039</span><span class="p">,</span> <span class="n">TSE040</span><span class="p">,</span> <span class="n">TSE041</span><span class="p">,</span> <span class="n">TSE042</span><span class="p">,</span> <span class="n">TSE043</span><span class="p">,</span> <span class="n">TSE004</span><span class="p">,</span> <span class="n">TSE005</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Indexs</span><span class="o">.</span><span class="n">TSE</span><span class="o">.</span><span class="n">TSE001</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Index</span><span class="p">(</span><span class="n">exchange</span><span class="o">=&lt;</span><span class="n">Exchange</span><span class="o">.</span><span class="n">TSE</span><span class="p">:</span> <span class="s1">&#39;TSE&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;TSE001&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;加權&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">security_type</span><span class="p">=</span><span class="n">IND</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="m">001</span><span class="p">,</span> 
+    <span class="n">exchange</span><span class="p">=</span><span class="n">TSE</span><span class="p">,</span> 
+    <span class="n">symbol</span><span class="p">=</span><span class="n">TSE001</span><span class="p">,</span> 
+    <span class="n">name</span><span class="p">=</span><span class="err">加權</span><span class="p">,</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">exchange</span> <span class="p">(</span><span class="n">Exchange</span><span class="p">):</span> <span class="n">Attributes</span> <span class="n">of</span> <span class="n">industry</span><span class="o">.</span>
-    <span class="p">{</span><span class="n">OES</span><span class="p">,</span> <span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span> <span class="o">...</span><span class="n">etc</span><span class="p">}</span>
-<span class="n">code</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Id</span><span class="o">.</span>
-<span class="n">symbol</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="o">.</span>
-<span class="n">name</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">Name</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code><span class="n">exchange</span> <span class="p">(</span><span class="n">Exchange</span><span class="p">):</span> <span class="n">Attributes</span> <span class="n">of</span> <span class="n">industry</span><span class="p">.</span>
+    <span class="p">{</span><span class="n">OES</span><span class="p">,</span> <span class="n">OTC</span><span class="p">,</span> <span class="n">TSE</span> <span class="p">...</span><span class="n">etc</span><span class="p">}</span>
+<span class="n">code</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Id</span><span class="p">.</span>
+<span class="n">symbol</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Symbol</span><span class="p">.</span>
+<span class="n">name</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">Name</span><span class="p">.</span>
 </code></pre></div>
 
 </div>
-<p>This contract is not avaiable to place order, but allow to subscribe the quote. It will be disuccess at next topic.</p>
+<p>This contract is not avaiable to place order, but allow to subscribe the quote.</p>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
 <p>Contract object will be used by a lot of place like place order and subscribe quote etc... So Keep in mind how to get the contract you want to use.</p>
                 
@@ -632,6 +743,41 @@ If you set contract_cb (contract callback) as prine, it will print "SecurityType
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../login/" title="Login" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Login
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../order/Stock/" title="Stock" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Stock
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
