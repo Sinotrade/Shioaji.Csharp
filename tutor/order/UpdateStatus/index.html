@@ -21,7 +21,7 @@
     
     
       
-        <title>UpdateStatus - Shioaji C#</title>
+        <title>Update Status - Shioaji C#</title>
       
     
     
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              UpdateStatus
+              Update Status
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -264,10 +266,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
     <label class="md-nav__link" for="nav-3-3">
       Order
@@ -306,6 +310,70 @@
     <a href="../FutureOption/" title="Future and Option" class="md-nav__link">
       Future and Option
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Update Status
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Update Status" class="md-nav__link md-nav__link--active">
+      Update Status
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-status" class="md-nav__link">
+    Update Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-trade-list" class="md-nav__link">
+    Get trade list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -475,41 +543,76 @@
                   
                 
                 
-                  <h1>UpdateStatus</h1>
+                  <h1>Update Status</h1>
                 
                 <h3 id="first-you-need-login"><a href="../../login/">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
 <h3 id="update-status">Update Status<a class="headerlink" href="#update-status" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">shioaji</span> <span class="k">as</span> <span class="nn">sj</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">sj</span><span class="o">.</span><span class="n">Shioaji</span><span class="p">()</span>
-<span class="n">accounts</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;YOUR_PASSWORD&quot;</span><span class="p">,</span> <span class="n">contracts_timeout</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">activate_ca</span><span class="p">(</span>
-    <span class="n">ca_path</span><span class="o">=</span><span class="s2">&quot;/c/your/ca/path/Sinopac.pfx&quot;</span><span class="p">,</span>
-    <span class="n">ca_passwd</span><span class="o">=</span><span class="s2">&quot;YOUR_CA_PASSWORD&quot;</span><span class="p">,</span>
-    <span class="n">person_id</span><span class="o">=</span><span class="s2">&quot;Person of this Ca&quot;</span><span class="p">,</span>
-<span class="p">)</span>
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+<span class="n">_api</span><span class="p">.</span><span class="n">ca_activate</span><span class="p">(</span>
+    <span class="s">&quot;C:\\ekey\\551\\person_id\\S\\Sinopac.pfx&quot;</span><span class="p">,</span>
+    <span class="s">&quot;YOUR_CA_PASSWORD&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Person of this Ca&quot;</span>
+<span class="p">);</span>
 
-<span class="hll"><span class="n">api</span><span class="o">.</span><span class="n">update_status</span><span class="p">()</span>
-</span><span class="hll"><span class="n">api</span><span class="o">.</span><span class="n">list_trades</span><span class="p">()</span>
+<span class="hll"><span class="n">_api</span><span class="p">.</span><span class="n">UpdateStatus</span><span class="p">();</span>
+</span><span class="hll"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">ListTrades</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
 </span></code></pre></div>
 
 </div>
 <h3 id="get-trade-list">Get trade list<a class="headerlink" href="#get-trade-list" title="Permanent link">&para;</a></h3>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span>
-    <span class="n">Trade</span><span class="p">(</span>
-        <span class="n">contract</span><span class="o">=</span><span class="n">Contract</span><span class="p">(</span><span class="n">security_type</span><span class="o">=&lt;</span><span class="n">SecurityType</span><span class="o">.</span><span class="n">Future</span><span class="p">:</span> <span class="s1">&#39;FUT&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">exchange</span><span class="o">=&lt;</span><span class="n">Exchange</span><span class="o">.</span><span class="n">TAIFEX</span><span class="p">:</span> <span class="s1">&#39;TAIFEX&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;TXFA1&#39;</span><span class="p">),</span> 
-        <span class="n">order</span><span class="o">=</span><span class="n">Order</span><span class="p">(</span><span class="n">action</span><span class="o">=&lt;</span><span class="n">Action</span><span class="o">.</span><span class="n">Buy</span><span class="p">:</span> <span class="s1">&#39;Buy&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">13770.0</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;63f8f2c9&#39;</span><span class="p">,</span> <span class="n">seqno</span><span class="o">=</span><span class="s1">&#39;896206&#39;</span><span class="p">,</span> <span class="n">ordno</span><span class="o">=</span><span class="s1">&#39;ky007&#39;</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">Account</span><span class="p">(</span><span class="n">account_type</span><span class="o">=&lt;</span><span class="n">AccountType</span><span class="o">.</span><span class="n">Future</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">person_id</span><span class="o">=</span><span class="s1">&#39;PAPIUSER06&#39;</span><span class="p">,</span> <span class="n">broker_id</span><span class="o">=</span><span class="s1">&#39;F002000&#39;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="s1">&#39;9102620&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">price_type</span><span class="o">=&lt;</span><span class="n">StockPriceType</span><span class="o">.</span><span class="n">LMT</span><span class="p">:</span> <span class="s1">&#39;LMT&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">order_type</span><span class="o">=&lt;</span><span class="n">FuturesOrderType</span><span class="o">.</span><span class="n">ROD</span><span class="p">:</span> <span class="s1">&#39;ROD&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">octype</span><span class="o">=&lt;</span><span class="n">FuturesOCType</span><span class="o">.</span><span class="n">New</span><span class="p">:</span> <span class="s1">&#39;New&#39;</span><span class="o">&gt;</span><span class="p">),</span> 
-        <span class="n">status</span><span class="o">=</span><span class="n">OrderStatus</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;63f8f2c9&#39;</span><span class="p">,</span> <span class="n">status</span><span class="o">=&lt;</span><span class="n">Status</span><span class="o">.</span><span class="n">Cancelled</span><span class="p">:</span> <span class="s1">&#39;Cancelled&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="s1">&#39;0000&#39;</span><span class="p">,</span> <span class="n">order_datetime</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">48</span><span class="p">),</span> <span class="n">modified_price</span><span class="o">=</span><span class="mf">13770.0</span><span class="p">,</span> <span class="n">cancel_quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">deals</span><span class="o">=</span><span class="p">[])</span>
-    <span class="p">),</span> 
-    <span class="n">Trade</span><span class="p">(</span>
-        <span class="n">contract</span><span class="o">=</span><span class="n">Contract</span><span class="p">(</span><span class="n">security_type</span><span class="o">=&lt;</span><span class="n">SecurityType</span><span class="o">.</span><span class="n">Future</span><span class="p">:</span> <span class="s1">&#39;FUT&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">exchange</span><span class="o">=&lt;</span><span class="n">Exchange</span><span class="o">.</span><span class="n">TAIFEX</span><span class="p">:</span> <span class="s1">&#39;TAIFEX&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;TXFA1&#39;</span><span class="p">),</span> 
-        <span class="n">order</span><span class="o">=</span><span class="n">Order</span><span class="p">(</span><span class="n">action</span><span class="o">=&lt;</span><span class="n">Action</span><span class="o">.</span><span class="n">Buy</span><span class="p">:</span> <span class="s1">&#39;Buy&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">13770.0</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;7808d809&#39;</span><span class="p">,</span> <span class="n">seqno</span><span class="o">=</span><span class="s1">&#39;896208&#39;</span><span class="p">,</span> <span class="n">ordno</span><span class="o">=</span><span class="s1">&#39;ky008&#39;</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">Account</span><span class="p">(</span><span class="n">account_type</span><span class="o">=&lt;</span><span class="n">AccountType</span><span class="o">.</span><span class="n">Future</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">person_id</span><span class="o">=</span><span class="s1">&#39;PAPIUSER06&#39;</span><span class="p">,</span> <span class="n">broker_id</span><span class="o">=</span><span class="s1">&#39;F002000&#39;</span><span class="p">,</span> <span class="n">account_id</span><span class="o">=</span><span class="s1">&#39;9102620&#39;</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">price_type</span><span class="o">=&lt;</span><span class="n">StockPriceType</span><span class="o">.</span><span class="n">LMT</span><span class="p">:</span> <span class="s1">&#39;LMT&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">order_type</span><span class="o">=&lt;</span><span class="n">FuturesOrderType</span><span class="o">.</span><span class="n">ROD</span><span class="p">:</span> <span class="s1">&#39;ROD&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">octype</span><span class="o">=&lt;</span><span class="n">FuturesOCType</span><span class="o">.</span><span class="n">New</span><span class="p">:</span> <span class="s1">&#39;New&#39;</span><span class="o">&gt;</span><span class="p">),</span> 
-        <span class="n">status</span><span class="o">=</span><span class="n">OrderStatus</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;7808d809&#39;</span><span class="p">,</span> <span class="n">status</span><span class="o">=&lt;</span><span class="n">Status</span><span class="o">.</span><span class="n">Cancelled</span><span class="p">:</span> <span class="s1">&#39;Cancelled&#39;</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">status_code</span><span class="o">=</span><span class="s1">&#39;0000&#39;</span><span class="p">,</span> <span class="n">order_datetime</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span> <span class="n">modified_price</span><span class="o">=</span><span class="mf">13770.0</span><span class="p">,</span> <span class="n">cancel_quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">deals</span><span class="o">=</span><span class="p">[])</span>
-    <span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="na">[</span>
+<span class="na">    {</span>
+<span class="na">        contract={</span>
+<span class="na">            security_type=STK, </span>
+<span class="na">            code=1101, </span>
+<span class="na">            exchange=TSE, </span>
+<span class="na">            limit_up=0, </span>
+<span class="na">            limit_down=0, </span>
+<span class="na">            reference=0, </span>
+<span class="na">            margin_trading_balance=0, </span>
+<span class="na">            short_selling_balance=0, </span>
+<span class="na">            day_trade=No,</span>
+<span class="na">        }, </span>
+<span class="na">        order={</span>
+<span class="na">            action=Buy, </span>
+<span class="na">            price=37.65, </span>
+<span class="na">            quantity=1, </span>
+<span class="na">            price_type=LMT, </span>
+<span class="na">            order_type=ROD, </span>
+<span class="na">            order_lot=Common, </span>
+<span class="na">            order_cond=Cash, </span>
+<span class="na">            first_sell=No,</span>
+<span class="na">            id=fd55a308, </span>
+<span class="na">            seqno=025054, </span>
+<span class="na">            ordno=WA085, </span>
+<span class="na">            account={</span>
+<span class="na">                account_type=S, </span>
+<span class="na">                person_id=PAPIUSER07, </span>
+<span class="na">                broker_id=9A95, </span>
+<span class="na">                account_id=0512999, </span>
+<span class="na">                signed=True,</span>
+<span class="na">            },</span>
+<span class="na">        }, </span>
+<span class="na">        status={</span>
+<span class="na">            id=fd55a308, </span>
+<span class="na">            status=Submitted, </span>
+<span class="na">            status_code=00, </span>
+<span class="na">            order_ts=1609385617, </span>
+<span class="na">            modified_ts=1609385592, </span>
+<span class="na">            modified_price=0, </span>
+<span class="na">            deal_quantity=0, </span>
+<span class="na">            cancel_quantity=0, </span>
+<span class="na">            deals=System.Collections.Generic.List`1[Sinopac.Shioaji.Deal]</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
 
@@ -528,6 +631,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../FutureOption/" title="Future and Option" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Future and Option
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../accounting/position/" title="Position" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Position
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
