@@ -11,7 +11,7 @@
         <meta name="description" content="Shioaji is provided by SinoPac the most pythonic API for trading the Taiwan and global financial market. You can use your favorite Python packages such as NumPy, pandas, PyTorch or TensorFlow to build your trading model with integrated the Shioaji API on cross-platform.">
       
       
-        <link rel="canonical" href="https://sinotrade.github.io/Shioaji.Csharp/tutor/advanced/nonblock/">
+        <link rel="canonical" href="https://sinotrade.github.io/Shioaji.Csharp/tutor/market_data/credit_enquires/">
       
       
         <meta name="author" content="Yvictor, ">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Nonblock - Shioaji C#</title>
+        <title>Credit Enquires - Shioaji C#</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#block-non-block-mode" class="md-skip">
+        <a href="#first-you-need-login" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Nonblock
+              Credit Enquires
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -264,10 +266,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
     <label class="md-nav__link" for="nav-3-3">
       Market Data
@@ -289,11 +293,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../market_data/credit_enquires/" title="Credit Enquires" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Credit Enquires
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Credit Enquires" class="md-nav__link md-nav__link--active">
       Credit Enquires
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-credit-enquires" class="md-nav__link">
+    Get Credit Enquires
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -493,36 +542,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#block-non-block-mode" class="md-nav__link">
-    Block &amp; Non Block Mode
-  </a>
-  
-    <nav class="md-nav" aria-label="Block &amp; Non Block Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#block" class="md-nav__link">
-    Block
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#non-block" class="md-nav__link">
-    Non Block
+      
+        <li class="md-nav__item">
+  <a href="#get-credit-enquires" class="md-nav__link">
+    Get Credit Enquires
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-function" class="md-nav__link">
-    Support Function
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -542,60 +571,50 @@
                   
                 
                 
-                  <h1>Nonblock</h1>
+                  <h1>Credit Enquires</h1>
                 
-                <h2 id="block-non-block-mode">Block &amp; Non Block Mode<a class="headerlink" href="#block-non-block-mode" title="Permanent link">&para;</a></h2>
-<p>Shioaji provides return the responsed using Block and Non Block mode, putting the 
-paramter of timeout can change the mode. Timeout default value is 5000 is wait the response for 5 second, but some api for data like tick data will become too large to receive in five second that need to scale up timeout or use Non-Block mode set the timeout as 0. Using cb parameter for Non-Block mode as the callback function.</p>
+                <h3 id="first-you-need-login"><a href="../../login/">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
+<h3 id="get-credit-enquires">Get Credit Enquires<a class="headerlink" href="#get-credit-enquires" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="err">?</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="n">contracts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">]);</span>
+<span class="n">contracts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2890&quot;</span><span class="p">]);</span>
+<span class="n">List</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;</span> <span class="n">creditEnquire</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">CreditEnquire</span><span class="p">(</span><span class="n">contracts</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">creditEnquire</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Signature</span><span class="p">:</span>
-    <span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span>
-        <span class="n">contract</span><span class="p">:</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">contracts</span><span class="o">.</span><span class="n">Contract</span><span class="p">,</span>
-        <span class="n">order</span><span class="p">:</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">Order</span><span class="p">,</span>
-        <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span>
-        <span class="n">cb</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">shioaji</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">Trade</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">Trade</span>
-<span class="n">Docstring</span><span class="p">:</span> <span class="n">placing</span> <span class="n">order</span>
-<span class="n">Type</span><span class="p">:</span>      <span class="n">method</span>
+<div class="highlight"><pre><span></span><code><span class="na">[</span>
+<span class="na">    {update_time=2021-01-05 10:43:36, system=HE, stock_id=2330, margin_unit=1290, short_unit=24,},</span>
+<span class="na">    {update_time=2021-01-05 11:13:40, system=HC, stock_id=2330, margin_unit=1252, short_unit=25,},</span>
+<span class="na">    {update_time=2021-01-05 10:56:10, system=HN, stock_id=2330, margin_unit=1315, short_unit=24,},</span>
+<span class="na">    {update_time=2021-01-05 10:56:11, system=HF, stock_id=2330, margin_unit=1315, short_unit=24,},</span>
+<span class="na">    {update_time=2021-01-05 10:11:56, system=HE, stock_id=2890, margin_unit=0, short_unit=0,},</span>
+<span class="na">    {update_time=2020-12-30 12:53:36, system=HN, stock_id=2890, margin_unit=0, short_unit=0,},</span>
+<span class="na">    {update_time=2021-01-04 10:45:06, system=HF, stock_id=2890, margin_unit=0, short_unit=0,},</span>
+<span class="na">    {update_time=2020-12-30 10:04:14, system=HC, stock_id=2890, margin_unit=0, short_unit=0,}</span>
+<span class="na">]</span>
 </code></pre></div>
 
 </div>
-<h3 id="block">Block<a class="headerlink" href="#block" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<div class="admonition example">
+<p class="admonition-title">Attributes:</p>
+<div class="highlight"><pre><span></span><code><span class="n">update_time</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">update</span> <span class="n">time</span><span class="p">.</span>
+<span class="n">system</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">system</span><span class="p">.</span>
+<span class="n">stock_id</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">stock_id</span><span class="p">.</span>
+<span class="n">margin_unit</span> <span class="p">(</span><span class="kt">int</span><span class="p">):</span> <span class="n">margin</span> <span class="n">unit</span><span class="p">.</span>
+<span class="n">short_unit</span> <span class="p">(</span><span class="kt">int</span><span class="p">):</span> <span class="kt">short</span> <span class="n">unit</span><span class="p">.</span>
 </code></pre></div>
 
 </div>
-<h3 id="non-block">Non Block<a class="headerlink" href="#non-block" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<h3 id="support-function">Support Function<a class="headerlink" href="#support-function" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Fuction:<ul>
-<li>ticks</li>
-<li>place_order</li>
-<li>update_order</li>
-<li>cancel_order</li>
-<li>update_status </li>
-<li>list_positions      </li>
-</ul>
-</li>
-<li>Parameter: timeout</li>
-<li>Parameter type: int</li>
-<li>Default Mode: Block </li>
-</ul>
                 
               
               
@@ -610,6 +629,41 @@ paramter of timeout can change the mode. Timeout default value is 5000 is wait t
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../contract/" title="Contract" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Contract
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../order/Stock/" title="Stock" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Stock
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
