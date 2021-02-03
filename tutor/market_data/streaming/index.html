@@ -21,7 +21,7 @@
     
     
       
-        <title>Streaming - Shioaji C#</title>
+        <title>Streaming Market Data - Shioaji C#</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#subscribe" class="md-skip">
+        <a href="#subscribe-tick" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Streaming
+              Streaming Market Data
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -264,10 +266,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
     <label class="md-nav__link" for="nav-3-3">
       Market Data
@@ -284,6 +288,63 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Streaming Market Data
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Streaming Market Data" class="md-nav__link md-nav__link--active">
+      Streaming Market Data
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#subscribe-tick" class="md-nav__link">
+    Subscribe Tick
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscribe-bidask" class="md-nav__link">
+    Subscribe BidAsk
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -493,103 +554,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#subscribe" class="md-nav__link">
-    subscribe
-  </a>
-  
-    <nav class="md-nav" aria-label="subscribe">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tick" class="md-nav__link">
-    Tick
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tick-intraday-odd" class="md-nav__link">
-    Tick intraday odd
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bidask" class="md-nav__link">
-    BidAsk
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bidask-intraday-odd" class="md-nav__link">
-    BidAsk intraday odd
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quote-callback" class="md-nav__link">
-    Quote Callback
+  <a href="#subscribe-tick" class="md-nav__link">
+    Subscribe Tick
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#event-callback" class="md-nav__link">
-    Event Callback
-  </a>
-  
-    <nav class="md-nav" aria-label="Event Callback">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-code" class="md-nav__link">
-    Event Code
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quote-format" class="md-nav__link">
-    Quote Format
-  </a>
-  
-    <nav class="md-nav" aria-label="Quote Format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tick_1" class="md-nav__link">
-    Tick
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bidask_1" class="md-nav__link">
-    BidAsk
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
+  <a href="#subscribe-bidask" class="md-nav__link">
+    Subscribe BidAsk
   </a>
   
 </li>
@@ -610,318 +583,144 @@
                   
                 
                 
-                  <h1>Streaming</h1>
+                  <h1>Streaming Market Data</h1>
                 
-                <h2 id="subscribe"><code>subscribe</code><a class="headerlink" href="#subscribe" title="Permanent link">&para;</a></h2>
+                <h2 id="subscribe-tick"><code>Subscribe Tick</code><a class="headerlink" href="#subscribe-tick" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="err">?</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">ConsoleApplication15</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">myCB</span><span class="p">(</span><span class="kt">string</span> <span class="n">topic</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">dynamic</span><span class="p">&gt;</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;topic: &quot;</span> <span class="p">+</span> <span class="n">topic</span><span class="p">);</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">msg</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">Key</span> <span class="p">+</span> <span class="s">&quot;: &quot;</span> <span class="p">+</span> <span class="n">item</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;-----------------------------------&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+            <span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback</span><span class="p">(</span><span class="n">myCB</span><span class="p">);</span>
+            <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">tick</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Signature</span><span class="p">:</span>
-    <span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span>
-        <span class="n">contract</span><span class="p">:</span><span class="n">shioaji</span><span class="o">.</span><span class="n">contracts</span><span class="o">.</span><span class="n">Contract</span><span class="p">,</span>
-        <span class="n">quote_type</span><span class="p">:</span><span class="n">shioaji</span><span class="o">.</span><span class="n">constant</span><span class="o">.</span><span class="n">QuoteType</span><span class="o">=&lt;</span><span class="n">QuoteType</span><span class="o">.</span><span class="n">Tick</span><span class="p">:</span> <span class="s1">&#39;tick&#39;</span><span class="o">&gt;</span><span class="p">,</span>
-        <span class="n">intraday_odd</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="p">)</span>
-<span class="n">Docstring</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">no</span> <span class="n">docstring</span><span class="o">&gt;</span>
-<span class="n">Type</span><span class="p">:</span>      <span class="n">method</span>
+<div class="highlight"><pre><span></span><code><span class="n">Connecting</span> <span class="k">as</span> <span class="n">shioaji@sinopac</span> <span class="k">on</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80.</span><span class="p">..</span>
+<span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="n">SOLCLIENT_OK</span> <span class="p">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="m">0</span> <span class="p">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">host</span> <span class="err">&#39;</span><span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">IP</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span> <span class="p">(</span><span class="n">host</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">total</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="n">ReResponse</span> <span class="n">Code</span><span class="p">:</span> <span class="n">SOLCLIENT_OK</span> <span class="p">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="m">0</span> <span class="p">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">host</span> <span class="err">&#39;</span><span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">IP</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span> <span class="p">(</span><span class="n">host</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">total</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span>
+<span class="p">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Session</span> <span class="n">up</span>
+<span class="n">Subscribe</span> <span class="n">MKT</span><span class="p">/*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">MKT</span><span class="p">/</span><span class="n">idcdmzpcr01</span><span class="p">/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
+<span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
+<span class="n">Time</span><span class="p">:</span> <span class="m">11</span><span class="p">:</span><span class="m">04</span><span class="p">:</span><span class="m">20.751919</span>
+<span class="n">Close</span><span class="p">:</span> <span class="p">[</span><span class="m">634</span><span class="p">]</span>
+<span class="n">Volume</span><span class="p">:</span> <span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="n">VolSum</span><span class="p">:</span> <span class="p">[</span><span class="m">29820</span><span class="p">]</span>
+<span class="n">AmountSum</span><span class="p">:</span> <span class="p">[</span><span class="m">19001762000</span><span class="p">]</span>
+<span class="n">TickType</span><span class="p">:</span> <span class="p">[</span><span class="m">2</span><span class="p">]</span>
+<span class="p">-----------------------------------</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">MKT</span><span class="p">/</span><span class="n">idcdmzpcr01</span><span class="p">/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
+<span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
+<span class="n">Time</span><span class="p">:</span> <span class="m">11</span><span class="p">:</span><span class="m">04</span><span class="p">:</span><span class="m">23.183556</span>
+<span class="n">Close</span><span class="p">:</span> <span class="p">[</span><span class="m">635</span><span class="p">]</span>
+<span class="n">Volume</span><span class="p">:</span> <span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="n">VolSum</span><span class="p">:</span> <span class="p">[</span><span class="m">29821</span><span class="p">]</span>
+<span class="n">AmountSum</span><span class="p">:</span> <span class="p">[</span><span class="m">19002397000</span><span class="p">]</span>
+<span class="n">TickType</span><span class="p">:</span> <span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="p">-----------------------------------</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">MKT</span><span class="p">/</span><span class="n">idcdmzpcr01</span><span class="p">/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
+<span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
+<span class="n">Time</span><span class="p">:</span> <span class="m">11</span><span class="p">:</span><span class="m">04</span><span class="p">:</span><span class="m">25.149339</span>
+<span class="n">Close</span><span class="p">:</span> <span class="p">[</span><span class="m">635</span><span class="p">]</span>
+<span class="n">Volume</span><span class="p">:</span> <span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="n">VolSum</span><span class="p">:</span> <span class="p">[</span><span class="m">29822</span><span class="p">]</span>
+<span class="n">AmountSum</span><span class="p">:</span> <span class="p">[</span><span class="m">19003032000</span><span class="p">]</span>
+<span class="n">TickType</span><span class="p">:</span> <span class="p">[</span><span class="m">1</span><span class="p">]</span>
+<span class="p">-----------------------------------</span>
 </code></pre></div>
 
 </div>
-<p>In above you can see the <code>subscribe</code> function signature with contract and quote type parameter, contract we have discussed in previous topic. <code>quote_type</code> is about which quote you want to subscribe(tick or bidask).<code>intraday_odd</code> is about which market you want to subscribe(intraday_odd or not).</p>
-<h3 id="tick">Tick<a class="headerlink" href="#tick" title="Permanent link">&para;</a></h3>
+<h2 id="subscribe-bidask"><code>Subscribe BidAsk</code><a class="headerlink" href="#subscribe-bidask" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">quote_type</span><span class="o">=</span><span class="n">sj</span><span class="o">.</span><span class="n">constant</span><span class="o">.</span><span class="n">QuoteType</span><span class="o">.</span><span class="n">Tick</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">ConsoleApplication15</span>
+<span class="p">{</span>
+    <span class="k">internal</span> <span class="k">class</span> <span class="nc">Program</span>
+    <span class="p">{</span>
+        <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">myCB</span><span class="p">(</span><span class="kt">string</span> <span class="n">topic</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">dynamic</span><span class="p">&gt;</span> <span class="n">msg</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;topic: &quot;</span> <span class="p">+</span> <span class="n">topic</span><span class="p">);</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">msg</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">Key</span> <span class="p">+</span> <span class="s">&quot;: &quot;</span> <span class="p">+</span> <span class="n">item</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;-----------------------------------&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+            <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+            <span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback</span><span class="p">(</span><span class="n">myCB</span><span class="p">);</span>
+            <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">MKT</span><span class="o">/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
+<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="n">SOLCLIENT_OK</span> <span class="p">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="m">0</span> <span class="p">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">host</span> <span class="err">&#39;</span><span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">IP</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span> <span class="p">(</span><span class="n">host</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">total</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span>
+<span class="p">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Session</span> <span class="n">up</span>
+<span class="n">Subscribe</span> <span class="n">QUT</span><span class="cm">/*/TSE/2330</span>
+<span class="cm">topic: QUO/v2/*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
+<span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
+<span class="n">Time</span><span class="p">:</span> <span class="m">13</span><span class="p">:</span><span class="m">24</span><span class="p">:</span><span class="m">38.847295</span>
+<span class="n">BidPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">631</span><span class="p">,</span><span class="m">630</span><span class="p">,</span><span class="m">629</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">627</span><span class="p">]</span>
+<span class="n">AskPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">632</span><span class="p">,</span><span class="m">633</span><span class="p">,</span><span class="m">634</span><span class="p">,</span><span class="m">635</span><span class="p">,</span><span class="m">636</span><span class="p">]</span>
+<span class="n">BidVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">127</span><span class="p">,</span><span class="m">832</span><span class="p">,</span><span class="m">462</span><span class="p">,</span><span class="m">453</span><span class="p">,</span><span class="m">1297</span><span class="p">]</span>
+<span class="n">AskVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">296</span><span class="p">,</span><span class="m">204</span><span class="p">,</span><span class="m">177</span><span class="p">,</span><span class="m">573</span><span class="p">,</span><span class="m">377</span><span class="p">]</span>
+<span class="p">-----------------------------------</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">QUO</span><span class="p">/</span><span class="n">v2</span><span class="cm">/*/TSE/2330/ODDLOT</span>
+<span class="cm">Date: 2021/02/03</span>
+<span class="cm">Time: 13:24:39.046382</span>
+<span class="cm">BidPrice: [631,630,629,628,627]</span>
+<span class="cm">AskPrice: [632,633,634,635,636]</span>
+<span class="cm">BidVolume: [128,832,462,453,1297]</span>
+<span class="cm">AskVolume: [296,204,177,573,377]</span>
+<span class="cm">-----------------------------------</span>
+<span class="cm">topic: QUO/v2/*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
+<span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
+<span class="n">Time</span><span class="p">:</span> <span class="m">13</span><span class="p">:</span><span class="m">24</span><span class="p">:</span><span class="m">39.238539</span>
+<span class="n">BidPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">631</span><span class="p">,</span><span class="m">630</span><span class="p">,</span><span class="m">629</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">627</span><span class="p">]</span>
+<span class="n">AskPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">632</span><span class="p">,</span><span class="m">633</span><span class="p">,</span><span class="m">634</span><span class="p">,</span><span class="m">635</span><span class="p">,</span><span class="m">636</span><span class="p">]</span>
+<span class="n">BidVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">127</span><span class="p">,</span><span class="m">832</span><span class="p">,</span><span class="m">462</span><span class="p">,</span><span class="m">453</span><span class="p">,</span><span class="m">1297</span><span class="p">]</span>
+<span class="n">AskVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">296</span><span class="p">,</span><span class="m">204</span><span class="p">,</span><span class="m">177</span><span class="p">,</span><span class="m">573</span><span class="p">,</span><span class="m">377</span><span class="p">]</span>
+<span class="p">-----------------------------------</span>
 </code></pre></div>
 
 </div>
-<p>You can start receiving tick data by above action.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">quote_type</span><span class="o">=</span><span class="s1">&#39;tick&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">MKT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
-
-<span class="n">MKT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span> <span class="p">{</span><span class="s1">&#39;Close&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">239.5</span><span class="p">],</span> <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;11:11:42.624718&#39;</span><span class="p">,</span> <span class="s1">&#39;VolSum&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">12206</span><span class="p">],</span> <span class="s1">&#39;Volume&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">]}</span>
-<span class="n">MKT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span> <span class="p">{</span><span class="s1">&#39;Close&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">239.5</span><span class="p">],</span> <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;11:11:47.628718&#39;</span><span class="p">,</span> <span class="s1">&#39;VolSum&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">12206</span><span class="p">],</span> <span class="s1">&#39;Volume&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">]}</span>
-</code></pre></div>
-
-</div>
-<p><code>quote_type</code> can also be just string 'tick' is same as <code>sj.constant.QuoteType.Tick</code>, we create enum for your with editor can just use autocomplete tools to help you typing less letter.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2890&quot;</span><span class="p">],</span> <span class="n">quote_type</span><span class="o">=</span><span class="s1">&#39;tick&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">MKT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2890</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
-</code></pre></div>
-
-</div>
-<p><code>quote_type</code> can also be just string 'tick' is same as <code>sj.constant.QuoteType.Tick</code>, we create enum for your with editor can just use autocomplete tools to help you typing less letter.</p>
-<h3 id="tick-intraday-odd">Tick intraday odd<a class="headerlink" href="#tick-intraday-odd" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">quote_type</span><span class="o">=</span><span class="n">sj</span><span class="o">.</span><span class="n">constant</span><span class="o">.</span><span class="n">QuoteType</span><span class="o">.</span><span class="n">Tick</span><span class="p">,</span> <span class="n">intraday_odd</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">TIC</span><span class="o">/</span><span class="n">v2</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span><span class="o">/</span><span class="n">ODDLOT</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
-
-<span class="n">TIC</span><span class="o">/</span><span class="n">v2</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span><span class="o">/</span><span class="n">ODDLOT</span> <span class="p">{</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;2020/10/20&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;10:56:17.431370&#39;</span><span class="p">,</span> <span class="s1">&#39;Close&#39;</span><span class="p">:</span> <span class="s1">&#39;450&#39;</span><span class="p">,</span> <span class="s1">&#39;TickType&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Shares&#39;</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span> <span class="s1">&#39;SharesSum&#39;</span><span class="p">:</span> <span class="mi">2995</span><span class="p">}</span>
-</code></pre></div>
-
-</div>
-<h3 id="bidask">BidAsk<a class="headerlink" href="#bidask" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">quote_type</span><span class="o">=</span><span class="n">sj</span><span class="o">.</span><span class="n">constant</span><span class="o">.</span><span class="n">QuoteType</span><span class="o">.</span><span class="n">BidAsk</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">QUT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
-
-<span class="n">QUT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span> <span class="p">{</span><span class="s1">&#39;AskPrice&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">240.0</span><span class="p">,</span> <span class="mf">240.5</span><span class="p">,</span> <span class="mf">241.0</span><span class="p">,</span> <span class="mf">241.5</span><span class="p">,</span> <span class="mf">242.0</span><span class="p">],</span> <span class="s1">&#39;AskVolume&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1808</span><span class="p">,</span> <span class="mi">1789</span><span class="p">,</span> <span class="mi">1645</span><span class="p">,</span> <span class="mi">582</span><span class="p">,</span> <span class="mi">1170</span><span class="p">],</span> <span class="s1">&#39;BidPrice&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">239.5</span><span class="p">,</span> <span class="mf">239.0</span><span class="p">,</span> <span class="mf">238.5</span><span class="p">,</span> <span class="mf">238.0</span><span class="p">,</span> <span class="mf">237.5</span><span class="p">],</span> <span class="s1">&#39;BidVolume&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">204</span><span class="p">,</span> <span class="mi">765</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">475</span><span class="p">,</span> <span class="mi">359</span><span class="p">],</span> <span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;2019/03/18&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;11:11:42.624718&#39;</span><span class="p">}</span>
-</code></pre></div>
-
-</div>
-<p><code>quote_type</code> set as 'bidask' will receive the order book data.</p>
-<h3 id="bidask-intraday-odd">BidAsk intraday odd<a class="headerlink" href="#bidask-intraday-odd" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">quote_type</span><span class="o">=</span><span class="n">sj</span><span class="o">.</span><span class="n">constant</span><span class="o">.</span><span class="n">QuoteType</span><span class="o">.</span><span class="n">BidAsk</span><span class="p">,</span> <span class="n">intraday_odd</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">200</span> <span class="o">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">QUO</span><span class="o">/</span><span class="n">v2</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span><span class="o">/</span><span class="n">ODDLOT</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
-
-<span class="n">QUO</span><span class="o">/</span><span class="n">v2</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span><span class="o">/</span><span class="n">ODDLOT</span> <span class="p">{</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;2020/10/20&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;10:56:17.431370&#39;</span><span class="p">,</span> <span class="s1">&#39;BidPrice&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;450&#39;</span><span class="p">,</span> <span class="s1">&#39;449.5&#39;</span><span class="p">,</span> <span class="s1">&#39;449&#39;</span><span class="p">,</span> <span class="s1">&#39;448.5&#39;</span><span class="p">,</span> <span class="s1">&#39;448&#39;</span><span class="p">],</span> <span class="s1">&#39;AskPrice&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;451&#39;</span><span class="p">,</span> <span class="s1">&#39;451.5&#39;</span><span class="p">,</span> <span class="s1">&#39;452&#39;</span><span class="p">,</span> <span class="s1">&#39;452.5&#39;</span><span class="p">,</span> <span class="s1">&#39;453&#39;</span><span class="p">],</span> <span class="s1">&#39;BidShares&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">137</span><span class="p">,</span> <span class="mi">2994</span><span class="p">,</span> <span class="mi">2994</span><span class="p">,</span> <span class="mi">3005</span><span class="p">,</span> <span class="mi">785</span><span class="p">],</span> <span class="s1">&#39;AskShares&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">403</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">123</span><span class="p">]}</span>
-</code></pre></div>
-
-</div>
-<h2 id="quote-callback">Quote Callback<a class="headerlink" href="#quote-callback" title="Permanent link">&para;</a></h2>
-<p>In default, we set quote callback as print function. Let's talk about set quote callback</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">on_quote</span>
-<span class="k">def</span> <span class="nf">quote_callback</span><span class="p">(</span><span class="n">topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">quote</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Topic: </span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="s2">, Quote: </span><span class="si">{</span><span class="n">quote</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Topic</span><span class="p">:</span> <span class="n">MKT</span><span class="o">/*/</span><span class="n">TSE</span><span class="o">/</span><span class="mi">2330</span><span class="p">,</span> <span class="n">Quote</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Close&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">239.5</span><span class="p">],</span> <span class="s1">&#39;Time&#39;</span><span class="p">:</span> <span class="s1">&#39;11:11:42.624718&#39;</span><span class="p">,</span> <span class="s1">&#39;VolSum&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">12206</span><span class="p">],</span> <span class="s1">&#39;Volume&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">]}</span>
-</code></pre></div>
-
-</div>
-<p>In above with pythonic way using decorator to set your quote callback. When callback setting done, The new arrived quote will use this function to processing.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">quote_callback</span><span class="p">(</span><span class="n">topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">quote</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Topic: </span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="s2">, Quote: </span><span class="si">{</span><span class="n">quote</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">set_quote_callback</span><span class="p">(</span><span class="n">quote_callback</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<p>The traditional way to set quote callback.</p>
-<h2 id="event-callback">Event Callback<a class="headerlink" href="#event-callback" title="Permanent link">&para;</a></h2>
-<div class="admonition attention">
-<p class="admonition-title">event</p>
-<p>In this api, we use solace as mesh borker. This event mean the status for your client with solace connection situation.
-If you have no experience with networking, please skip this part, In defalut, we help you reconnect solace broker 50 times without any setting. Best way is keep your network connection alive.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="nd">@api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">on_event</span>
-<span class="k">def</span> <span class="nf">event_callback</span><span class="p">(</span><span class="n">resp_code</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">event_code</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">info</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Event code: </span><span class="si">{</span><span class="n">event_code</span><span class="si">}</span><span class="s1"> | Event: </span><span class="si">{</span><span class="n">event</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Event</span> <span class="n">code</span><span class="p">:</span> <span class="mi">16</span> <span class="o">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Subscribe</span> <span class="ow">or</span> <span class="n">Unsubscribe</span> <span class="n">ok</span>
-</code></pre></div>
-
-</div>
-<p>Like the quote callback, your can also set event cllback with two way just make <code>quote -&gt; event</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">set_event_callback</span><span class="err">?</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Signature</span><span class="p">:</span> <span class="n">api</span><span class="o">.</span><span class="n">quote</span><span class="o">.</span><span class="n">set_event_callback</span><span class="p">(</span><span class="n">func</span><span class="p">:</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-<span class="n">Docstring</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">no</span> <span class="n">docstring</span><span class="o">&gt;</span>
-<span class="n">Type</span><span class="p">:</span>      <span class="n">method</span>
-</code></pre></div>
-
-</div>
-<p>If you want to set event callback please pay attention one the event callback signature.</p>
-<h3 id="event-code">Event Code<a class="headerlink" href="#event-code" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Event Code</th>
-<th>Event Code Enumerator</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>SOLCLIENT_SESSION_EVENT_UP_NOTICE</td>
-<td>The Session is established.</td>
-</tr>
-<tr>
-<td>1</td>
-<td>SOLCLIENT_SESSION_EVENT_DOWN_ERROR</td>
-<td>The Session was established and then went down.</td>
-</tr>
-<tr>
-<td>2</td>
-<td>SOLCLIENT_SESSION_EVENT_CONNECT_FAILED_ERROR</td>
-<td>The Session attempted to connect but was unsuccessful.</td>
-</tr>
-<tr>
-<td>3</td>
-<td>SOLCLIENT_SESSION_EVENT_REJECTED_MSG_ERROR</td>
-<td>The appliance rejected a published message.</td>
-</tr>
-<tr>
-<td>4</td>
-<td>SOLCLIENT_SESSION_EVENT_SUBSCRIPTION_ERROR</td>
-<td>The appliance rejected a subscription (add or remove).</td>
-</tr>
-<tr>
-<td>5</td>
-<td>SOLCLIENT_SESSION_EVENT_RX_MSG_TOO_BIG_ERROR</td>
-<td>The API discarded a received message that exceeded the Session buffer size.</td>
-</tr>
-<tr>
-<td>6</td>
-<td>SOLCLIENT_SESSION_EVENT_ACKNOWLEDGEMENT</td>
-<td>The oldest transmitted Persistent/Non-Persistent message that has been acknowledged.</td>
-</tr>
-<tr>
-<td>7</td>
-<td>SOLCLIENT_SESSION_EVENT_ASSURED_PUBLISHING_UP</td>
-<td>Deprecated -- see notes in solClient_session_startAssuredPublishing.The AD Handshake (that is, Guaranteed Delivery handshake) has completed for the publisher and Guaranteed messages can be sent.</td>
-</tr>
-<tr>
-<td>8</td>
-<td>SOLCLIENT_SESSION_EVENT_ASSURED_CONNECT_FAILED</td>
-<td>Deprecated -- see notes in solClient_session_startAssuredPublishing.The appliance rejected the AD Handshake to start Guaranteed publishing. Use SOLCLIENT_SESSION_EVENT_ASSURED_DELIVERY_DOWN instead.</td>
-</tr>
-<tr>
-<td>8</td>
-<td>SOLCLIENT_SESSION_EVENT_ASSURED_DELIVERY_DOWN</td>
-<td>Guaranteed Delivery publishing is not available.The guaranteed delivery capability on the session has been disabled by some action on the appliance.</td>
-</tr>
-<tr>
-<td>9</td>
-<td>SOLCLIENT_SESSION_EVENT_TE_UNSUBSCRIBE_ERROR</td>
-<td>The Topic Endpoint unsubscribe command failed.</td>
-</tr>
-<tr>
-<td>9</td>
-<td>SOLCLIENT_SESSION_EVENT_DTE_UNSUBSCRIBE_ERROR</td>
-<td>Deprecated name; SOLCLIENT_SESSION_EVENT_TE_UNSUBSCRIBE_ERROR is preferred.</td>
-</tr>
-<tr>
-<td>10</td>
-<td>SOLCLIENT_SESSION_EVENT_TE_UNSUBSCRIBE_OK</td>
-<td>The Topic Endpoint unsubscribe completed.</td>
-</tr>
-<tr>
-<td>10</td>
-<td>SOLCLIENT_SESSION_EVENT_DTE_UNSUBSCRIBE_OK</td>
-<td>Deprecated name; SOLCLIENT_SESSION_EVENT_TE_UNSUBSCRIBE_OK is preferred.</td>
-</tr>
-<tr>
-<td>11</td>
-<td>SOLCLIENT_SESSION_EVENT_CAN_SEND</td>
-<td>The send is no longer blocked.</td>
-</tr>
-<tr>
-<td>12</td>
-<td>SOLCLIENT_SESSION_EVENT_RECONNECTING_NOTICE</td>
-<td>The Session has gone down, and an automatic reconnect attempt is in progress.</td>
-</tr>
-<tr>
-<td>13</td>
-<td>SOLCLIENT_SESSION_EVENT_RECONNECTED_NOTICE</td>
-<td>The automatic reconnect of the Session was successful, and the Session was established again.</td>
-</tr>
-<tr>
-<td>14</td>
-<td>SOLCLIENT_SESSION_EVENT_PROVISION_ERROR</td>
-<td>The endpoint create/delete command failed.</td>
-</tr>
-<tr>
-<td>15</td>
-<td>SOLCLIENT_SESSION_EVENT_PROVISION_OK</td>
-<td>The endpoint create/delete command completed.</td>
-</tr>
-<tr>
-<td>16</td>
-<td>SOLCLIENT_SESSION_EVENT_SUBSCRIPTION_OK</td>
-<td>The subscribe or unsubscribe operation has succeeded.</td>
-</tr>
-<tr>
-<td>17</td>
-<td>SOLCLIENT_SESSION_EVENT_VIRTUAL_ROUTER_NAME_CHANGED</td>
-<td>The appliance's Virtual Router Name changed during a reconnect operation.This could render existing queues or temporary topics invalid.</td>
-</tr>
-<tr>
-<td>18</td>
-<td>SOLCLIENT_SESSION_EVENT_MODIFYPROP_OK</td>
-<td>The session property modification completed.</td>
-</tr>
-<tr>
-<td>19</td>
-<td>SOLCLIENT_SESSION_EVENT_MODIFYPROP_FAIL</td>
-<td>The session property modification failed.</td>
-</tr>
-<tr>
-<td>20</td>
-<td>SOLCLIENT_SESSION_EVENT_REPUBLISH_UNACKED_MESSAGES</td>
-<td>After successfully reconnecting a disconnected session, the SDK received an unknown publisher flow name response when reconnecting the GD publisher flow.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="quote-format">Quote Format<a class="headerlink" href="#quote-format" title="Permanent link">&para;</a></h2>
-<h3 id="tick_1">Tick<a class="headerlink" href="#tick_1" title="Permanent link">&para;</a></h3>
-<h3 id="bidask_1">BidAsk<a class="headerlink" href="#bidask_1" title="Permanent link">&para;</a></h3>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>Contract object will be used by a lot of place like place order and subscribe quote etc... So Keep in mind how to get the contract you want to use.</p>
                 
               
               
@@ -936,6 +735,41 @@ If you have no experience with networking, please skip this part, In defalut, we
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../contract/" title="Contract" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Contract
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../credit_enquires/" title="Credit Enquires" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Credit Enquires
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
