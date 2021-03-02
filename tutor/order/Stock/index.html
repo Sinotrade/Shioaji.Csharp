@@ -1114,7 +1114,8 @@
 <h3 id="cancel-order">Cancel Order<a class="headerlink" href="#cancel-order" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">_trade</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">CancelOrder</span><span class="p">(</span><span class="n">_trade</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">_api</span><span class="p">.</span><span class="n">UpdateStatus</span><span class="p">();</span>
+<span class="n">_trade</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">CancelOrder</span><span class="p">(</span><span class="n">_trade</span><span class="p">);</span>
 <span class="n">_api</span><span class="p">.</span><span class="n">UpdateStatus</span><span class="p">();</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_trade</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
