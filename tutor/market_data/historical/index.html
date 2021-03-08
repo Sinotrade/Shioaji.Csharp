@@ -21,7 +21,7 @@
     
     
       
-        <title>Historical - Shioaji C#</title>
+        <title>Historical Market Data - Shioaji C#</title>
       
     
     
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Historical
+              Historical Market Data
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -264,10 +266,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
     <label class="md-nav__link" for="nav-3-3">
       Market Data
@@ -289,11 +293,76 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../streaming/" title="Streaming Market Data" class="md-nav__link">
-      Streaming Market Data
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Historical Market Data
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Historical Market Data" class="md-nav__link md-nav__link--active">
+      Historical Market Data
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ticks-data" class="md-nav__link">
+    Ticks Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticks Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticks-function-api" class="md-nav__link">
+    ticks function api
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticks-to-dataframe" class="md-nav__link">
+    Ticks to DataFrame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -513,8 +582,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ticks-schema" class="md-nav__link">
-    Ticks Schema
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
   </a>
   
 </li>
@@ -538,13 +607,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#kbar-data" class="md-nav__link">
-    KBar Data
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -561,54 +623,34 @@
                   
                 
                 
-                  <h1>Historical</h1>
+                  <h1>Historical Market Data</h1>
                 
                 <h2 id="ticks-data">Ticks Data<a class="headerlink" href="#ticks-data" title="Permanent link">&para;</a></h2>
-<h3 id="ticks-schema">Ticks Schema<a class="headerlink" href="#ticks-schema" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">shioaji.data</span> <span class="kn">import</span> <span class="n">Ticks</span>
-<span class="n">Ticks</span><span class="err">??</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Init</span> <span class="n">signature</span><span class="p">:</span> <span class="n">Ticks</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">:</span><span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-<span class="n">Docstring</span><span class="p">:</span>      <span class="o">&lt;</span><span class="n">no</span> <span class="n">docstring</span><span class="o">&gt;</span>
-<span class="n">Source</span><span class="p">:</span>        
-<span class="k">class</span> <span class="nc">Ticks</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
-    <span class="n">ts</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-    <span class="n">close</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
-    <span class="n">volume</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-    <span class="n">bid_price</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
-    <span class="n">bid_volume</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-    <span class="n">ask_price</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
-    <span class="n">ask_volume</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
-
-<span class="n">File</span><span class="p">:</span>           <span class="n">shioaji</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">py</span>
-<span class="n">Type</span><span class="p">:</span>           <span class="n">ModelMetaclass</span>
-</code></pre></div>
-
-</div>
+<h3 id="first-you-need-login"><a href="../../login/">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
 <h3 id="ticks-function-api">ticks function api<a class="headerlink" href="#ticks-function-api" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">ticks</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">ticks</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="s2">&quot;2020-03-04&quot;</span><span class="p">)</span>
-<span class="n">ticks</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">contract</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">];</span>
+<span class="n">Ticks</span> <span class="n">ticks</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Ticks</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span> <span class="s">&quot;2021-02-24&quot;</span><span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ticks</span><span class="p">);</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
 <div class="highlight"><pre><span></span><code><span class="n">Ticks</span><span class="p">(</span>
-    <span class="n">ts</span><span class="o">=</span><span class="p">[</span><span class="mi">1583312400821000000</span><span class="p">,</span> <span class="mi">1583312405836000000</span><span class="p">,</span> <span class="mi">1583312410849000000</span><span class="p">,</span> <span class="mi">1583312415864000000</span><span class="p">,</span> <span class="mi">1583312420877000000</span><span class="p">],</span> 
-    <span class="n">close</span><span class="o">=</span><span class="p">[</span><span class="mf">322.0</span><span class="p">,</span> <span class="mf">321.5</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">],</span>
-    <span class="n">volume</span><span class="o">=</span><span class="p">[</span><span class="mi">5098</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">126</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
-    <span class="n">bid_price</span><span class="o">=</span><span class="p">[</span><span class="mf">321.5</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">,</span> <span class="mf">321.0</span><span class="p">],</span>
-    <span class="n">bid_volume</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">94</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
-    <span class="n">ask_price</span><span class="o">=</span><span class="p">[</span><span class="mf">322.0</span><span class="p">,</span> <span class="mf">321.5</span><span class="p">,</span> <span class="mf">321.5</span><span class="p">,</span> <span class="mf">321.5</span><span class="p">,</span> <span class="mf">321.5</span><span class="p">],</span>
-    <span class="n">ask_volume</span><span class="o">=</span><span class="p">[</span><span class="mi">646</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">199</span><span class="p">]</span>
+    <span class="n">ts</span><span class="p">=[</span><span class="m">1614157201843172000</span><span class="p">,</span><span class="m">1614157201883723000</span><span class="p">,</span><span class="m">1614157201890433000</span><span class="p">,</span><span class="m">1614157201915257000</span><span class="p">,</span><span class="m">1614157201928901000</span><span class="p">],</span> 
+    <span class="n">close</span><span class="p">=[</span><span class="m">627</span><span class="p">,</span><span class="m">627</span><span class="p">,</span><span class="m">627</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">628</span><span class="p">],</span>
+    <span class="n">volume</span><span class="p">=[</span><span class="m">4507</span><span class="p">,</span><span class="m">133</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">5</span><span class="p">],</span>
+    <span class="n">bid_price</span><span class="p">=[</span><span class="m">627</span><span class="p">,</span><span class="m">627</span><span class="p">,</span><span class="m">627</span><span class="p">,</span><span class="m">627</span><span class="p">,</span><span class="m">627</span><span class="p">],</span>
+    <span class="n">bid_volume</span><span class="p">=[</span><span class="m">324</span><span class="p">,</span><span class="m">324</span><span class="p">,</span><span class="m">324</span><span class="p">,</span><span class="m">324</span><span class="p">,</span><span class="m">324</span><span class="p">],</span>
+    <span class="n">ask_price</span><span class="p">=[</span><span class="m">628</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">628</span><span class="p">],</span>
+    <span class="n">ask_volume</span><span class="p">=[</span><span class="m">261</span><span class="p">,</span><span class="m">261</span><span class="p">,</span><span class="m">261</span><span class="p">,</span><span class="m">261</span><span class="p">,</span><span class="m">261</span><span class="p">]</span>
 <span class="p">)</span>
 </code></pre></div>
 
@@ -616,10 +658,23 @@
 <h3 id="ticks-to-dataframe">Ticks to DataFrame<a class="headerlink" href="#ticks-to-dataframe" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="o">**</span><span class="n">ticks</span><span class="p">})</span>
-<span class="n">df</span><span class="o">.</span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ts</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Microsoft.Data.Analysis</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">contract</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">];</span>
+<span class="n">Ticks</span> <span class="n">ticks</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Ticks</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span> <span class="s">&quot;2021-02-24&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">volume</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">long</span><span class="p">&gt;(</span><span class="s">&quot;volume&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">volume</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">close</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;(</span><span class="s">&quot;close&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">close</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">ts</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">long</span><span class="p">&gt;(</span><span class="s">&quot;ts&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">bid_price</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;(</span><span class="s">&quot;bid_price&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">bid_price</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">bid_volume</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">long</span><span class="p">&gt;(</span><span class="s">&quot;bid_volume&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">bid_volume</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">ask_price</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;(</span><span class="s">&quot;ask_price&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">ask_price</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">ask_volume</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PrimitiveDataFrameColumn</span><span class="p">&lt;</span><span class="kt">long</span><span class="p">&gt;(</span><span class="s">&quot;ask_volume&quot;</span><span class="p">,</span> <span class="n">ticks</span><span class="p">.</span><span class="n">ask_volume</span><span class="p">.</span><span class="n">ToList</span><span class="p">());</span>
+<span class="kt">var</span> <span class="n">df_ticks</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">volume</span><span class="p">,</span> <span class="n">close</span><span class="p">,</span> <span class="n">bid_price</span><span class="p">,</span> <span class="n">bid_volume</span><span class="p">,</span> <span class="n">ask_price</span><span class="p">,</span> <span class="n">ask_volume</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">df_ticks</span><span class="p">);</span>
 </code></pre></div>
 
 </div>
@@ -641,68 +696,67 @@
 <tbody>
 <tr>
 <td align="right">0</td>
-<td align="left">2020-03-04 09:00:00.821</td>
-<td align="left">646</td>
-<td align="left">322.0</td>
-<td align="left">322.0</td>
-<td align="left">321.5</td>
-<td align="left">5</td>
-<td align="left">5098</td>
+<td align="left">1614157201843172000</td>
+<td align="left">261</td>
+<td align="left">628</td>
+<td align="left">627</td>
+<td align="left">627</td>
+<td align="left">324</td>
+<td align="left">4507</td>
 </tr>
 <tr>
 <td align="right">1</td>
-<td align="left">2020-03-04 09:00:05.836</td>
-<td align="left">13</td>
-<td align="left">321.5</td>
-<td align="left">321.5</td>
-<td align="left">321.0</td>
-<td align="left">100</td>
-<td align="left">91</td>
+<td align="left">1614157201883723000</td>
+<td align="left">261</td>
+<td align="left">628</td>
+<td align="left">627</td>
+<td align="left">627</td>
+<td align="left">324</td>
+<td align="left">133</td>
 </tr>
 <tr>
 <td align="right">2</td>
-<td align="left">2020-03-04 09:00:10.849</td>
-<td align="left">31</td>
-<td align="left">321.5</td>
-<td align="left">321.0</td>
-<td align="left">321.0</td>
-<td align="left">94</td>
-<td align="left">126</td>
+<td align="left">1614157201890433000</td>
+<td align="left">261</td>
+<td align="left">628</td>
+<td align="left">627</td>
+<td align="left">627</td>
+<td align="left">324</td>
+<td align="left">2</td>
 </tr>
 <tr>
 <td align="right">3</td>
-<td align="left">2020-03-04 09:00:15.864</td>
-<td align="left">86</td>
-<td align="left">321.5</td>
-<td align="left">321.0</td>
-<td align="left">321.0</td>
-<td align="left">78</td>
-<td align="left">59</td>
+<td align="left">1614157201915257000</td>
+<td align="left">261</td>
+<td align="left">628</td>
+<td align="left">628</td>
+<td align="left">627</td>
+<td align="left">324</td>
+<td align="left">1</td>
 </tr>
 <tr>
 <td align="right">4</td>
-<td align="left">2020-03-04 09:00:20.877</td>
-<td align="left">199</td>
-<td align="left">321.5</td>
-<td align="left">321.0</td>
-<td align="left">321.0</td>
-<td align="left">20</td>
-<td align="left">90</td>
+<td align="left">1614157201928901000</td>
+<td align="left">261</td>
+<td align="left">628</td>
+<td align="left">628</td>
+<td align="left">627</td>
+<td align="left">324</td>
+<td align="left">5</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="kbar-data">KBar Data<a class="headerlink" href="#kbar-data" title="Permanent link">&para;</a></h2>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">shioaji.data</span> <span class="kn">import</span> <span class="n">Kbars</span>
+<!-- 
+## KBar Data
+
+!!! info "In"
+    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">shioaji.data</span> <span class="kn">import</span> <span class="n">Kbars</span>
 <span class="n">Kbars</span><span class="err">??</span>
 </code></pre></div>
 
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Init</span> <span class="n">signature</span><span class="p">:</span> <span class="n">Kbars</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+!!! done "Out"
+    <div class="highlight"><pre><span></span><code><span class="n">Init</span> <span class="n">signature</span><span class="p">:</span> <span class="n">Kbars</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 <span class="n">Docstring</span><span class="p">:</span>      <span class="o">&lt;</span><span class="n">no</span> <span class="n">docstring</span><span class="o">&gt;</span>
 <span class="n">Source</span><span class="p">:</span>        
 <span class="k">class</span> <span class="nc">Kbars</span><span class="p">(</span><span class="n">BaseMapping</span><span class="p">):</span>
@@ -714,79 +768,21 @@
     <span class="n">Volume</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
 </code></pre></div>
 
-</div>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">kbars</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">kbars</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2020-06-01&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2020-07-01&quot;</span><span class="p">)</span>
+!!! info "In"
+    <div class="highlight"><pre><span></span><code><span class="n">kbars</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">kbars</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">Contracts</span><span class="o">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s2">&quot;2330&quot;</span><span class="p">],</span> <span class="n">start</span><span class="o">=</span><span class="s2">&quot;2020-06-01&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;2020-07-01&quot;</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="o">**</span><span class="n">kbars</span><span class="p">})</span>
 <span class="n">df</span><span class="o">.</span><span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">ts</span><span class="p">)</span>
 <span class="n">df</span>
 </code></pre></div>
 
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>ts</th>
-<th>Close</th>
-<th>Open</th>
-<th>High</th>
-<th>Volume</th>
-<th>Low</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>2020-06-01 09:01:00</td>
-<td>294.0</td>
-<td>294.0</td>
-<td>294.0</td>
-<td>3187</td>
-<td>293.5</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2020-06-01 09:02:00</td>
-<td>293.5</td>
-<td>293.5</td>
-<td>294.0</td>
-<td>201</td>
-<td>293.5</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2020-06-01 09:03:00</td>
-<td>294.0</td>
-<td>293.5</td>
-<td>294.0</td>
-<td>267</td>
-<td>293.5</td>
-</tr>
-<tr>
-<td>3</td>
-<td>2020-06-01 09:04:00</td>
-<td>294.5</td>
-<td>294.0</td>
-<td>294.5</td>
-<td>624</td>
-<td>293.5</td>
-</tr>
-<tr>
-<td>4</td>
-<td>2020-06-01 09:05:00</td>
-<td>294.0</td>
-<td>294.0</td>
-<td>294.5</td>
-<td>419</td>
-<td>293.5</td>
-</tr>
-</tbody>
-</table>
-</div>
+!!! done "Out"
+    |   | ts                  | Close | Open  | High  | Volume | Low   |
+    |---|---------------------|-------|-------|-------|--------|-------|
+    | 0 | 2020-06-01 09:01:00 | 294.0 | 294.0 | 294.0 | 3187   | 293.5 |
+    | 1 | 2020-06-01 09:02:00 | 293.5 | 293.5 | 294.0 | 201    | 293.5 |
+    | 2 | 2020-06-01 09:03:00 | 294.0 | 293.5 | 294.0 | 267    | 293.5 |
+    | 3 | 2020-06-01 09:04:00 | 294.5 | 294.0 | 294.5 | 624    | 293.5 |
+    | 4 | 2020-06-01 09:05:00 | 294.0 | 294.0 | 294.5 | 419    | 293.5 | -->
                 
               
               
@@ -801,6 +797,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../contract/" title="Contract" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Contract
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../credit_enquires/" title="Credit Enquires" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Credit Enquires
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
