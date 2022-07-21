@@ -11,7 +11,7 @@
         <meta name="description" content="Shioaji is provided by SinoPac the most pythonic API for trading the Taiwan and global financial market. You can use your favorite Python packages such as NumPy, pandas, PyTorch or TensorFlow to build your trading model with integrated the Shioaji API on cross-platform.">
       
       
-        <link rel="canonical" href="https://sinotrade.github.io/Shioaji.Csharp/tutor/advanced/nonblock/">
+        <link rel="canonical" href="https://sinotrade.github.io/Shioaji.Csharp/tutor/market_data/snapshot/">
       
       
         <meta name="author" content="Yvictor, ">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Nonblock - Shioaji C#</title>
+        <title>Snapshot - Shioaji C#</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#block-non-block-mode" class="md-skip">
+        <a href="#first-you-need-login" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Nonblock
+              Snapshot
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -264,10 +266,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
     <label class="md-nav__link" for="nav-3-3">
       Market Data
@@ -291,7 +295,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../market_data/streaming/" title="Streaming Market Data" class="md-nav__link">
+    <a href="../streaming/" title="Streaming Market Data" class="md-nav__link">
       Streaming Market Data
     </a>
   </li>
@@ -303,7 +307,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../market_data/historical/" title="Historical Market Data" class="md-nav__link">
+    <a href="../historical/" title="Historical Market Data" class="md-nav__link">
       Historical Market Data
     </a>
   </li>
@@ -313,11 +317,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../market_data/snapshot/" title="Snapshot" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Snapshot
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Snapshot" class="md-nav__link md-nav__link--active">
       Snapshot
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-snapshot" class="md-nav__link">
+    Get Snapshot
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -327,7 +376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../market_data/credit_enquires/" title="Credit Enquires" class="md-nav__link">
+    <a href="../credit_enquires/" title="Credit Enquires" class="md-nav__link">
       Credit Enquires
     </a>
   </li>
@@ -529,36 +578,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#block-non-block-mode" class="md-nav__link">
-    Block &amp; Non Block Mode
-  </a>
-  
-    <nav class="md-nav" aria-label="Block &amp; Non Block Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#block" class="md-nav__link">
-    Block
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#non-block" class="md-nav__link">
-    Non Block
+      
+        <li class="md-nav__item">
+  <a href="#get-snapshot" class="md-nav__link">
+    Get Snapshot
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-function" class="md-nav__link">
-    Support Function
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -578,60 +607,206 @@
                   
                 
                 
-                  <h1>Nonblock</h1>
+                  <h1>Snapshot</h1>
                 
-                <h2 id="block-non-block-mode">Block &amp; Non Block Mode<a class="headerlink" href="#block-non-block-mode" title="Permanent link">&para;</a></h2>
-<p>Shioaji provides return the responsed using Block and Non Block mode, putting the 
-paramter of timeout can change the mode. Timeout default value is 5000 is wait the response for 5 second, but some api for data like tick data will become too large to receive in five second that need to scale up timeout or use Non-Block mode set the timeout as 0. Using cb parameter for Non-Block mode as the callback function.</p>
+                <p>Snapshot is a present stock, future, option info. It contain open, high, low, close, change price, average price, volume, total volume, buy price, buy volume, sell price, sell volume and yestoday volume.</p>
+<h3 id="first-you-need-login"><a href="../../tutor/login">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
+<h3 id="get-snapshot">Get Snapshot<a class="headerlink" href="#get-snapshot" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="err">?</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">contracts</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Stock</span><span class="p">&gt;();</span>
+<span class="n">contracts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2890&quot;</span><span class="p">]);</span>
+<span class="n">contracts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">]);</span>
+<span class="n">List</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;</span> <span class="n">snapshot</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Snapshots</span><span class="p">(</span><span class="n">contracts</span><span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">snapshot</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Signature</span><span class="p">:</span>
-    <span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span>
-        <span class="n">contract</span><span class="p">:</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">contracts</span><span class="o">.</span><span class="n">Contract</span><span class="p">,</span>
-        <span class="n">order</span><span class="p">:</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">Order</span><span class="p">,</span>
-        <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span>
-        <span class="n">cb</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">shioaji</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">Trade</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">Trade</span>
-<span class="n">Docstring</span><span class="p">:</span> <span class="n">placing</span> <span class="n">order</span>
-<span class="n">Type</span><span class="p">:</span>      <span class="n">method</span>
+<div class="highlight"><pre><span></span><code><span class="na">[</span>
+<span class="na">    {</span>
+<span class="na">        ts=1656935843384000000, </span>
+<span class="na">        code=2890, </span>
+<span class="na">        exchange=TSE, </span>
+<span class="na">        open=16.65, </span>
+<span class="na">        high=17, </span>
+<span class="na">        low=16.55, </span>
+<span class="na">        close=16.55, </span>
+<span class="na">        tick_type=Sell, </span>
+<span class="na">        change_price=-0.1, </span>
+<span class="na">        change_rate=-0.6, </span>
+<span class="na">        change_type=Down, </span>
+<span class="na">        average_price=16.75, </span>
+<span class="na">        volume=0, </span>
+<span class="na">        total_volume=12447, </span>
+<span class="na">        amount=16550, </span>
+<span class="na">        total_amount=208451300, </span>
+<span class="na">        yesterday_volume=0,</span>
+<span class="na">        buy_price=15.9, </span>
+<span class="na">        buy_volume=247, </span>
+<span class="na">        sell_price=15.95, </span>
+<span class="na">        sell_volume=404, </span>
+<span class="na">        volume_ratio=0, </span>
+<span class="na">    },</span>
+<span class="na">    {</span>
+<span class="na">        ts=1656935843079000000, </span>
+<span class="na">        code=2330, </span>
+<span class="na">        exchange=TSE, </span>
+<span class="na">        open=443, </span>
+<span class="na">        high=451.5, </span>
+<span class="na">        low=443, </span>
+<span class="na">        close=445.5, </span>
+<span class="na">        tick_type=Buy, </span>
+<span class="na">        change_price=-8, </span>
+<span class="na">        change_rate=-1.76, </span>
+<span class="na">        change_type=Down, </span>
+<span class="na">        average_price=446.65, </span>
+<span class="na">        volume=0, </span>
+<span class="na">        total_volume=32523, </span>
+<span class="na">        amount=445500, </span>
+<span class="na">        total_amount=14526383500, </span>
+<span class="na">        yesterday_volume=0, </span>
+<span class="na">        buy_price=495, </span>
+<span class="na">        buy_volume=484, </span>
+<span class="na">        sell_price=495.5, </span>
+<span class="na">        sell_volume=12, </span>
+<span class="na">        volume_ratio=0, </span>
+<span class="na">    }</span>
+<span class="na">]</span>
 </code></pre></div>
 
 </div>
-<h3 id="block">Block<a class="headerlink" href="#block" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
-</code></pre></div>
-
+<div class="admonition example">
+<p class="admonition-title">Attributes:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>ts</code></td>
+<td align="left">long</td>
+<td align="left">TimeStamp</td>
+</tr>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">Contract id</td>
+</tr>
+<tr>
+<td align="left"><code>exchange</code></td>
+<td align="left">Exchange</td>
+<td align="left">Attributes of industry</td>
+</tr>
+<tr>
+<td align="left"><code>open</code></td>
+<td align="left">double</td>
+<td align="left">open</td>
+</tr>
+<tr>
+<td align="left"><code>high</code></td>
+<td align="left">double</td>
+<td align="left">high</td>
+</tr>
+<tr>
+<td align="left"><code>low</code></td>
+<td align="left">double</td>
+<td align="left">low</td>
+</tr>
+<tr>
+<td align="left"><code>close</code></td>
+<td align="left">double</td>
+<td align="left">close</td>
+</tr>
+<tr>
+<td align="left"><code>tick_type</code></td>
+<td align="left">TickType</td>
+<td align="left">None, Buy, Sell</td>
+</tr>
+<tr>
+<td align="left"><code>change_price</code></td>
+<td align="left">double</td>
+<td align="left">change price</td>
+</tr>
+<tr>
+<td align="left"><code>change_rate</code></td>
+<td align="left">double</td>
+<td align="left">change rate</td>
+</tr>
+<tr>
+<td align="left"><code>change_type</code></td>
+<td align="left">ChangeType</td>
+<td align="left">LimitUp, Up, Unchanged, Dowm, LimitDown</td>
+</tr>
+<tr>
+<td align="left"><code>avgerage_price</code></td>
+<td align="left">double</td>
+<td align="left">avgerage of price</td>
+</tr>
+<tr>
+<td align="left"><code>volume</code></td>
+<td align="left">long</td>
+<td align="left">volume</td>
+</tr>
+<tr>
+<td align="left"><code>total_volume</code></td>
+<td align="left">long</td>
+<td align="left">total volume</td>
+</tr>
+<tr>
+<td align="left"><code>amount</code></td>
+<td align="left">long</td>
+<td align="left">deal amount</td>
+</tr>
+<tr>
+<td align="left"><code>total_amount</code></td>
+<td align="left">long</td>
+<td align="left">total deal amount</td>
+</tr>
+<tr>
+<td align="left"><code>yestoday_volume</code></td>
+<td align="left">str</td>
+<td align="left">volume of yestoday</td>
+</tr>
+<tr>
+<td align="left"><code>buy_price</code></td>
+<td align="left">double</td>
+<td align="left">price of buy</td>
+</tr>
+<tr>
+<td align="left"><code>buy_volume</code></td>
+<td align="left">double</td>
+<td align="left">volume of sell</td>
+</tr>
+<tr>
+<td align="left"><code>sell_price</code></td>
+<td align="left">double</td>
+<td align="left">price of sell</td>
+</tr>
+<tr>
+<td align="left"><code>sell_volume</code></td>
+<td align="left">long</td>
+<td align="left">volume of sell</td>
+</tr>
+<tr>
+<td align="left"><code>volume_ratio</code></td>
+<td align="left">double</td>
+<td align="left">total_volume/yestoday_volume</td>
+</tr>
+</tbody>
+</table>
 </div>
-<h3 id="non-block">Non Block<a class="headerlink" href="#non-block" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span> <span class="n">order</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<h3 id="support-function">Support Function<a class="headerlink" href="#support-function" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Fuction:<ul>
-<li>ticks</li>
-<li>place_order</li>
-<li>update_order</li>
-<li>cancel_order</li>
-<li>update_status </li>
-<li>list_positions      </li>
-</ul>
-</li>
-<li>Parameter: timeout</li>
-<li>Parameter type: int</li>
-<li>Default Mode: Block </li>
-</ul>
                 
               
               
@@ -646,6 +821,41 @@ paramter of timeout can change the mode. Timeout default value is 5000 is wait t
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../historical/" title="Historical Market Data" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Historical Market Data
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../credit_enquires/" title="Credit Enquires" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Credit Enquires
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

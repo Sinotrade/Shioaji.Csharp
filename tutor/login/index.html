@@ -281,6 +281,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#list-accounts" class="md-nav__link">
+    List Accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout-shioaji" class="md-nav__link">
+    Logout Shioaji
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -345,6 +359,18 @@
   <li class="md-nav__item">
     <a href="../market_data/historical/" title="Historical Market Data" class="md-nav__link">
       Historical Market Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../market_data/snapshot/" title="Snapshot" class="md-nav__link">
+      Snapshot
     </a>
   </li>
 
@@ -563,6 +589,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#list-accounts" class="md-nav__link">
+    List Accounts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout-shioaji" class="md-nav__link">
+    Logout Shioaji
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -584,7 +624,7 @@
                 <h3 id="login-shioaji">Login Shioaji<a class="headerlink" href="#login-shioaji" title="Permanent link">&para;</a></h3>
 <div class="admonition attention">
 <p class="admonition-title">Simulation Accounts</p>
-<p>If use simulation, we provide 10 of test accounts <strong>PAPIUSER01~PAPIUSER08</strong>, the password both <strong>2222</strong>.</p>
+<p>If use simulation, we provide 1 of test account <strong>PAPIUSER01</strong>, the password is <strong>2222</strong>.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">In</p>
@@ -610,6 +650,25 @@
 </div>
 </div>
 </div>
+<h3 id="list-accounts">List Accounts<a class="headerlink" href="#list-accounts" title="Permanent link">&para;</a></h3>
+<p>There are 2 ways you can get your accounts:  </p>
+<ol>
+<li><code>_api.Login()</code>  </li>
+<li><code>_api.ListAccounts()</code></li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">In: login</p>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">person_id</span><span class="p">=</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="n">passwd</span><span class="p">=</span><span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">)</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_accounts</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+</code></pre></div>
+
+</div>
+<div class="admonition info">
+<p class="admonition-title">In: list_accounts</p>
+<div class="highlight"><pre><span></span><code><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">ListAccounts</span><span class="p">().</span><span class="n">ToString</span><span class="p">());</span>
+</code></pre></div>
+
+</div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
 <div class="highlight"><pre><span></span><code><span class="na">[</span>
@@ -617,6 +676,26 @@
 <span class="na"> {account_type=H, person_id=&quot;&quot;, broker_id=&quot;&quot;, account_id=&quot;&quot;, signed=False, username=&quot;&quot;,},</span>
 <span class="na"> {account_type=S, person_id=&quot;&quot;, broker_id=&quot;&quot;, account_id=&quot;&quot;, signed=True, username=&quot;&quot;,}</span>
 <span class="na">]</span>
+</code></pre></div>
+
+</div>
+<h3 id="logout-shioaji">Logout Shioaji<a class="headerlink" href="#logout-shioaji" title="Permanent link">&para;</a></h3>
+<p>Logout funciton will close the connection between the client and the server.</p>
+<div class="admonition info">
+<p class="admonition-title">In</p>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">(</span><span class="n">simulation</span><span class="p">:</span><span class="k">true</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">res</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Logout</span><span class="p">();</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">res</span><span class="p">);</span> 
+</code></pre></div>
+
+</div>
+<div class="admonition done">
+<p class="admonition-title">Out</p>
+<div class="highlight"><pre><span></span><code><span class="n">Disconnect</span>
+<span class="n">True</span>
 </code></pre></div>
 
 </div>

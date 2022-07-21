@@ -364,6 +364,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../snapshot/" title="Snapshot" class="md-nav__link">
+      Snapshot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../credit_enquires/" title="Credit Enquires" class="md-nav__link">
       Credit Enquires
     </a>
@@ -623,8 +635,8 @@
             <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
             <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
             <span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback</span><span class="p">(</span><span class="n">myCB</span><span class="p">);</span>
-            <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">tick</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
+<span class="hll">            <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">tick</span><span class="p">);</span>
+</span>            <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -636,7 +648,7 @@
 <div class="highlight"><pre><span></span><code><span class="n">Connecting</span> <span class="k">as</span> <span class="n">shioaji@sinopac</span> <span class="k">on</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80.</span><span class="p">..</span>
 <span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="n">SOLCLIENT_OK</span> <span class="p">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="m">0</span> <span class="p">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">host</span> <span class="err">&#39;</span><span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">IP</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span> <span class="p">(</span><span class="n">host</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">total</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="n">ReResponse</span> <span class="n">Code</span><span class="p">:</span> <span class="n">SOLCLIENT_OK</span> <span class="p">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="m">0</span> <span class="p">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">host</span> <span class="err">&#39;</span><span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">IP</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span> <span class="p">(</span><span class="n">host</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">total</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span>
 <span class="p">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Session</span> <span class="n">up</span>
-<span class="n">Subscribe</span> <span class="n">MKT</span><span class="p">/*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
+<span class="n">Subscribe</span> <span class="n">MKT</span><span class="p">/</span> <span class="p">*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
 <span class="n">topic</span><span class="p">:</span> <span class="n">MKT</span><span class="p">/</span><span class="n">idcdmzpcr01</span><span class="p">/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
 <span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
 <span class="n">Time</span><span class="p">:</span> <span class="m">11</span><span class="p">:</span><span class="m">04</span><span class="p">:</span><span class="m">20.751919</span>
@@ -693,8 +705,8 @@
             <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
             <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
             <span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback</span><span class="p">(</span><span class="n">myCB</span><span class="p">);</span>
-            <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
+<span class="hll">            <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
+</span>            <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -705,8 +717,8 @@
 <p class="admonition-title">Out</p>
 <div class="highlight"><pre><span></span><code><span class="n">Response</span> <span class="n">Code</span><span class="p">:</span> <span class="n">SOLCLIENT_OK</span> <span class="p">|</span> <span class="n">Event</span> <span class="n">Code</span><span class="p">:</span> <span class="m">0</span> <span class="p">|</span> <span class="n">Info</span><span class="p">:</span> <span class="n">host</span> <span class="err">&#39;</span><span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">IP</span> <span class="m">203.66</span><span class="p">.</span><span class="m">91.161</span><span class="p">:</span><span class="m">80</span> <span class="p">(</span><span class="n">host</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">host</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span> <span class="p">(</span><span class="n">total</span> <span class="n">connection</span> <span class="n">attempt</span> <span class="m">1</span> <span class="n">of</span> <span class="m">1</span><span class="p">)</span>
 <span class="p">|</span> <span class="n">Event</span><span class="p">:</span> <span class="n">Session</span> <span class="n">up</span>
-<span class="n">Subscribe</span> <span class="n">QUT</span><span class="cm">/*/TSE/2330</span>
-<span class="cm">topic: QUO/v2/*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
+<span class="n">Subscribe</span> <span class="n">QUT</span><span class="p">/</span> <span class="p">*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">QUO</span><span class="p">/</span><span class="n">v2</span><span class="p">/</span> <span class="p">*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
 <span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
 <span class="n">Time</span><span class="p">:</span> <span class="m">13</span><span class="p">:</span><span class="m">24</span><span class="p">:</span><span class="m">38.847295</span>
 <span class="n">BidPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">631</span><span class="p">,</span><span class="m">630</span><span class="p">,</span><span class="m">629</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">627</span><span class="p">]</span>
@@ -714,15 +726,15 @@
 <span class="n">BidVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">127</span><span class="p">,</span><span class="m">832</span><span class="p">,</span><span class="m">462</span><span class="p">,</span><span class="m">453</span><span class="p">,</span><span class="m">1297</span><span class="p">]</span>
 <span class="n">AskVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">296</span><span class="p">,</span><span class="m">204</span><span class="p">,</span><span class="m">177</span><span class="p">,</span><span class="m">573</span><span class="p">,</span><span class="m">377</span><span class="p">]</span>
 <span class="p">-----------------------------------</span>
-<span class="n">topic</span><span class="p">:</span> <span class="n">QUO</span><span class="p">/</span><span class="n">v2</span><span class="cm">/*/TSE/2330/ODDLOT</span>
-<span class="cm">Date: 2021/02/03</span>
-<span class="cm">Time: 13:24:39.046382</span>
-<span class="cm">BidPrice: [631,630,629,628,627]</span>
-<span class="cm">AskPrice: [632,633,634,635,636]</span>
-<span class="cm">BidVolume: [128,832,462,453,1297]</span>
-<span class="cm">AskVolume: [296,204,177,573,377]</span>
-<span class="cm">-----------------------------------</span>
-<span class="cm">topic: QUO/v2/*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">QUO</span><span class="p">/</span><span class="n">v2</span><span class="p">/</span> <span class="p">*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
+<span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
+<span class="n">Time</span><span class="p">:</span> <span class="m">13</span><span class="p">:</span><span class="m">24</span><span class="p">:</span><span class="m">39.046382</span>
+<span class="n">BidPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">631</span><span class="p">,</span><span class="m">630</span><span class="p">,</span><span class="m">629</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">627</span><span class="p">]</span>
+<span class="n">AskPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">632</span><span class="p">,</span><span class="m">633</span><span class="p">,</span><span class="m">634</span><span class="p">,</span><span class="m">635</span><span class="p">,</span><span class="m">636</span><span class="p">]</span>
+<span class="n">BidVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">128</span><span class="p">,</span><span class="m">832</span><span class="p">,</span><span class="m">462</span><span class="p">,</span><span class="m">453</span><span class="p">,</span><span class="m">1297</span><span class="p">]</span>
+<span class="n">AskVolume</span><span class="p">:</span> <span class="p">[</span><span class="m">296</span><span class="p">,</span><span class="m">204</span><span class="p">,</span><span class="m">177</span><span class="p">,</span><span class="m">573</span><span class="p">,</span><span class="m">377</span><span class="p">]</span>
+<span class="p">-----------------------------------</span>
+<span class="n">topic</span><span class="p">:</span> <span class="n">QUO</span><span class="p">/</span><span class="n">v2</span><span class="p">/</span> <span class="p">*/</span><span class="n">TSE</span><span class="p">/</span><span class="m">2330</span><span class="p">/</span><span class="n">ODDLOT</span>
 <span class="n">Date</span><span class="p">:</span> <span class="m">2021</span><span class="p">/</span><span class="m">02</span><span class="p">/</span><span class="m">03</span>
 <span class="n">Time</span><span class="p">:</span> <span class="m">13</span><span class="p">:</span><span class="m">24</span><span class="p">:</span><span class="m">39.238539</span>
 <span class="n">BidPrice</span><span class="p">:</span> <span class="p">[</span><span class="m">631</span><span class="p">,</span><span class="m">630</span><span class="p">,</span><span class="m">629</span><span class="p">,</span><span class="m">628</span><span class="p">,</span><span class="m">627</span><span class="p">]</span>
