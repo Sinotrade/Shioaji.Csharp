@@ -21,7 +21,7 @@
     
     
       
-        <title>Account balance - Shioaji C#</title>
+        <title>Account Balance - Shioaji C#</title>
       
     
     
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Account balance
+              Account Balance
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -327,8 +329,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../market_data/short_stock_source/" title="Short Stock Source" class="md-nav__link">
+      Short Stock Source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../market_data/credit_enquires/" title="Credit Enquires" class="md-nav__link">
       Credit Enquires
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../market_data/scanners/" title="Scanners" class="md-nav__link">
+      Scanners
     </a>
   </li>
 
@@ -408,10 +434,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
     
     <label class="md-nav__link" for="nav-3-5">
       Account Data
@@ -438,6 +466,92 @@
     <a href="../position/" title="Position" class="md-nav__link">
       Position
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../profit_loss/" title="Profit Loss" class="md-nav__link">
+      Profit Loss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../profit_loss_detail/" title="Profit Loss Detail" class="md-nav__link">
+      Profit Loss Detail
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settlement/" title="Settlement" class="md-nav__link">
+      Settlement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Account Balance
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Account Balance" class="md-nav__link md-nav__link--active">
+      Account Balance
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-you-need-login" class="md-nav__link">
+    First, you need login.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -551,73 +665,59 @@
                   
                 
                 
-                  <h1>Account balance</h1>
+                  <h1>Account Balance</h1>
                 
                 <p>Query stock account balance </p>
 <h3 id="first-you-need-login"><a href="../../tutor/login">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">account_balance</span><span class="err">?</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">accountBalance</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">AccountBalance</span><span class="p">();</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">accountBalance</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Signature</span><span class="p">:</span>
-    <span class="n">api</span><span class="o">.</span><span class="n">account_balance</span><span class="p">(</span>
-        <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span>
-        <span class="n">cb</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">shioaji</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">AccountBalance</span><span class="p">],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span>
-<span class="n">Docstring</span><span class="p">:</span> <span class="n">query</span> <span class="n">stock</span> <span class="n">account</span> <span class="n">balance</span> 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">acc_balance</span><span class="p">=</span><span class="m">12345</span><span class="p">,</span> <span class="n">date</span><span class="p">=</span><span class="m">2022</span><span class="p">-</span><span class="m">07</span><span class="p">-</span><span class="m">28</span> <span class="m">14</span><span class="p">:</span><span class="m">19</span><span class="p">:</span><span class="m">58</span><span class="p">,</span> <span class="n">errmsg</span><span class="p">=</span><span class="s">&quot;&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">account_balance</span><span class="p">()</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">AccountBalance</span><span class="p">(</span><span class="n">acc_balance</span><span class="o">=</span><span class="mf">123456.0</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;2020-07-16 09:29:13&#39;</span><span class="p">,</span> <span class="n">errmsg</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)]</span>
-</code></pre></div>
-
-</div>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">acc_balance</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">account_balance</span><span class="p">()</span>   
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">acc_balance</span><span class="p">)</span>     
-<span class="n">df</span>     
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
+<div class="admonition example">
+<p class="admonition-title">Attributes:</p>
 <table>
 <thead>
 <tr>
-<th>acc_balance</th>
-<th>date</th>
-<th>errmsg</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>123456.0</td>
-<td>2020-07-16 09:29:13</td>
-<td></td>
+<td align="left"><code>acc_balance</code></td>
+<td align="left">float</td>
+<td align="left">account balance</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">str</td>
+<td align="left">query date</td>
+</tr>
+<tr>
+<td align="left"><code>errmsg</code></td>
+<td align="left">str</td>
+<td align="left">error message</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">acc_balance</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">account</span> <span class="n">balance</span>
-<span class="n">date</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">query</span> <span class="n">date</span>
-<span class="n">errmsg</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">error</span> <span class="n">message</span>    
-</code></pre></div>
-
 </div>
                 
               
@@ -633,6 +733,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../settlement/" title="Settlement" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Settlement
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../misc/CA/" title="CA" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                CA
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

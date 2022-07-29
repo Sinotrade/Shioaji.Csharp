@@ -21,7 +21,7 @@
     
     
       
-        <title>Profit loss detail - Shioaji C#</title>
+        <title>Profit Loss Detail - Shioaji C#</title>
       
     
     
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Profit loss detail
+              Profit Loss Detail
             
           </span>
         </div>
@@ -215,10 +215,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Tutorial - User Guide
@@ -327,8 +329,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../../market_data/short_stock_source/" title="Short Stock Source" class="md-nav__link">
+      Short Stock Source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../market_data/credit_enquires/" title="Credit Enquires" class="md-nav__link">
       Credit Enquires
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../market_data/scanners/" title="Scanners" class="md-nav__link">
+      Scanners
     </a>
   </li>
 
@@ -408,10 +434,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
     
     <label class="md-nav__link" for="nav-3-5">
       Account Data
@@ -437,6 +465,92 @@
   <li class="md-nav__item">
     <a href="../position/" title="Position" class="md-nav__link">
       Position
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../profit_loss/" title="Profit Loss" class="md-nav__link">
+      Profit Loss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Profit Loss Detail
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Profit Loss Detail" class="md-nav__link md-nav__link--active">
+      Profit Loss Detail
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#first-you-need-get-profit-loss" class="md-nav__link">
+    First, you need get profit loss.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settlement/" title="Settlement" class="md-nav__link">
+      Settlement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../account_balance/" title="Account Balance" class="md-nav__link">
+      Account Balance
     </a>
   </li>
 
@@ -551,109 +665,136 @@
                   
                 
                 
-                  <h1>Profit loss detail</h1>
+                  <h1>Profit Loss Detail</h1>
                 
                 <p>Query account of profit loss detail</p>
 <h3 id="first-you-need-get-profit-loss"><a href="../../tutor/accounting/profir_loss.">First, you need get profit loss.</a><a class="headerlink" href="#first-you-need-get-profit-loss" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">list_profit_loss_detail</span><span class="err">?</span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">listProfitLossDetail</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossDetail</span><span class="p">(</span><span class="n">detail_id</span><span class="p">:</span><span class="m">1</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">listProfitLossDetail</span><span class="p">);</span>
 </code></pre></div>
 
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="n">Signature</span><span class="p">:</span>
-    <span class="n">api</span><span class="o">.</span><span class="n">list_profit_loss_detail</span><span class="p">(</span>
-        <span class="n">account</span><span class="p">:</span> <span class="n">shioaji</span><span class="o">.</span><span class="n">account</span><span class="o">.</span><span class="n">Account</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">detail_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">,</span>
-        <span class="n">cb</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">List</span><span class="p">[</span><span class="n">shioaji</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">ProfitLossDetail</span><span class="p">]],</span> <span class="n">NoneType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="p">)</span>
-<span class="n">Docstring</span><span class="p">:</span>
-    <span class="n">query</span> <span class="n">account</span> <span class="n">of</span> <span class="n">profit</span> <span class="n">loss</span> <span class="n">detail</span>
-
-    <span class="n">Args</span><span class="p">:</span>
-        <span class="n">account</span> <span class="p">(:</span><span class="n">obj</span><span class="p">:</span><span class="n">Account</span><span class="p">):</span> 
-            <span class="n">choice</span> <span class="n">the</span> <span class="n">account</span> <span class="kn">from</span> <span class="nn">listing</span> <span class="n">account</span> <span class="p">(</span><span class="n">Default</span><span class="p">:</span> <span class="n">stock</span> <span class="n">account</span><span class="p">)</span>
-        <span class="n">detail_id</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">the</span> <span class="nb">id</span> <span class="ow">is</span> <span class="kn">from</span> <span class="nn">ProfitLoss</span> <span class="nb">object</span><span class="p">,</span> <span class="n">ProfitLoss</span> <span class="ow">is</span> <span class="kn">from</span> <span class="nn">list_profit_loss</span>
+<div class="highlight"><pre><span></span><code><span class="na">[</span>
+<span class="na">    {</span>
+<span class="na">        date=2021-03-11, </span>
+<span class="na">        cond=Cash, </span>
+<span class="na">        code=2031, </span>
+<span class="na">        quantity=1, </span>
+<span class="na">        price=39.95, </span>
+<span class="na">        cost=39969, </span>
+<span class="na">        dseq=IN383, </span>
+<span class="na">        rep_margintrading_amt=0, </span>
+<span class="na">        rep_collateral=0, </span>
+<span class="na">        rep_margin=0, </span>
+<span class="na">        fee=19, </span>
+<span class="na">        interest=0, </span>
+<span class="na">        tax=0, </span>
+<span class="na">        shortselling_fee=0, </span>
+<span class="na">        currency=NTD, </span>
+<span class="na">        trade_type=Common, </span>
+<span class="na">    }</span>
+<span class="na">]</span>
 </code></pre></div>
 
 </div>
-<div class="admonition info">
-<p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="n">api</span><span class="o">.</span><span class="n">list_profit_loss_detail</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">stock_account</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">ProfitLossDetail</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="s1">&#39;2020-05-22&#39;</span><span class="p">,</span> <span class="n">cond</span><span class="o">=</span><span class="s1">&#39;Cash&#39;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;2890&#39;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">10.1</span><span class="p">,</span> <span class="n">cost</span><span class="o">=</span><span class="mi">9100</span><span class="p">,</span> <span class="n">dseq</span><span class="o">=</span><span class="s1">&#39;ID111&#39;</span><span class="p">,</span> <span class="n">rep_margintrading_amt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">rep_collateral</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">rep_margin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fee</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">interest</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">tax</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">shortselling_fee</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">currency</span><span class="o">=</span><span class="s1">&#39;NTD&#39;</span><span class="p">)]</span>
-</code></pre></div>
-
-</div>
-<div class="admonition done">
-<p class="admonition-title">Out</p>
+<div class="admonition example">
+<p class="admonition-title">Attributes:</p>
 <table>
 <thead>
 <tr>
-<th>date</th>
-<th>cond</th>
-<th>code</th>
-<th>quantity</th>
-<th>price</th>
-<th>cost</th>
-<th>dseq</th>
-<th>rep_margintrading_amt</th>
-<th>rep_collateral</th>
-<th>rep_margin</th>
-<th>fee</th>
-<th>interest</th>
-<th>tax</th>
-<th>shortselling_fee</th>
-<th>currency</th>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>2020-05-22</td>
-<td>StockOrderCond.Cash</td>
-<td>2890</td>
-<td>1</td>
-<td>10.1</td>
-<td>9100</td>
-<td>ID111</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>20</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>NTD</td>
+<td align="left"><code>date</code></td>
+<td align="left">str</td>
+<td align="left">trade date</td>
+</tr>
+<tr>
+<td align="left"><code>cond</code></td>
+<td align="left">StockOrderCond</td>
+<td align="left">Cash, Netting, MarginTrading, ShortSelling</td>
+</tr>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>price</code></td>
+<td align="left">float</td>
+<td align="left">price</td>
+</tr>
+<tr>
+<td align="left"><code>cost</code></td>
+<td align="left">int</td>
+<td align="left">cost of price</td>
+</tr>
+<tr>
+<td align="left"><code>dseq</code></td>
+<td align="left">str</td>
+<td align="left">detail seqno no</td>
+</tr>
+<tr>
+<td align="left"><code>rep_margintrading_amt</code></td>
+<td align="left">int</td>
+<td align="left">repay amount of margin trading</td>
+</tr>
+<tr>
+<td align="left"><code>rep_collateral</code></td>
+<td align="left">int</td>
+<td align="left">repay collateral</td>
+</tr>
+<tr>
+<td align="left"><code>rep_margin</code></td>
+<td align="left">int</td>
+<td align="left">repay margin</td>
+</tr>
+<tr>
+<td align="left"><code>fee</code></td>
+<td align="left">int</td>
+<td align="left">fee</td>
+</tr>
+<tr>
+<td align="left"><code>interest</code></td>
+<td align="left">int</td>
+<td align="left">interest</td>
+</tr>
+<tr>
+<td align="left"><code>tax</code></td>
+<td align="left">str</td>
+<td align="left">trading tax</td>
+</tr>
+<tr>
+<td align="left"><code>shortselling_fee</code></td>
+<td align="left">int</td>
+<td align="left">fee of short selling</td>
+</tr>
+<tr>
+<td align="left"><code>currency</code></td>
+<td align="left">str</td>
+<td align="left">NTD, USD, HKD, EUR, CAD, BAS</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">date</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">trade</span> <span class="n">date</span><span class="o">.</span>
-<span class="n">cond</span> <span class="p">(</span><span class="n">StockOrderCond</span><span class="p">):</span> <span class="p">{</span><span class="n">Cash</span><span class="p">,</span> <span class="n">Netting</span><span class="p">,</span> <span class="n">MarginTrading</span><span class="p">,</span> <span class="n">ShortSelling</span><span class="p">}</span>
-<span class="n">code</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">contract</span> <span class="nb">id</span><span class="o">.</span>
-<span class="n">quantity</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">quantity</span><span class="o">.</span>
-<span class="n">price</span> <span class="p">(</span><span class="nb">float</span><span class="p">):</span> <span class="n">price</span><span class="o">.</span>
-<span class="n">cost</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">cost</span> <span class="n">of</span> <span class="n">price</span><span class="o">.</span>
-<span class="n">dseq</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="n">detail</span> <span class="n">seqno</span> <span class="n">no</span><span class="o">.</span>
-<span class="n">rep_margintrading_amt</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">repay</span> <span class="n">amount</span> <span class="n">of</span> <span class="n">margin</span> <span class="n">trading</span><span class="o">.</span>
-<span class="n">rep_collateral</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">repay</span> <span class="n">collateral</span><span class="o">.</span>
-<span class="n">rep_margin</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">repay</span> <span class="n">margin</span><span class="o">.</span>
-<span class="n">fee</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">fee</span><span class="o">.</span>
-<span class="n">interest</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">interest</span><span class="o">.</span>
-<span class="n">tax</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">trading</span> <span class="n">tax</span><span class="o">.</span>
-<span class="n">shortselling_fee</span> <span class="p">(</span><span class="nb">int</span><span class="p">):</span> <span class="n">fee</span> <span class="n">of</span> <span class="n">short</span> <span class="n">selling</span><span class="o">.</span> 
-<span class="n">currency</span> <span class="p">(</span><span class="nb">str</span><span class="p">):</span> <span class="p">{</span><span class="n">NTD</span><span class="p">,</span> <span class="n">USD</span><span class="p">,</span> <span class="n">HKD</span><span class="p">,</span> <span class="n">EUR</span><span class="p">,</span> <span class="n">CAD</span><span class="p">,</span> <span class="n">BAS</span><span class="p">}</span>
-</code></pre></div>
-
 </div>
                 
               
@@ -669,6 +810,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../profit_loss/" title="Profit Loss" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Profit Loss
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../settlement/" title="Settlement" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Settlement
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
