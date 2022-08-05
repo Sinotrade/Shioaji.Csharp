@@ -395,6 +395,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../order/CA/" title="CA & Signature" class="md-nav__link">
+      CA & Signature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../order/Stock/" title="Stock" class="md-nav__link">
       Stock
     </a>
@@ -421,6 +433,18 @@
   <li class="md-nav__item">
     <a href="../../order/UpdateStatus/" title="Update Status" class="md-nav__link">
       Update Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../order/Reserve/" title="Reserve Order" class="md-nav__link">
+      Reserve Order
     </a>
   </li>
 
@@ -583,48 +607,6 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Misc
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Misc" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Misc
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../misc/CA/" title="CA" class="md-nav__link">
-      CA
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item">
     <a href="https://sinotrade.github.io/" title="Python" class="md-nav__link">
       Python
@@ -720,17 +702,52 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
-<div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">contract</span> <span class="n">id</span><span class="p">.</span>
-<span class="n">direction</span> <span class="p">(</span><span class="n">Action</span><span class="p">):</span> <span class="n">action</span><span class="p">.</span>
-    <span class="p">{</span><span class="n">Buy</span><span class="p">,</span> <span class="n">Sell</span><span class="p">}</span>
-<span class="n">quantity</span> <span class="p">(</span><span class="kt">int</span><span class="p">):</span> <span class="n">quantity</span><span class="p">.</span>
-<span class="n">price</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">the</span> <span class="n">average</span> <span class="n">price</span><span class="p">.</span>
-<span class="n">pnl</span> <span class="p">(</span><span class="kt">float</span><span class="p">):</span> <span class="n">unrealized</span> <span class="n">profit</span><span class="p">.</span>
-<span class="n">yd_quantity</span> <span class="p">(</span><span class="kt">int</span><span class="p">):</span> <span class="n">yesterday</span>
-<span class="n">cond</span> <span class="p">(</span><span class="n">StockOrderCond</span><span class="p">):</span> <span class="n">Default</span> <span class="n">Cash</span><span class="p">.</span>
-    <span class="p">{</span><span class="n">Cash</span><span class="p">(</span><span class="err">現股</span><span class="p">),</span> <span class="n">Netting</span><span class="p">(</span><span class="err">餘額交割</span><span class="p">),</span> <span class="n">MarginTrading</span><span class="p">(</span><span class="err">融資</span><span class="p">),</span> <span class="n">ShortSelling</span><span class="p">(</span><span class="err">融券</span><span class="p">),</span> <span class="n">Emerging</span><span class="p">(</span><span class="err">興櫃</span><span class="p">)}</span>
-</code></pre></div>
-
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>direction</code></td>
+<td align="left">Action</td>
+<td align="left">Buy, Sell</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>price</code></td>
+<td align="left">float</td>
+<td align="left">the average price</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">float</td>
+<td align="left">unrealized profit</td>
+</tr>
+<tr>
+<td align="left"><code>yd_quantity</code></td>
+<td align="left">int</td>
+<td align="left">yesterday</td>
+</tr>
+<tr>
+<td align="left"><code>cond</code></td>
+<td align="left">StockOrderCond</td>
+<td align="left">Cash(現股), Netting(餘額交割), MarginTrading(融資), ShortSelling(融券), Emerging(興櫃)</td>
+</tr>
+</tbody>
+</table>
 </div>
                 
               
@@ -750,7 +767,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../order/UpdateStatus/" title="Update Status" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../order/Reserve/" title="Reserve Order" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -759,7 +776,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Update Status
+                Reserve Order
               </div>
             </div>
           </a>
