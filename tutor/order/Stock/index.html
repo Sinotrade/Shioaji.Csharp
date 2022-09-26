@@ -693,6 +693,48 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Advanced Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Advanced Guide" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Advanced Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/nonblock/" title="None Block & Block Mode" class="md-nav__link">
+      None Block & Block Mode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -891,6 +933,7 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
     <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">No</span><span class="p">,</span>
+    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
 <span class="p">};</span>
 </code></pre></div>
 
@@ -907,6 +950,7 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
     <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">No</span><span class="p">,</span>
+    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
 <span class="p">};</span>
 </code></pre></div>
 
@@ -923,7 +967,8 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
 <span class="hll">    <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">Yes</span><span class="p">,</span>
-</span><span class="p">};</span>
+</span>    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
+<span class="p">};</span>
 </code></pre></div>
 
 </div>
@@ -946,6 +991,7 @@
     <span class="p">{</span><span class="k">true</span><span class="p">,</span> <span class="k">false</span><span class="p">}</span>
 <span class="n">account</span> <span class="p">(:</span><span class="n">obj</span><span class="p">:</span><span class="n">Account</span><span class="p">):</span> <span class="n">which</span> <span class="n">account</span> <span class="n">to</span> <span class="n">place</span> <span class="k">this</span> <span class="n">order</span>
 <span class="n">ca</span> <span class="p">(</span><span class="n">binary</span><span class="p">):</span> <span class="n">the</span> <span class="n">ca</span> <span class="n">of</span> <span class="k">this</span> <span class="n">order</span>
+<span class="n">custom_field</span> <span class="p">(</span><span class="n">str</span><span class="p">):</span> <span class="n">custom</span> <span class="n">field</span>
 </code></pre></div>
 
 </div>
@@ -983,6 +1029,7 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
     <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">No</span><span class="p">,</span>
+    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
 <span class="p">};</span>
 <span class="kt">var</span> <span class="n">_trade</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">PlaceOrder</span><span class="p">(</span><span class="n">_contract</span><span class="p">,</span> <span class="n">_stockOrder</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_trade</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
@@ -995,7 +1042,7 @@
 <span class="k">using</span> <span class="nn">Action</span> <span class="p">=</span> <span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">Action</span><span class="p">;</span>
 
 <span class="hll"><span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">(</span><span class="n">simulation</span><span class="p">:</span><span class="k">true</span><span class="p">);</span>
-</span><span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PAPIUSER07&quot;</span><span class="p">,</span> <span class="s">&quot;2222&quot;</span><span class="p">);</span>
+</span><span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PAPIUSER01&quot;</span><span class="p">,</span> <span class="s">&quot;2222&quot;</span><span class="p">);</span>
 
 <span class="kt">var</span> <span class="n">_contract</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;1101&quot;</span><span class="p">];</span>
 <span class="kt">var</span> <span class="n">_stockOrder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StockOrder</span><span class="p">()</span>
@@ -1007,6 +1054,7 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
     <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">No</span><span class="p">,</span>
+    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
 <span class="p">};</span>
 <span class="kt">var</span> <span class="n">_trade</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">PlaceOrder</span><span class="p">(</span><span class="n">_contract</span><span class="p">,</span> <span class="n">_stockOrder</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_trade</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
@@ -1043,7 +1091,8 @@
         <span class="n">first_sell</span><span class="p">=</span><span class="k">false</span><span class="p">,</span>
         <span class="n">id</span><span class="p">=</span><span class="n">c9854d9d</span><span class="p">,</span> 
         <span class="n">seqno</span><span class="p">=</span><span class="m">024592</span><span class="p">,</span> 
-        <span class="n">ordno</span><span class="p">=</span><span class="n">WA036</span><span class="p">,</span> 
+        <span class="n">ordno</span><span class="p">=</span><span class="n">WA036</span><span class="p">,</span>
+        <span class="n">custom_field</span><span class="p">=</span><span class="n">test</span><span class="p">,</span> 
         <span class="n">account</span><span class="p">={</span>
             <span class="n">account_type</span><span class="p">=</span><span class="n">S</span><span class="p">,</span> 
             <span class="n">person_id</span><span class="p">=</span><span class="n">PAPIUSER07</span><span class="p">,</span> 
@@ -1054,9 +1103,9 @@
         <span class="p">},</span>
     <span class="p">},</span> 
     <span class="n">status</span><span class="p">={</span>
-        <span class="n">id</span><span class="p">=</span><span class="n">c9854d9d</span><span class="p">,</span> 
-<span class="hll">        <span class="n">status</span><span class="p">=</span><span class="n">PendingSubmit</span><span class="p">,</span> 
-</span>        <span class="n">status_code</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+<span class="hll">        <span class="n">id</span><span class="p">=</span><span class="n">c9854d9d</span><span class="p">,</span> 
+</span>        <span class="n">status</span><span class="p">=</span><span class="n">PendingSubmit</span><span class="p">,</span> 
+        <span class="n">status_code</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
         <span class="n">order_ts</span><span class="p">=</span><span class="m">1608863715</span><span class="p">,</span> 
         <span class="n">modified_ts</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
         <span class="n">modified_price</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
@@ -1093,7 +1142,8 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
 <span class="hll">    <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">Yes</span><span class="p">,</span>
-</span><span class="p">};</span>
+</span>    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
+<span class="p">};</span>
 <span class="kt">var</span> <span class="n">_trade</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">PlaceOrder</span><span class="p">(</span><span class="n">_contract</span><span class="p">,</span> <span class="n">_stockOrder</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_trade</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
@@ -1105,7 +1155,7 @@
 <span class="k">using</span> <span class="nn">Action</span> <span class="p">=</span> <span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">Action</span><span class="p">;</span>
 
 <span class="hll"><span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">(</span><span class="n">simulation</span><span class="p">:</span><span class="k">true</span><span class="p">);</span>
-</span><span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PAPIUSER07&quot;</span><span class="p">,</span> <span class="s">&quot;2222&quot;</span><span class="p">);</span>
+</span><span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PAPIUSER01&quot;</span><span class="p">,</span> <span class="s">&quot;2222&quot;</span><span class="p">);</span>
 
 <span class="kt">var</span> <span class="n">_contract</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;1101&quot;</span><span class="p">];</span>
 <span class="kt">var</span> <span class="n">_stockOrder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StockOrder</span><span class="p">()</span>
@@ -1117,7 +1167,8 @@
     <span class="n">order_type</span> <span class="p">=</span> <span class="n">StockOrderType</span><span class="p">.</span><span class="n">ROD</span><span class="p">,</span>
     <span class="n">order_lot</span> <span class="p">=</span> <span class="n">StockOrderLot</span><span class="p">.</span><span class="n">Common</span><span class="p">,</span>
 <span class="hll">    <span class="n">first_sell</span> <span class="p">=</span> <span class="n">StockFirstSell</span><span class="p">.</span><span class="n">Yes</span><span class="p">,</span>
-</span><span class="p">};</span>
+</span>    <span class="n">custom_field</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span>
+<span class="p">};</span>
 <span class="kt">var</span> <span class="n">_trade</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">PlaceOrder</span><span class="p">(</span><span class="n">_contract</span><span class="p">,</span> <span class="n">_stockOrder</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">_trade</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
 </code></pre></div>
@@ -1154,6 +1205,7 @@
 </span>        <span class="n">id</span><span class="p">=</span><span class="m">36970</span><span class="n">be4</span><span class="p">,</span> 
         <span class="n">seqno</span><span class="p">=</span><span class="m">024600</span><span class="p">,</span> 
         <span class="n">ordno</span><span class="p">=</span><span class="n">WA038</span><span class="p">,</span> 
+        <span class="n">custom_field</span><span class="p">=</span><span class="n">test</span><span class="p">,</span> 
         <span class="n">account</span><span class="p">={</span>
             <span class="n">account_type</span><span class="p">=</span><span class="n">S</span><span class="p">,</span> 
             <span class="n">person_id</span><span class="p">=</span><span class="n">PAPIUSER07</span><span class="p">,</span> 
@@ -1164,9 +1216,9 @@
         <span class="p">},</span>
     <span class="p">},</span> 
     <span class="n">status</span><span class="p">={</span>
-        <span class="n">id</span><span class="p">=</span><span class="m">36970</span><span class="n">be4</span><span class="p">,</span> 
-<span class="hll">        <span class="n">status</span><span class="p">=</span><span class="n">PendingSubmit</span><span class="p">,</span> 
-</span>        <span class="n">status_code</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+<span class="hll">        <span class="n">id</span><span class="p">=</span><span class="m">36970</span><span class="n">be4</span><span class="p">,</span> 
+</span>        <span class="n">status</span><span class="p">=</span><span class="n">PendingSubmit</span><span class="p">,</span> 
+        <span class="n">status_code</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
         <span class="n">order_ts</span><span class="p">=</span><span class="m">1608864475</span><span class="p">,</span> 
         <span class="n">modified_ts</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
         <span class="n">modified_price</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
@@ -1228,6 +1280,7 @@
         <span class="n">id</span><span class="p">=</span><span class="n">a9c37faa</span><span class="p">,</span> 
         <span class="n">seqno</span><span class="p">=</span><span class="m">024609</span><span class="p">,</span> 
         <span class="n">ordno</span><span class="p">=</span><span class="n">WA057</span><span class="p">,</span> 
+        <span class="n">custom_field</span><span class="p">=</span><span class="n">test</span><span class="p">,</span> 
         <span class="n">account</span><span class="p">={</span>
             <span class="n">account_type</span><span class="p">=</span><span class="n">S</span><span class="p">,</span> 
             <span class="n">person_id</span><span class="p">=</span><span class="n">PAPIUSER07</span><span class="p">,</span> 
@@ -1237,15 +1290,15 @@
         <span class="p">},</span>
     <span class="p">},</span> 
     <span class="n">status</span><span class="p">={</span>
-        <span class="n">id</span><span class="p">=</span><span class="n">a9c37faa</span><span class="p">,</span> 
-<span class="hll">        <span class="n">status</span><span class="p">=</span><span class="n">Cancelled</span><span class="p">,</span> 
-</span>        <span class="n">status_code</span><span class="p">=</span><span class="m">00</span><span class="p">,</span> 
+<span class="hll">        <span class="n">id</span><span class="p">=</span><span class="n">a9c37faa</span><span class="p">,</span> 
+</span>        <span class="n">status</span><span class="p">=</span><span class="n">Cancelled</span><span class="p">,</span> 
+        <span class="n">status_code</span><span class="p">=</span><span class="m">00</span><span class="p">,</span> 
         <span class="n">order_ts</span><span class="p">=</span><span class="m">1608885083</span><span class="p">,</span> 
         <span class="n">modified_ts</span><span class="p">=</span><span class="m">1608885059</span><span class="p">,</span> 
         <span class="n">modified_price</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
-        <span class="n">deal_quantity</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
-<span class="hll">        <span class="n">cancel_quantity</span><span class="p">=</span><span class="m">3</span><span class="p">,</span> 
-</span>        <span class="n">deals</span><span class="p">=</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">Deal</span><span class="p">],</span>
+<span class="hll">        <span class="n">deal_quantity</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+</span>        <span class="n">cancel_quantity</span><span class="p">=</span><span class="m">3</span><span class="p">,</span> 
+        <span class="n">deals</span><span class="p">=</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">Deal</span><span class="p">],</span>
     <span class="p">},</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1289,6 +1342,7 @@
         <span class="n">id</span><span class="p">=</span><span class="m">3</span><span class="n">ea7a36f</span><span class="p">,</span> 
         <span class="n">seqno</span><span class="p">=</span><span class="m">024612</span><span class="p">,</span> 
         <span class="n">ordno</span><span class="p">=</span><span class="n">WA059</span><span class="p">,</span> 
+        <span class="n">custom_field</span><span class="p">=</span><span class="n">test</span><span class="p">,</span> 
         <span class="n">account</span><span class="p">={</span>
             <span class="n">account_type</span><span class="p">=</span><span class="n">S</span><span class="p">,</span> 
             <span class="n">person_id</span><span class="p">=</span><span class="n">PAPIUSER07</span><span class="p">,</span> 
@@ -1298,15 +1352,15 @@
         <span class="p">},</span>
     <span class="p">},</span> 
     <span class="n">status</span><span class="p">={</span>
-        <span class="n">id</span><span class="p">=</span><span class="m">3</span><span class="n">ea7a36f</span><span class="p">,</span> 
-<span class="hll">        <span class="n">status</span><span class="p">=</span><span class="n">Submitted</span><span class="p">,</span> 
-</span>        <span class="n">status_code</span><span class="p">=</span><span class="m">00</span><span class="p">,</span> 
+<span class="hll">        <span class="n">id</span><span class="p">=</span><span class="m">3</span><span class="n">ea7a36f</span><span class="p">,</span> 
+</span>        <span class="n">status</span><span class="p">=</span><span class="n">Submitted</span><span class="p">,</span> 
+        <span class="n">status_code</span><span class="p">=</span><span class="m">00</span><span class="p">,</span> 
         <span class="n">order_ts</span><span class="p">=</span><span class="m">1608885879</span><span class="p">,</span> 
-        <span class="n">modified_ts</span><span class="p">=</span><span class="m">1608885854</span><span class="p">,</span> 
-<span class="hll">        <span class="n">modified_price</span><span class="p">=</span><span class="m">38</span><span class="p">,</span> 
-</span>        <span class="n">deal_quantity</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
-<span class="hll">        <span class="n">cancel_quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
-</span>        <span class="n">deals</span><span class="p">=</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">Deal</span><span class="p">],</span>
+<span class="hll">        <span class="n">modified_ts</span><span class="p">=</span><span class="m">1608885854</span><span class="p">,</span> 
+</span>        <span class="n">modified_price</span><span class="p">=</span><span class="m">38</span><span class="p">,</span> 
+<span class="hll">        <span class="n">deal_quantity</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+</span>        <span class="n">cancel_quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
+        <span class="n">deals</span><span class="p">=</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">Deal</span><span class="p">],</span>
     <span class="p">},</span>
 <span class="p">}</span>
 </code></pre></div>
