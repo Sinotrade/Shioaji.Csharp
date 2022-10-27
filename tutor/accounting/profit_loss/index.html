@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#first-you-need-login" class="md-skip">
+        <a href="#profit-loss" class="md-skip">
           Skip to content
         </a>
       
@@ -529,6 +529,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../account_balance/" title="Account Balance" class="md-nav__link">
+      Account Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../margin/" title="Margin" class="md-nav__link">
+      Margin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../position/" title="Position" class="md-nav__link">
       Position
     </a>
@@ -572,8 +596,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-you-need-login" class="md-nav__link">
-    First, you need login.
+  <a href="#profit-loss" class="md-nav__link">
+    Profit loss
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-loss-detail" class="md-nav__link">
+    Profit loss detail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-loss-summary" class="md-nav__link">
+    Profit loss summary
   </a>
   
 </li>
@@ -591,32 +629,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../profit_loss_detail/" title="Profit Loss Detail" class="md-nav__link">
-      Profit Loss Detail
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../settlement/" title="Settlement" class="md-nav__link">
-      Settlement
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../account_balance/" title="Account Balance" class="md-nav__link">
-      Account Balance
+    <a href="../settlements/" title="Settlements" class="md-nav__link">
+      Settlements
     </a>
   </li>
 
@@ -721,8 +735,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-you-need-login" class="md-nav__link">
-    First, you need login.
+  <a href="#profit-loss" class="md-nav__link">
+    Profit loss
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-loss-detail" class="md-nav__link">
+    Profit loss detail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profit-loss-summary" class="md-nav__link">
+    Profit loss summary
   </a>
   
 </li>
@@ -745,32 +773,94 @@
                 
                   <h1>Profit Loss</h1>
                 
-                <p>Query account of profit loss</p>
-<h3 id="first-you-need-login"><a href="../../tutor/login">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
+                <h3 id="profit-loss">Profit loss<a class="headerlink" href="#profit-loss" title="Permanent link">&para;</a></h3>
+<p>The feature of <code>ListProfitLoss</code> is used to query profit loss of account and you need to <a href="../../login">login</a> first.</p>
 <div class="admonition info">
 <p class="admonition-title">In</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Stock</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
 
 <span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
 <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
 
-<span class="kt">var</span> <span class="n">listProfitLoss</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span><span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2021-03-01&quot;</span><span class="p">,</span> <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">listProfitLoss</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span>
+        <span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2021-03-01&quot;</span><span class="p">,</span> 
+        <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span>
+<span class="hll">        <span class="n">account</span><span class="p">:</span> <span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span>
+</span>    <span class="p">);</span>
+
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">listProfitLoss</span><span class="p">);</span>
+<span class="hll"><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">profitLoss</span> <span class="k">in</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">StockProfitLoss</span><span class="p">&gt;)</span><span class="n">listProfitLoss</span><span class="p">)</span>
+</span><span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{profitLoss}&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">listProfitLoss</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span>
+        <span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2022-10-19&quot;</span><span class="p">,</span> 
+        <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2022-10-19&quot;</span><span class="p">,</span> 
+<span class="hll">        <span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">FutureAccount</span>
+</span>    <span class="p">);</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">listProfitLoss</span><span class="p">);</span>
+<span class="hll"><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">profitLoss</span> <span class="k">in</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">FutureProfitLoss</span><span class="p">&gt;)</span><span class="n">listProfitLoss</span><span class="p">)</span>
+</span><span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{profitLoss}&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="na">[</span>
-<span class="na">    {id=0, code=2031, seqno=21272, dseq=ID884, quantity=1, price=40.3, pnl=191, pr_ratio=0.0048, cond=Cash, date=2021-03-15,},</span>
-<span class="na">    {id=1, code=2338, seqno=28141, dseq=IM045, quantity=1, price=54.1, pnl=-1616, pr_ratio=-0.0291, cond=Cash, date=2021-03-16,}</span>
-<span class="na">]</span>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Stock</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">StockProfitLoss</span><span class="p">]</span>
+<span class="p">{</span>
+    <span class="n">id</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">seqno</span><span class="p">=</span><span class="m">21272</span><span class="p">,</span> 
+    <span class="n">dseq</span><span class="p">=</span><span class="n">ID884</span><span class="p">,</span> 
+    <span class="n">price</span><span class="p">=</span><span class="m">40.3</span><span class="p">,</span> 
+    <span class="n">pr_ratio</span><span class="p">=</span><span class="m">0.0048</span><span class="p">,</span> 
+    <span class="n">cond</span><span class="p">=</span><span class="n">Cash</span><span class="p">,</span>             
+    <span class="n">code</span><span class="p">=</span><span class="m">2031</span><span class="p">,</span> 
+    <span class="n">quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
+    <span class="n">pnl</span><span class="p">=</span><span class="m">191.0</span><span class="p">,</span> 
+    <span class="n">date</span><span class="p">=</span><span class="m">2021</span><span class="p">-</span><span class="m">03</span><span class="p">-</span><span class="m">15</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">FutureProfitLoss</span><span class="p">]</span>
+<span class="p">{</span>            
+    <span class="n">id</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">entry_price</span><span class="p">=</span><span class="m">63</span><span class="p">,</span> 
+    <span class="n">cover_price</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">tax</span><span class="p">=</span><span class="m">3</span><span class="p">,</span> 
+    <span class="n">fee</span><span class="p">=</span><span class="m">20</span><span class="p">,</span>             
+    <span class="n">code</span><span class="p">=</span><span class="n">TXO01350J2</span><span class="p">,</span> 
+    <span class="n">quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
+    <span class="n">pnl</span><span class="p">=-</span><span class="m">3150.0</span><span class="p">,</span> 
+    <span class="n">date</span><span class="p">=</span><span class="m">20221019</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Stock</label><div class="tabbed-content">
 <table>
 <thead>
 <tr>
@@ -791,6 +881,21 @@
 <td align="left">contract id</td>
 </tr>
 <tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">float</td>
+<td align="left">profit and loss</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">str</td>
+<td align="left">trade date</td>
+</tr>
+<tr>
 <td align="left"><code>seqno</code></td>
 <td align="left">str</td>
 <td align="left">seqno no</td>
@@ -801,19 +906,9 @@
 <td align="left">seqno no</td>
 </tr>
 <tr>
-<td align="left"><code>quantity</code></td>
-<td align="left">int</td>
-<td align="left">quantity</td>
-</tr>
-<tr>
 <td align="left"><code>price</code></td>
 <td align="left">float</td>
 <td align="left">price</td>
-</tr>
-<tr>
-<td align="left"><code>pnl</code></td>
-<td align="left">float</td>
-<td align="left">profit and loss</td>
 </tr>
 <tr>
 <td align="left"><code>pr_ratio</code></td>
@@ -825,13 +920,574 @@
 <td align="left">StockOrderCond</td>
 <td align="left">Cash, Netting, MarginTrading, ShortSelling</td>
 </tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Future</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>id</code></td>
+<td align="left">int</td>
+<td align="left">use to find detail</td>
+</tr>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">float</td>
+<td align="left">profit and loss</td>
+</tr>
 <tr>
 <td align="left"><code>date</code></td>
 <td align="left">str</td>
 <td align="left">trade date</td>
 </tr>
+<tr>
+<td align="left"><code>entry_price</code></td>
+<td align="left">int</td>
+<td align="left">price of entry</td>
+</tr>
+<tr>
+<td align="left"><code>cover_price</code></td>
+<td align="left">int</td>
+<td align="left">price of cover</td>
+</tr>
+<tr>
+<td align="left"><code>tax</code></td>
+<td align="left">int</td>
+<td align="left">tax</td>
+</tr>
+<tr>
+<td align="left"><code>fee</code></td>
+<td align="left">int</td>
+<td align="left">fee</td>
+</tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
+<h3 id="profit-loss-detail">Profit loss detail<a class="headerlink" href="#profit-loss-detail" title="Permanent link">&para;</a></h3>
+<p>The feature of <code>ListProfitLossDetail</code> is used to query profit loss detail of account.</p>
+<div class="admonition info">
+<p class="admonition-title">In</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Stock</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">listProfitLoss</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span>
+        <span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2021-03-01&quot;</span><span class="p">,</span> 
+        <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span><span class="p">,</span>
+        <span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span>
+    <span class="p">);</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">);</span>
+<span class="hll"><span class="kt">var</span> <span class="n">listProfitLossDetail</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossDetail</span><span class="p">(</span><span class="n">detail_id</span><span class="p">:</span><span class="n">listProfitLoss</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
+</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{listProfitLossDetail}&quot;</span><span class="p">);</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">detail</span> <span class="k">in</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">StockProfitDetail</span><span class="p">&gt;)</span><span class="n">listProfitLossDetail</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{detail}&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">listProfitLoss</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span>
+        <span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2022-10-19&quot;</span><span class="p">,</span> 
+        <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2022-10-19&quot;</span><span class="p">,</span> 
+        <span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">FutureAccount</span>
+    <span class="p">);</span>
+<span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">1000</span><span class="p">);</span>
+<span class="hll"><span class="kt">var</span> <span class="n">listProfitLossDetail</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossDetail</span><span class="p">(</span><span class="n">detail_id</span><span class="p">:</span><span class="n">listProfitLoss</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
+</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{listProfitLossDetail}&quot;</span><span class="p">);</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">detail</span> <span class="k">in</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">StockProfitDetail</span><span class="p">&gt;)</span><span class="n">listProfitLossDetail</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{detail}&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Out</p>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Stock</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">StockProfitDetail</span><span class="p">]</span>
+<span class="p">{</span>
+    <span class="n">price</span><span class="p">=</span><span class="m">39.95</span><span class="p">,</span> 
+    <span class="n">cost</span><span class="p">=</span><span class="m">39969</span><span class="p">,</span> 
+    <span class="n">rep_margintrading_amt</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">rep_collateral</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">rep_margin</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">shortselling_fee</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">ex_dividend_amt</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">interest</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">trade_type</span><span class="p">=</span><span class="n">Common</span><span class="p">,</span> 
+    <span class="n">cond</span><span class="p">=</span><span class="n">Cash</span><span class="p">,</span> 
+    <span class="n">date</span><span class="p">=</span><span class="m">2021</span><span class="p">-</span><span class="m">03</span><span class="p">-</span><span class="m">11</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="m">2031</span><span class="p">,</span> 
+    <span class="n">quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
+    <span class="n">dseq</span><span class="p">=</span><span class="n">IN383</span><span class="p">,</span> 
+    <span class="n">fee</span><span class="p">=</span><span class="m">19</span><span class="p">,</span> 
+    <span class="n">tax</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">currency</span><span class="p">=</span><span class="n">NTD</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">FutureProfitDetail</span><span class="p">]</span>
+<span class="p">{</span>
+    <span class="n">direction</span><span class="p">=</span><span class="n">Buy</span><span class="p">,</span> 
+    <span class="n">entry_price</span><span class="p">=</span><span class="m">56</span><span class="p">,</span> 
+    <span class="n">cover_price</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">pnl</span><span class="p">=-</span><span class="m">2800</span><span class="p">,</span> 
+    <span class="n">date</span><span class="p">=</span><span class="m">20221019</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="n">TXO01350J2</span><span class="p">,</span> 
+    <span class="n">quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
+    <span class="n">dseq</span><span class="p">=</span><span class="n">vA0op</span><span class="p">,</span> 
+    <span class="n">fee</span><span class="p">=</span><span class="m">20</span><span class="p">,</span> 
+    <span class="n">tax</span><span class="p">=</span><span class="m">3</span><span class="p">,</span> 
+    <span class="n">currency</span><span class="p">=</span><span class="n">NTD</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Attributes:</p>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Stock</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">str</td>
+<td align="left">trade date</td>
+</tr>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>dseq</code></td>
+<td align="left">str</td>
+<td align="left">detail seqno no</td>
+</tr>
+<tr>
+<td align="left"><code>fee</code></td>
+<td align="left">int</td>
+<td align="left">fee</td>
+</tr>
+<tr>
+<td align="left"><code>tax</code></td>
+<td align="left">int</td>
+<td align="left">tax</td>
+</tr>
+<tr>
+<td align="left"><code>currency</code></td>
+<td align="left">str</td>
+<td align="left">NTD, USD, HKD, EUR, CAD, BAS</td>
+</tr>
+<tr>
+<td align="left"><code>price</code></td>
+<td align="left">decimal</td>
+<td align="left">price</td>
+</tr>
+<tr>
+<td align="left"><code>cost</code></td>
+<td align="left">int</td>
+<td align="left">cost of price</td>
+</tr>
+<tr>
+<td align="left"><code>rep_margintrading_amt</code></td>
+<td align="left">int</td>
+<td align="left">repay amount of margin trading</td>
+</tr>
+<tr>
+<td align="left"><code>rep_collateral</code></td>
+<td align="left">int</td>
+<td align="left">repay collateral</td>
+</tr>
+<tr>
+<td align="left"><code>rep_margin</code></td>
+<td align="left">int</td>
+<td align="left">repay margin</td>
+</tr>
+<tr>
+<td align="left"><code>shortselling_fee</code></td>
+<td align="left">int</td>
+<td align="left">fee of short selling</td>
+</tr>
+<tr>
+<td align="left"><code>ex_dividend_amt</code></td>
+<td align="left">int</td>
+<td align="left">ex vdividend amount</td>
+</tr>
+<tr>
+<td align="left"><code>interest</code></td>
+<td align="left">int</td>
+<td align="left">interest</td>
+</tr>
+<tr>
+<td align="left"><code>trade_type</code></td>
+<td align="left">TradeType</td>
+<td align="left">Common, DayTrade</td>
+</tr>
+<tr>
+<td align="left"><code>cond</code></td>
+<td align="left">StockOrderCond</td>
+<td align="left">Cash, Netting, MarginTrading, ShortSelling</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Future</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">str</td>
+<td align="left">trade date</td>
+</tr>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>dseq</code></td>
+<td align="left">str</td>
+<td align="left">detail seqno no</td>
+</tr>
+<tr>
+<td align="left"><code>fee</code></td>
+<td align="left">int</td>
+<td align="left">fee</td>
+</tr>
+<tr>
+<td align="left"><code>tax</code></td>
+<td align="left">int</td>
+<td align="left">tax</td>
+</tr>
+<tr>
+<td align="left"><code>currency</code></td>
+<td align="left">str</td>
+<td align="left">NTD, USD, HKD, EUR, CAD, BAS</td>
+</tr>
+<tr>
+<td align="left"><code>direction</code></td>
+<td align="left">Action</td>
+<td align="left">Buy, Sell</td>
+</tr>
+<tr>
+<td align="left"><code>entry_price</code></td>
+<td align="left">int</td>
+<td align="left">price of entry</td>
+</tr>
+<tr>
+<td align="left"><code>cover_price</code></td>
+<td align="left">TradeType</td>
+<td align="left">price of cover</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">decimal</td>
+<td align="left">profit and loss</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h3 id="profit-loss-summary">Profit loss summary<a class="headerlink" href="#profit-loss-summary" title="Permanent link">&para;</a></h3>
+<p>The feature of <code>ListProfitLossSum</code> is used to query summary of profit loss for a period of time and you need to <a href="../../login">login</a> first.</p>
+<div class="admonition info">
+<p class="admonition-title">In</p>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Stock</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">pfSumTotal</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossSum</span><span class="p">(</span>
+        <span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2021-03-01&quot;</span><span class="p">,</span> 
+        <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span><span class="p">,</span> 
+<span class="hll">        <span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span>
+</span>    <span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">pfSumTotal</span><span class="p">);</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="kt">var</span> <span class="n">pfSumTotal</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossSum</span><span class="p">(</span>
+        <span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2022-10-19&quot;</span><span class="p">,</span> 
+        <span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2022-10-19&quot;</span> <span class="p">,</span>
+<span class="hll">        <span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">FutureAccount</span>
+</span>    <span class="p">);</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">pfSumTotal</span><span class="p">);</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Out</p>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Stock</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">profitloss_summary</span><span class="p">=</span>
+<span class="na">    [</span>
+<span class="na">        {</span>
+<span class="na">            entry_cost=111600, </span>
+<span class="na">            cover_cost=108200, </span>
+<span class="na">            buy_cost=111655, </span>
+<span class="na">            sell_cost=107903, </span>
+<span class="na">            pr_ratio=-3.36, </span>
+<span class="na">            cond=Cash, </span>
+<span class="na">            code=2338, </span>
+<span class="na">            quantity=2000, </span>
+<span class="na">            entry_price=55, </span>
+<span class="na">            cover_price=54, </span>
+<span class="na">            pnl=-3752, </span>
+<span class="na">            currency=NTD</span>
+<span class="na">        },</span>
+<span class="na">    ]</span><span class="p">,</span> 
+    <span class="n">total</span><span class="p">=</span>
+    <span class="p">{</span>
+        <span class="n">entry_amount</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+        <span class="n">cover_amount</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+        <span class="n">quantity</span><span class="p">=</span><span class="m">8000</span><span class="p">,</span> 
+        <span class="n">buy_cost</span><span class="p">=</span><span class="m">291092</span><span class="p">,</span> 
+        <span class="n">sell_cost</span><span class="p">=</span><span class="m">288172</span><span class="p">,</span> 
+        <span class="n">pnl</span><span class="p">=-</span><span class="m">2920.0</span><span class="p">,</span> 
+        <span class="n">pr_ratio</span><span class="p">=-</span><span class="m">1.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">profitloss_summary</span><span class="p">=</span>
+<span class="na">    [</span>
+<span class="na">        {</span>
+<span class="na">            direction=Buy, </span>
+<span class="na">            tax=6, </span>
+<span class="na">            fee=40, </span>
+<span class="na">            code=TXO01350J2, </span>
+<span class="na">            quantity=2, </span>
+<span class="na">            entry_price=59, </span>
+<span class="na">            cover_price=0, </span>
+<span class="na">            pnl=-5950, </span>
+<span class="na">            currency=NTD</span>
+<span class="na">        }, </span>
+<span class="na">    ]</span><span class="p">,</span> 
+    <span class="n">total</span><span class="p">=</span>
+    <span class="p">{</span>
+        <span class="n">entry_amount</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+        <span class="n">cover_amount</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+        <span class="n">quantity</span><span class="p">=</span><span class="m">2</span><span class="p">,</span> 
+        <span class="n">buy_cost</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+        <span class="n">sell_cost</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+        <span class="n">pnl</span><span class="p">=-</span><span class="m">5950.0</span><span class="p">,</span> 
+        <span class="n">pr_ratio</span><span class="p">=</span><span class="m">0.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Attributes:</p>
+<div class="tabbed-set" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><label for="__tabbed_9_1">Stock</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>entry_price</code></td>
+<td align="left">int</td>
+<td align="left">price of entry</td>
+</tr>
+<tr>
+<td align="left"><code>cover_price</code></td>
+<td align="left">int</td>
+<td align="left">price of cover</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">decimal</td>
+<td align="left">profit and loss</td>
+</tr>
+<tr>
+<td align="left"><code>currency</code></td>
+<td align="left">str</td>
+<td align="left">currency</td>
+</tr>
+<tr>
+<td align="left"><code>entry_cost</code></td>
+<td align="left">int</td>
+<td align="left">cost of entry</td>
+</tr>
+<tr>
+<td align="left"><code>cover_cost</code></td>
+<td align="left">int</td>
+<td align="left">cost of cover</td>
+</tr>
+<tr>
+<td align="left"><code>buy_cost</code></td>
+<td align="left">int</td>
+<td align="left">cost of buy</td>
+</tr>
+<tr>
+<td align="left"><code>sell_cost</code></td>
+<td align="left">int</td>
+<td align="left">cost of sell</td>
+</tr>
+<tr>
+<td align="left"><code>pr_ratio</code></td>
+<td align="left">decimal</td>
+<td align="left">profit rate</td>
+</tr>
+<tr>
+<td align="left"><code>cond</code></td>
+<td align="left">StockOrderCond</td>
+<td align="left">Cash, Netting, MarginTrading, ShortSelling</td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><label for="__tabbed_9_2">Future</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">int</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>entry_price</code></td>
+<td align="left">int</td>
+<td align="left">price of entry</td>
+</tr>
+<tr>
+<td align="left"><code>cover_price</code></td>
+<td align="left">int</td>
+<td align="left">price of cover</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">decimal</td>
+<td align="left">profit and loss</td>
+</tr>
+<tr>
+<td align="left"><code>currency</code></td>
+<td align="left">str</td>
+<td align="left">currency</td>
+</tr>
+<tr>
+<td align="left"><code>direction</code></td>
+<td align="left">Action</td>
+<td align="left">Buy, Sell</td>
+</tr>
+<tr>
+<td align="left"><code>tax</code></td>
+<td align="left">str</td>
+<td align="left">tax</td>
+</tr>
+<tr>
+<td align="left"><code>fee</code></td>
+<td align="left">str</td>
+<td align="left">fee</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
                 
               
@@ -866,13 +1522,13 @@
           </a>
         
         
-          <a href="../profit_loss_detail/" title="Profit Loss Detail" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../settlements/" title="Settlements" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Profit Loss Detail
+                Settlements
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

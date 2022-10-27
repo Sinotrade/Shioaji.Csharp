@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#first-you-need-login" class="md-skip">
+        <a href="#account-balance" class="md-skip">
           Skip to content
         </a>
       
@@ -527,54 +527,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../position/" title="Position" class="md-nav__link">
-      Position
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../profit_loss/" title="Profit Loss" class="md-nav__link">
-      Profit Loss
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../profit_loss_detail/" title="Profit Loss Detail" class="md-nav__link">
-      Profit Loss Detail
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../settlement/" title="Settlement" class="md-nav__link">
-      Settlement
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -608,8 +560,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-you-need-login" class="md-nav__link">
-    First, you need login.
+  <a href="#account-balance" class="md-nav__link">
+    Account Balance
   </a>
   
 </li>
@@ -618,6 +570,54 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../margin/" title="Margin" class="md-nav__link">
+      Margin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../position/" title="Position" class="md-nav__link">
+      Position
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../profit_loss/" title="Profit Loss" class="md-nav__link">
+      Profit Loss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settlements/" title="Settlements" class="md-nav__link">
+      Settlements
+    </a>
   </li>
 
         
@@ -721,8 +721,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-you-need-login" class="md-nav__link">
-    First, you need login.
+  <a href="#account-balance" class="md-nav__link">
+    Account Balance
   </a>
   
 </li>
@@ -745,8 +745,8 @@
                 
                   <h1>Account Balance</h1>
                 
-                <p>Query stock account balance </p>
-<h3 id="first-you-need-login"><a href="../../tutor/login">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
+                <h3 id="account-balance">Account Balance<a class="headerlink" href="#account-balance" title="Permanent link">&para;</a></h3>
+<p>The feature of account_balance is used to query account balance  of stock account and you need to <a href="../../login">login</a> first.</p>
 <div class="admonition info">
 <p class="admonition-title">In</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
@@ -756,7 +756,7 @@
 <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
 
 <span class="kt">var</span> <span class="n">accountBalance</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">AccountBalance</span><span class="p">();</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">accountBalance</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">accountBalance</span><span class="p">);</span>
 </code></pre></div>
 
 </div>
@@ -815,7 +815,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../settlement/" title="Settlement" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../order/Reserve/" title="Reserve Order" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -824,19 +824,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Settlement
+                Reserve Order
               </div>
             </div>
           </a>
         
         
-          <a href="../../advanced/nonblock/" title="None Block & Block Mode" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../margin/" title="Margin" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                None Block & Block Mode
+                Margin
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

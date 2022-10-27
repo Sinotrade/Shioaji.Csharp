@@ -66,11 +66,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#first-you-need-login" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -527,6 +522,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../account_balance/" title="Account Balance" class="md-nav__link">
+      Account Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../margin/" title="Margin" class="md-nav__link">
+      Margin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -535,53 +554,9 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Position
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
     <a href="./" title="Position" class="md-nav__link md-nav__link--active">
       Position
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#first-you-need-login" class="md-nav__link">
-    First, you need login.
-  </a>
-  
-    <nav class="md-nav" aria-label="First, you need login.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stocks" class="md-nav__link">
-    Stocks
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -604,32 +579,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../profit_loss_detail/" title="Profit Loss Detail" class="md-nav__link">
-      Profit Loss Detail
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../settlement/" title="Settlement" class="md-nav__link">
-      Settlement
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../account_balance/" title="Account Balance" class="md-nav__link">
-      Account Balance
+    <a href="../settlements/" title="Settlements" class="md-nav__link">
+      Settlements
     </a>
   </li>
 
@@ -717,49 +668,6 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#first-you-need-login" class="md-nav__link">
-    First, you need login.
-  </a>
-  
-    <nav class="md-nav" aria-label="First, you need login.">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stocks" class="md-nav__link">
-    Stocks
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -771,33 +679,84 @@
                 
                   <h1>Position</h1>
                 
-                <p>Query account of unrealized gain or loss</p>
-<h3 id="first-you-need-login"><a href="../../login">First, you need login.</a><a class="headerlink" href="#first-you-need-login" title="Permanent link">&para;</a></h3>
-<h4 id="stocks">Stocks<a class="headerlink" href="#stocks" title="Permanent link">&para;</a></h4>
+                <p>The feature of <code>ListPositions</code> is used to query unrealized gain or loss of account and you need to <a href="../../login">login</a> first.</p>
 <div class="admonition info">
 <p class="admonition-title">In</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Stock</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
 
 <span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
 <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
 
-<span class="kt">var</span> <span class="n">positions</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListPositions</span><span class="p">();</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">positions</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+<span class="hll"><span class="kt">var</span> <span class="n">positions</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListPositions</span><span class="p">(</span><span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span><span class="p">);</span>
+</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">positions</span><span class="p">);</span>
+<span class="hll"><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">position</span> <span class="k">in</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">StockPosition</span><span class="p">&gt;)</span><span class="n">positions</span><span class="p">)</span>
+</span><span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+
+<span class="n">Shioaji</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;YOUR_PASSWORD&quot;</span><span class="p">);</span>
+
+<span class="hll"><span class="kt">var</span> <span class="n">positions</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">ListPositions</span><span class="p">(</span><span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">FutureAccount</span><span class="p">);</span>
+</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">positions</span><span class="p">);</span>
+<span class="hll"><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">position</span> <span class="k">in</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">FuturePosition</span><span class="p">&gt;)</span><span class="n">positions</span><span class="p">)</span>
+</span><span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">position</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
 </div>
 <div class="admonition done">
 <p class="admonition-title">Out</p>
-<div class="highlight"><pre><span></span><code><span class="na">[</span>
-<span class="na">    {code=2303, direction=Buy, quantity=2, price=43.52, pnl=1000, yd_quantity=2, cond=Cash,},</span>
-<span class="na">    {code=2884, direction=Buy, quantity=2, price=26.03, pnl=-913, yd_quantity=2, cond=Cash,}</span>
-<span class="na">]</span>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Stock</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">StockPosition</span><span class="p">]</span>
+<span class="p">{</span>
+    <span class="n">yd_quantity</span><span class="p">=</span><span class="m">2</span><span class="p">,</span> 
+    <span class="n">cond</span><span class="p">=</span><span class="n">Cash</span><span class="p">,</span> 
+    <span class="n">margin_purchase_amount</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">collateral</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">short_sale_margin</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">interest</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">id</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="m">1101</span><span class="p">,</span> 
+    <span class="n">direction</span><span class="p">=</span><span class="n">Buy</span><span class="p">,</span> 
+    <span class="n">quantity</span><span class="p">=</span><span class="m">2</span><span class="p">,</span> 
+    <span class="n">price</span><span class="p">=</span><span class="m">45.35</span><span class="p">,</span> 
+    <span class="n">last_price</span><span class="p">=</span><span class="m">31.0</span><span class="p">,</span> 
+    <span class="n">pnl</span><span class="p">=-</span><span class="m">31786.0</span>
+<span class="p">}</span>
 </code></pre></div>
 
 </div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Future</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">List</span><span class="err">`</span><span class="m">1</span><span class="p">[</span><span class="n">Sinopac</span><span class="p">.</span><span class="n">Shioaji</span><span class="p">.</span><span class="n">FuturePosition</span><span class="p">]</span>
+<span class="p">{</span>
+    <span class="n">id</span><span class="p">=</span><span class="m">0</span><span class="p">,</span> 
+    <span class="n">code</span><span class="p">=</span><span class="n">TX400130J2</span><span class="p">,</span> 
+    <span class="n">direction</span><span class="p">=</span><span class="n">Buy</span><span class="p">,</span> 
+    <span class="n">quantity</span><span class="p">=</span><span class="m">1</span><span class="p">,</span> 
+    <span class="n">price</span><span class="p">=</span><span class="m">68.0</span><span class="p">,</span> 
+    <span class="n">last_price</span><span class="p">=</span><span class="m">78.0</span><span class="p">,</span> 
+    <span class="n">pnl</span><span class="p">=</span><span class="m">500.0</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Attributes:</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Stock</label><div class="tabbed-content">
 <table>
 <thead>
 <tr>
@@ -807,6 +766,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td align="left"><code>id</code></td>
+<td align="left">int</td>
+<td align="left">id</td>
+</tr>
 <tr>
 <td align="left"><code>code</code></td>
 <td align="left">str</td>
@@ -819,7 +783,7 @@
 </tr>
 <tr>
 <td align="left"><code>quantity</code></td>
-<td align="left">int</td>
+<td align="left">float</td>
 <td align="left">quantity</td>
 </tr>
 <tr>
@@ -828,22 +792,97 @@
 <td align="left">the average price</td>
 </tr>
 <tr>
+<td align="left"><code>last_price</code></td>
+<td align="left">int</td>
+<td align="left">last pric</td>
+</tr>
+<tr>
 <td align="left"><code>pnl</code></td>
-<td align="left">float</td>
+<td align="left">StockOrderCond</td>
 <td align="left">unrealized profit</td>
 </tr>
 <tr>
 <td align="left"><code>yd_quantity</code></td>
 <td align="left">int</td>
-<td align="left">yesterday</td>
+<td align="left">yesterday quantity</td>
 </tr>
 <tr>
 <td align="left"><code>cond</code></td>
-<td align="left">StockOrderCond</td>
-<td align="left">Cash(現股), Netting(餘額交割), MarginTrading(融資), ShortSelling(融券), Emerging(興櫃)</td>
+<td align="left">int</td>
+<td align="left">Default Cash, Cash(現股), Netting(餘額交割), MarginTrading(融資), ShortSelling(融券), Emerging(興櫃)</td>
+</tr>
+<tr>
+<td align="left"><code>margin_purchase_amount</code></td>
+<td align="left">int</td>
+<td align="left">margin purchase amount</td>
+</tr>
+<tr>
+<td align="left"><code>collateral</code></td>
+<td align="left">int</td>
+<td align="left">collateral</td>
+</tr>
+<tr>
+<td align="left"><code>short_sale_margin</code></td>
+<td align="left">int</td>
+<td align="left">short sale margin</td>
+</tr>
+<tr>
+<td align="left"><code>interest</code></td>
+<td align="left">int</td>
+<td align="left">interest</td>
 </tr>
 </tbody>
 </table>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Future</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>id</code></td>
+<td align="left">int</td>
+<td align="left">id</td>
+</tr>
+<tr>
+<td align="left"><code>code</code></td>
+<td align="left">str</td>
+<td align="left">contract id</td>
+</tr>
+<tr>
+<td align="left"><code>direction</code></td>
+<td align="left">Action</td>
+<td align="left">Buy, Sell</td>
+</tr>
+<tr>
+<td align="left"><code>quantity</code></td>
+<td align="left">float</td>
+<td align="left">quantity</td>
+</tr>
+<tr>
+<td align="left"><code>price</code></td>
+<td align="left">float</td>
+<td align="left">the average price</td>
+</tr>
+<tr>
+<td align="left"><code>last_price</code></td>
+<td align="left">int</td>
+<td align="left">last pric</td>
+</tr>
+<tr>
+<td align="left"><code>pnl</code></td>
+<td align="left">StockOrderCond</td>
+<td align="left">unrealized profit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
                 
               
@@ -863,7 +902,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../order/Reserve/" title="Reserve Order" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../margin/" title="Margin" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -872,7 +911,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Reserve Order
+                Margin
               </div>
             </div>
           </a>

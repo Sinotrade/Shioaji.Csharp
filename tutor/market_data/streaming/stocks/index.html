@@ -374,25 +374,19 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#bidask" class="md-nav__link">
     BidAsk
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#bidask-intraday-odd" class="md-nav__link">
     BidAsk intraday odd
   </a>
   
-    <nav class="md-nav" aria-label="BidAsk intraday odd">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#quote" class="md-nav__link">
@@ -636,6 +630,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../accounting/account_balance/" title="Account Balance" class="md-nav__link">
+      Account Balance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../accounting/margin/" title="Margin" class="md-nav__link">
+      Margin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../accounting/position/" title="Position" class="md-nav__link">
       Position
     </a>
@@ -660,32 +678,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../accounting/profit_loss_detail/" title="Profit Loss Detail" class="md-nav__link">
-      Profit Loss Detail
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../accounting/settlement/" title="Settlement" class="md-nav__link">
-      Settlement
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../accounting/account_balance/" title="Account Balance" class="md-nav__link">
-      Account Balance
+    <a href="../../../accounting/settlements/" title="Settlements" class="md-nav__link">
+      Settlements
     </a>
   </li>
 
@@ -811,25 +805,19 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#bidask" class="md-nav__link">
     BidAsk
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#bidask-intraday-odd" class="md-nav__link">
     BidAsk intraday odd
   </a>
   
-    <nav class="md-nav" aria-label="BidAsk intraday odd">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#quote" class="md-nav__link">
@@ -911,6 +899,7 @@
     <span class="p">{</span>
         <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
         <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+
         <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span>
             <span class="n">contract</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> 
 <span class="hll">            <span class="n">quoteType</span><span class="p">:</span><span class="n">QuoteType</span><span class="p">.</span><span class="n">tick</span><span class="p">,</span>
@@ -1030,7 +1019,7 @@
 </div>
 </div>
 </div>
-<h2 id="bidask">BidAsk<a class="headerlink" href="#bidask" title="Permanent link">&para;</a></h2>
+<h3 id="bidask">BidAsk<a class="headerlink" href="#bidask" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
 <div class="highlight"><pre><span></span><code><span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
@@ -1039,6 +1028,7 @@
     <span class="p">{</span>
         <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
         <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+
         <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span>
             <span class="n">contract</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> 
 <span class="hll">            <span class="n">quoteType</span><span class="p">:</span><span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">,</span>
@@ -1120,7 +1110,7 @@
 </div>
 </div>
 </div>
-<h2 id="bidask-intraday-odd">BidAsk intraday odd<a class="headerlink" href="#bidask-intraday-odd" title="Permanent link">&para;</a></h2>
+<h3 id="bidask-intraday-odd">BidAsk intraday odd<a class="headerlink" href="#bidask-intraday-odd" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
 <p class="admonition-title">In</p>
 <div class="highlight"><pre><span></span><code><span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span>
@@ -1212,6 +1202,7 @@
     <span class="p">{</span>
         <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
         <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+
         <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span>
             <span class="n">contract</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> 
 <span class="hll">            <span class="n">quoteType</span><span class="p">:</span><span class="n">QuoteType</span><span class="p">.</span><span class="n">quote</span><span class="p">,</span>
@@ -1319,6 +1310,7 @@
     <span class="p">{</span>
         <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
         <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+
 <span class="hll">        <span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback_v1</span><span class="p">(</span><span class="n">myQuoteCB_v1</span><span class="p">);</span>
 </span>        <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
@@ -1345,6 +1337,7 @@
     <span class="p">{</span>
         <span class="kt">var</span> <span class="n">_api</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Shioaji</span><span class="p">();</span>
         <span class="kt">var</span> <span class="n">_accounts</span> <span class="p">=</span> <span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;PERSON_ID&quot;</span><span class="p">,</span> <span class="s">&quot;PASSWORD&quot;</span><span class="p">);</span>
+
 <span class="hll">        <span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback</span><span class="p">(</span><span class="n">myQuoteCB</span><span class="p">);</span>
 </span>        <span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span> <span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="n">Threading</span><span class="p">.</span><span class="n">Thread</span><span class="p">.</span><span class="n">Sleep</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
