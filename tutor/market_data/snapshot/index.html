@@ -1077,7 +1077,7 @@
 <h2 id="_1">範例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="admonition info">
 <p class="admonition-title">In</p>
-<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">contracts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Stock</span><span class="o">&gt;</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">contracts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">IContract</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="n">contracts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2890&quot;</span><span class="p">]);</span>
 <span class="n">contracts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">]);</span>
 <span class="n">List</span><span class="o">&lt;</span><span class="kt">dynamic</span><span class="o">&gt;</span><span class="w"> </span><span class="n">snapshot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Snapshots</span><span class="p">(</span><span class="n">contracts</span><span class="p">);</span>
@@ -1152,12 +1152,12 @@ tick_type (TickType): 收盤買賣別 {None, Buy, Sell}
 change_price (double): 漲跌
 change_rate (double): 漲跌幅
 change_type (ChangeType): 漲跌 {LimitUp, Up, Unchanged, Dowm, LimitDown}
-avgerage_price (double): 均價
+average_price (double): 均價
 volume (int): 單量
 total_volume (int): 成交量
 amount (int): 單量成交金額
 total_amount (int): 成交金額
-yestoday_volume (double): 昨量
+yesterday_volume (double): 昨量
 buy_price (double): 委買價
 buy_volume (double): 委買量
 sell_price (double): 賣出價
