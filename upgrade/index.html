@@ -1192,6 +1192,10 @@
   <h1>升版指南</h1>
 
 <p>1.0 為主要版本，這份文件協助使用者遷移到版本 1.0。</p>
+<div class="admonition attention">
+<p class="admonition-title">使用.Net Framework</p>
+<p>使用 NuGet 安裝完後，需將您專案下的 <strong>libsodium.dll (<code>packages\libsodium.1.0.16\runtimes\win-x64\native\libsodium.dll</code></strong>) 複製到您專案執行的 x64 目標平台目錄下</p>
+</div>
 <h2 id="_1">登入<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>登入參數<code>person_id</code> 及 <code>password</code> 變更為 <code>api_key</code> 及 <code>secret_key</code>。
 您可以在 <a href="https://sinotrade.github.io/tutor/prepare/token/">Token</a> 深入了解如何取得 API Key。</p>
