@@ -308,6 +308,39 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    行情資料
+  </a>
+  
+    <nav class="md-nav" aria-label="行情資料">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#callback" class="md-nav__link">
+    Callback
+  </a>
+  
+    <nav class="md-nav" aria-label="Callback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tick" class="md-nav__link">
+    Tick
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     期貨下單
   </a>
   
@@ -315,14 +348,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     委託回報
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     成交回報
   </a>
   
@@ -334,14 +367,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     歷史行情
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     帳務資訊
   </a>
   
@@ -1135,6 +1168,39 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    行情資料
+  </a>
+  
+    <nav class="md-nav" aria-label="行情資料">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#callback" class="md-nav__link">
+    Callback
+  </a>
+  
+    <nav class="md-nav" aria-label="Callback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tick" class="md-nav__link">
+    Tick
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     期貨下單
   </a>
   
@@ -1142,14 +1208,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     委託回報
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     成交回報
   </a>
   
@@ -1161,14 +1227,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     歷史行情
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     帳務資訊
   </a>
   
@@ -1413,11 +1479,139 @@
 </div>
 </div>
 </div>
-<h2 id="_5">期貨下單<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">行情資料<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p><strong>版本&gt;=1.1將不再提供QuoteVersion.v0，請更改至QuoteVersion.v1。</strong></p>
+</div>
+<h3 id="callback">Callback<a class="headerlink" href="#callback" title="Permanent link">&para;</a></h3>
+<h4 id="tick">Tick<a class="headerlink" href="#tick" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">In</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">QuoteVersion.v1</label><label for="__tabbed_5_2">QuoteVersion.v0</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">myQuoteCB_v1</span><span class="p">(</span><span class="n">Exchange</span><span class="w"> </span><span class="n">exchange</span><span class="p">,</span><span class="w"> </span><span class="kt">dynamic</span><span class="w"> </span><span class="n">quote</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;QuoteCB_v1 | Exchange.{exchange} {quote.GetType().Name} {quote}&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">_api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shioaji</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">_accounts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_API_KEY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YOUR_SECRET_KEY&quot;</span><span class="p">);</span>
+
+<span class="hll"><span class="w">        </span><span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback_v1</span><span class="p">(</span><span class="n">myQuoteCB_v1</span><span class="p">);</span>
+</span><span class="w">        </span><span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">myQuoteCB</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">topic</span><span class="p">,</span><span class="w"> </span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">dynamic</span><span class="o">&gt;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;QuoteCB | Topic: {topic}&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">Key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">item</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;-----------------------------------&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">_api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shioaji</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">_accounts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Login</span><span class="p">(</span><span class="s">&quot;YOUR_API_KEY&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;YOUR_SECRET_KEY&quot;</span><span class="p">);</span>
+
+<span class="hll"><span class="w">        </span><span class="n">_api</span><span class="p">.</span><span class="n">SetQuoteCallback</span><span class="p">(</span><span class="n">myQuoteCB</span><span class="p">);</span>
+</span><span class="w">        </span><span class="n">_api</span><span class="p">.</span><span class="n">Subscribe</span><span class="p">(</span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Stocks</span><span class="p">[</span><span class="s">&quot;TSE&quot;</span><span class="p">][</span><span class="s">&quot;2330&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">QuoteType</span><span class="p">.</span><span class="n">bidask</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition done">
+<p class="admonition-title">Out</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">QuoteVersion.v1</label><label for="__tabbed_6_2">QuoteVersion.v0</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">QuoteCB_v1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Exchange</span><span class="p">.</span><span class="n">TSE</span><span class="w"> </span><span class="n">BidAskSTKv1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2330&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;datetime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2022/10/14 09:39:00.354081&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;bid_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s">&quot;411&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;410.5&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;410&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;409.5&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;409&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s">&quot;bid_volume&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="m">577</span><span class="p">,</span>
+<span class="w">        </span><span class="m">191</span><span class="p">,</span>
+<span class="w">        </span><span class="m">364</span><span class="p">,</span>
+<span class="w">        </span><span class="m">185</span><span class="p">,</span>
+<span class="w">        </span><span class="m">148</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s">&quot;diff_bid_vol&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s">&quot;ask_price&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s">&quot;411.5&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;412&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;412.5&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;413&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;413.5&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s">&quot;ask_volume&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="m">53</span><span class="p">,</span>
+<span class="w">        </span><span class="m">609</span><span class="p">,</span>
+<span class="w">        </span><span class="m">230</span><span class="p">,</span>
+<span class="w">        </span><span class="m">750</span><span class="p">,</span>
+<span class="w">        </span><span class="m">358</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s">&quot;diff_ask_vol&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="o">-</span><span class="m">4</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span><span class="p">,</span>
+<span class="w">        </span><span class="m">0</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="s">&quot;suspend&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;simtrade&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">false</span><span class="p">,</span>
+<span class="w">    </span><span class="s">&quot;intraday_odd&quot;</span><span class="p">:</span><span class="w"> </span><span class="k">false</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">QuoteCB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Topic</span><span class="p">:</span><span class="w"> </span><span class="n">QUT</span><span class="o">/</span><span class="n">idcdmzpcr01</span><span class="o">/</span><span class="n">TSE</span><span class="o">/</span><span class="m">2330</span>
+<span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="m">2022</span><span class="o">/</span><span class="m">10</span><span class="o">/</span><span class="m">14</span>
+<span class="n">Time</span><span class="p">:</span><span class="w"> </span><span class="m">09</span><span class="p">:</span><span class="m">37</span><span class="p">:</span><span class="m">02.268206</span>
+<span class="n">BidPrice</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">411</span><span class="p">,</span><span class="m">410.5</span><span class="p">,</span><span class="m">410</span><span class="p">,</span><span class="m">409.5</span><span class="p">,</span><span class="m">409</span><span class="p">]</span>
+<span class="n">AskPrice</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">411.5</span><span class="p">,</span><span class="m">412</span><span class="p">,</span><span class="m">412.5</span><span class="p">,</span><span class="m">413</span><span class="p">,</span><span class="m">413.5</span><span class="p">]</span>
+<span class="n">BidVolume</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">107</span><span class="p">,</span><span class="m">132</span><span class="p">,</span><span class="m">563</span><span class="p">,</span><span class="m">188</span><span class="p">,</span><span class="m">150</span><span class="p">]</span>
+<span class="n">AskVolume</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="m">34</span><span class="p">,</span><span class="m">592</span><span class="p">,</span><span class="m">258</span><span class="p">,</span><span class="m">675</span><span class="p">,</span><span class="m">299</span><span class="p">]</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="_6">期貨下單<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p><code>FuturesOrderType</code> 更改為 <code>OrderType</code></p>
 <div class="admonition info">
 <p class="admonition-title">Order</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">verion&gt;=1.0</label><label for="__tabbed_5_2">verion&lt;1.0</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">verion&gt;=1.0</label><label for="__tabbed_7_2">verion&lt;1.0</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">_futOptOrder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FutOptOrder</span><span class="p">()</span>
@@ -1446,11 +1640,11 @@
 </div>
 </div>
 </div>
-<h3 id="_6">委託回報<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">委託回報<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p><code>FOrder</code> 更改為 <code>FuturesOrder</code></p>
 <div class="admonition info">
 <p class="admonition-title">Order Event</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">version&gt;=1.0</label><label for="__tabbed_6_2">version&lt;1.0</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">version&gt;=1.0</label><label for="__tabbed_8_2">version&lt;1.0</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="hll"><span class="n">OrderState</span><span class="p">.</span><span class="n">FuturesOrder</span><span class="w"> </span><span class="p">{</span>
@@ -1533,11 +1727,11 @@
 </div>
 </div>
 </div>
-<h3 id="_7">成交回報<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_8">成交回報<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p><code>FDeal</code> 更改為 <code>FuturesDeal</code></p>
 <div class="admonition info">
 <p class="admonition-title">Deal Event</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">version&gt;=1.0</label><label for="__tabbed_7_2">version&lt;1.0</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">version&gt;=1.0</label><label for="__tabbed_9_2">version&lt;1.0</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="hll"><span class="n">OrderState</span><span class="p">.</span><span class="n">FuturesDeal</span><span class="w"> </span><span class="p">{</span>
@@ -1586,11 +1780,11 @@
 </div>
 </div>
 </div>
-<h2 id="_8">歷史行情<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">歷史行情<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>Ticks 新增 QueryType
 </code></pre></div>
 
-<h2 id="_9">帳務資訊<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">帳務資訊<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>重新命名API</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="kr">List</span><span class="n">Settlements</span><span class="w"> </span><span class="n">更名為</span><span class="w"> </span><span class="n">Settlements</span>
 <span class="mf">2.</span><span class="w"> </span><span class="kr">List</span><span class="n">ProfitLossSum</span><span class="w"> </span><span class="n">更名為</span><span class="w"> </span><span class="kr">List</span><span class="n">ProfitLossSummary</span>
