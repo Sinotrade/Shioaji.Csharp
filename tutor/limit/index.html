@@ -71,11 +71,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -970,65 +965,9 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          使用限制
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         使用限制
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    為避免影響其他使用者連線，請遵守以下使用規範
-  </a>
-  
-    <nav class="md-nav" aria-label="為避免影響其他使用者連線，請遵守以下使用規範">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    若使用量超過限制，將暫停服務一分鐘
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ipid" class="md-nav__link">
-    若當日連續多次超過限制，本公司將暫停該IP及ID使用權
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#idshioaji" class="md-nav__link">
-    若ID被暫停使用，請洽Shioaji管理人員
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1052,48 +991,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    為避免影響其他使用者連線，請遵守以下使用規範
-  </a>
-  
-    <nav class="md-nav" aria-label="為避免影響其他使用者連線，請遵守以下使用規範">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    若使用量超過限制，將暫停服務一分鐘
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ipid" class="md-nav__link">
-    若當日連續多次超過限制，本公司將暫停該IP及ID使用權
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#idshioaji" class="md-nav__link">
-    若ID被暫停使用，請洽Shioaji管理人員
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1109,31 +1006,48 @@
 
   <h1>使用限制</h1>
 
-<h2 id="_1">為避免影響其他使用者連線，請遵守以下使用規範<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>為避免影響其他使用者連線，請遵守以下使用規範</p>
+<div class="admonition info">
+<p class="admonition-title">Rules</p>
 <ul>
 <li>
-<p>行情(data) : 相關查詢，5秒上限500次</p>
-<p>包含 <code>CreditEnquire</code>、<code>ShortStockSources</code>、<code>Snapshots</code>、<code>Ticks</code>、<code>Kbars</code>。</p>
+<p>行情 :</p>
+<p><code>CreditEnquire</code>、<code>ShortStockSources</code>、<code>Snapshots</code>、<code>Ticks</code>、<code>Kbars</code>。</p>
+<ul>
+<li>以上查詢總次數 5 秒上限 50 次</li>
+<li>盤中查詢 <code>ticks</code> 次數不得超過 10 次</li>
+<li>盤中查詢 <code>kbars</code> 次數不得超過 270 次</li>
+</ul>
 </li>
 <li>
-<p>帳務(portfolio) : 相關查詢，5秒上限25次</p>
-<p>包含 <code>ListPositions</code>、<code>ListPositionDetail</code>、<code>ListProfitLoss</code>、<code>ListProfitLossDetail</code>、<code>AccountBalance</code>、<code>Settlements</code>、<code>Margin</code>。</p>
+<p>帳務 :</p>
+<p><code>ListPositions</code>、<code>ListPositionDetail</code>、<code>ListProfitLoss</code>、<code>ListProfitLossDetail</code>、<code>AccountBalance</code>、<code>Settlements</code>、<code>Margin</code>。</p>
+<p>以上查詢總次數 5 秒上限 25 次</p>
 </li>
 <li>
-<p>委託(order) : 相關查詢，10秒上限500次</p>
-<p>包含 <code>PlaceOrder</code>、<code>UpdateStatus</code>、<code>UpdateOrder</code>、<code>CancelOrder</code>。</p>
+<p>委託：</p>
+<p><code>PlaceOrder</code>、<code>UpdateStatus</code>、<code>UpdateOrder</code>、<code>CancelOrder</code></p>
+<p>以上查詢總次數 10 秒上限 500 次</p>
 </li>
 <li>
-<p>連線限制: 同一永豐金證券<code>personId</code>，僅可使用最多5個連線<br />
-<code>Login()</code>即建立一個連線。</p>
+<p>連線：</p>
+<p>同一永豐金證券<code>person_id</code>，僅可使用最多5個連線。
+注意: <code>Login()</code>即建立一個連線。</p>
 </li>
 <li>
-<p>登入限制: <code>Login()</code>一天上限1000次</p>
+<p>登入：</p>
+<p><code>Login()</code>一天上限1000次</p>
 </li>
 </ul>
-<h3 id="_2">若使用量超過限制，將暫停服務一分鐘<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<h3 id="ipid">若當日連續多次超過限制，本公司將暫停該IP及ID使用權<a class="headerlink" href="#ipid" title="Permanent link">&para;</a></h3>
-<h3 id="idshioaji">若ID被暫停使用，請洽Shioaji管理人員<a class="headerlink" href="#idshioaji" title="Permanent link">&para;</a></h3>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Warn</p>
+<ul>
+<li>若使用量超過限制，將暫停服務一分鐘</li>
+<li>若當日連續多次超過限制，本公司將暫停該IP及ID使用權</li>
+<li>若 ID 被暫停使用，請洽Shioaji管理人員</li>
+</ul>
+</div>
 
 
 
