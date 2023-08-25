@@ -1473,12 +1473,12 @@ tick_type (int): 內外盤別{1: 內盤, 2: 外盤, 0: 無法判定}
 <div class="admonition info">
 <p class="admonition-title">Ticks</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
-<span class="hll"><span class="k">using</span><span class="w"> </span><span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
-</span><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Data.Analysis</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Data.Analysis</span><span class="p">;</span>
 
 <span class="n">Shioaji</span><span class="w"> </span><span class="n">_api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shioaji</span><span class="p">();</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">contract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Futures</span><span class="p">[</span><span class="s">&quot;TXF&quot;</span><span class="p">][</span><span class="s">&quot;TXFR1&quot;</span><span class="p">];</span>
-<span class="n">Kbars</span><span class="w"> </span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Ticks</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2023-03-22&quot;</span><span class="p">);</span>
+<span class="hll"><span class="kt">var</span><span class="w"> </span><span class="n">contract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Futures</span><span class="p">[</span><span class="s">&quot;TXF&quot;</span><span class="p">][</span><span class="s">&quot;TXFR1&quot;</span><span class="p">];</span>
+</span><span class="n">Kbars</span><span class="w"> </span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Ticks</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2023-03-22&quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ticks</span><span class="p">);</span>
 </code></pre></div>
 </div>
@@ -1500,12 +1500,12 @@ tick_type (int): 內外盤別{1: 內盤, 2: 外盤, 0: 無法判定}
 <div class="admonition info">
 <p class="admonition-title">Kbars</p>
 <div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
-<span class="hll"><span class="k">using</span><span class="w"> </span><span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
-</span><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Data.Analysis</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Sinopac.Shioaji</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.Data.Analysis</span><span class="p">;</span>
 
 <span class="n">Shioaji</span><span class="w"> </span><span class="n">_api</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Shioaji</span><span class="p">();</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">contract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Futures</span><span class="p">[</span><span class="s">&quot;TXF&quot;</span><span class="p">][</span><span class="s">&quot;TXFR1&quot;</span><span class="p">];</span>
-<span class="n">Kbars</span><span class="w"> </span><span class="n">kbars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Kbars</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2023-03-22&quot;</span><span class="p">);</span>
+<span class="hll"><span class="kt">var</span><span class="w"> </span><span class="n">contract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Contracts</span><span class="p">.</span><span class="n">Futures</span><span class="p">[</span><span class="s">&quot;TXF&quot;</span><span class="p">][</span><span class="s">&quot;TXFR1&quot;</span><span class="p">];</span>
+</span><span class="n">Kbars</span><span class="w"> </span><span class="n">kbars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">Kbars</span><span class="p">(</span><span class="n">contract</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2023-03-22&quot;</span><span class="p">);</span>
 <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">kbars</span><span class="p">);</span>
 </code></pre></div>
 </div>
