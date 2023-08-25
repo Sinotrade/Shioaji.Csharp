@@ -1096,13 +1096,14 @@
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">listProfitLoss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span>
 <span class="w">        </span><span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2021-03-01&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span>
-<span class="hll"><span class="w">        </span><span class="n">account</span><span class="p">:</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span>
-</span><span class="w">    </span><span class="p">);</span>
+<span class="w">        </span><span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span><span class="p">,</span>
+<span class="hll"><span class="w">        </span><span class="n">account</span><span class="p">:</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span><span class="p">,</span>
+</span><span class="w">        </span><span class="n">unit</span><span class="p">:</span><span class="w"> </span><span class="n">Unit</span><span class="p">.</span><span class="n">Common</span>
+<span class="w">    </span><span class="p">);</span>
 
-<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">listProfitLoss</span><span class="p">);</span>
-<span class="hll"><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">profitLoss</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">StockProfitLoss</span><span class="o">&gt;</span><span class="p">)</span><span class="n">listProfitLoss</span><span class="p">)</span>
-</span><span class="p">{</span>
+<span class="hll"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">listProfitLoss</span><span class="p">);</span>
+</span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">profitLoss</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">StockProfitLoss</span><span class="o">&gt;</span><span class="p">)</span><span class="n">listProfitLoss</span><span class="p">)</span>
+<span class="p">{</span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{profitLoss}&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1210,13 +1211,14 @@
 <div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">listProfitLoss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLoss</span><span class="p">(</span>
 <span class="w">        </span><span class="n">begin_date</span><span class="p">:</span><span class="s">&quot;2021-03-01&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">        </span><span class="n">end_date</span><span class="p">:</span><span class="s">&quot;2021-03-31&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span>
+<span class="w">        </span><span class="n">account</span><span class="p">:</span><span class="n">_api</span><span class="p">.</span><span class="n">StockAccount</span><span class="p">,</span>
+<span class="w">        </span><span class="n">unit</span><span class="p">:</span><span class="w"> </span><span class="n">Unit</span><span class="p">.</span><span class="n">Common</span>
 <span class="w">    </span><span class="p">);</span>
-<span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
-<span class="hll"><span class="kt">var</span><span class="w"> </span><span class="n">listProfitLossDetail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossDetail</span><span class="p">(</span><span class="n">detail_id</span><span class="p">:</span><span class="n">listProfitLoss</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
-</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{listProfitLossDetail}&quot;</span><span class="p">);</span>
-<span class="hll"><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">detail</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">StockProfitDetail</span><span class="o">&gt;</span><span class="p">)</span><span class="n">listProfitLossDetail</span><span class="p">)</span>
-</span><span class="p">{</span>
+<span class="hll"><span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+</span><span class="kt">var</span><span class="w"> </span><span class="n">listProfitLossDetail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_api</span><span class="p">.</span><span class="n">ListProfitLossDetail</span><span class="p">(</span><span class="n">detail_id</span><span class="p">:</span><span class="n">listProfitLoss</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">id</span><span class="p">);</span>
+<span class="hll"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{listProfitLossDetail}&quot;</span><span class="p">);</span>
+</span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">detail</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">StockProfitDetail</span><span class="o">&gt;</span><span class="p">)</span><span class="n">listProfitLossDetail</span><span class="p">)</span>
+<span class="p">{</span>
 <span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;{detail}&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
